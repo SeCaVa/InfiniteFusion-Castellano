@@ -1,0 +1,357 @@
+[
+ {
+  "en": "(?i)wonder ?trades",
+  "es": "Intercambios (?:Mágicos|Maravillas?|Prodigioso)(?!s)",
+  "por": "Intercambios Prodigiosos"
+ },
+ {
+  "en": "(?i)wonder ?trade",
+  "es": "Intercambio (?:Mágico|Maravilla)",
+  "por": "Intercambio Prodigioso"
+ },
+ {
+  "en": "(?i)Trainer Card",
+  "es": "(?:Tarjeta|Carn[eé]) de [Ee]ntrenador",
+  "por": "Ficha de Entrenador"
+ },
+ {
+  "en": "(?i)pok[eé] ?balls",
+  "es": "Pok[eé] ?[Bb]alls",
+  "por": "Poké Balls"
+ },
+ {
+  "en": "(?i)pok[eé] ?ball",
+  "es": "Pok[eé]ball\\b|Pok[eé]Ball\\b",
+  "por": "Poké Ball"
+ },
+ {
+  "en": "Cynthia",
+  "es": "\\bCynthia\\b",
+  "por": "Cintia"
+ },
+ {
+  "en": "Kurt",
+  "es": "\\bKurt\\b",
+  "por": "César"
+ },
+ {
+  "en": "Falkner",
+  "es": "\\bFalkner\\b",
+  "por": "Pegaso"
+ },
+ {
+  "en": "Bugsy",
+  "es": "\\bBugsy\\b",
+  "por": "Antón"
+ },
+ {
+  "en": "Whitney",
+  "es": "\\bWhitney\\b",
+  "por": "Blanca"
+ },
+ {
+  "en": "Morty",
+  "es": "\\bMorty\\b",
+  "por": "Morti"
+ },
+ {
+  "en": "Chuck",
+  "es": "\\bChuck\\b",
+  "por": "Aníbal"
+ },
+ {
+  "en": "Jasmine",
+  "es": "\\bJasmine\\b",
+  "por": "Yasmina"
+ },
+ {
+  "en": "Pryce",
+  "es": "\\bPryce\\b",
+  "por": "Fredo"
+ },
+ {
+  "en": "Clair",
+  "es": "\\bClair\\b",
+  "por": "Débora"
+ },
+ {
+  "en": "Mr\\. Fuji",
+  "es": "\\b(?:Sr\\.|Señor) Fuji\\b|\\bMr\\. Fuji\\b",
+  "por": "Señor Fuji"
+ },
+ {
+  "en": "Steven",
+  "es": "\\bSteven\\b",
+  "por": "Máximo"
+ },
+ {
+  "en": "Wallace",
+  "es": "\\bWallace\\b",
+  "por": "Plubio"
+ },
+ {
+  "en": "Boon Island",
+  "es": "Isla Boon",
+  "por": "Isla Secunda"
+ },
+ {
+  "en": "Kin Island",
+  "es": "Isla Kin",
+  "por": "Isla Tera"
+ },
+ {
+  "en": "Knot Island",
+  "es": "Isla (?:Knot|Nudo)",
+  "por": "Isla Prima"
+ },
+ {
+  "en": "Chrono Island",
+  "es": "Isla (?:Chrono|Crono)",
+  "por": "Isla Inta"
+ },
+ {
+  "en": "Fullmoon Island",
+  "es": "Isla (?:Fullmoon|Luna Llena)",
+  "por": "Isla Plenilunio"
+ },
+ {
+  "en": "Newmoon Island",
+  "es": "Isla (?:Newmoon|Luna Nueva)",
+  "por": "Isla Lunanueva"
+ },
+ {
+  "en": "Violet City",
+  "es": "Ciudad Violeta",
+  "por": "Ciudad Malva"
+ },
+ {
+  "en": "Mt\\. Ember",
+  "es": "(?:Monte|Mt\\.) (?:Ember|Ascuas?)\\b",
+  "por": "Monte Ascuas"
+ },
+ {
+  "en": "Mt\\. Silver",
+  "es": "(?:Monte|Mt\\.) (?:Silver|Plata)\\b",
+  "por": "Monte Plateado"
+ },
+ {
+  "en": "Power Plant",
+  "es": "Central Energía",
+  "por": "Central de Energía"
+ },
+ {
+  "en": "Ilex Forest",
+  "es": "Bosque (?:Ilex|Encinas|Encina)",
+  "por": "Encinar"
+ },
+ {
+  "en": "Sevii",
+  "es": "Islas Sevii|Islas Sete\\b",
+  "por": "Archi7"
+ },
+ {
+  "en": "Unova",
+  "es": "\\bUnova\\b",
+  "por": "Teselia"
+ },
+ {
+  "en": "Saffron City",
+  "es": "(?<!Ciudad )(?<!Ciudad de )\\bAzafrán\\b",
+  "por": "Ciudad Azafrán"
+ },
+ {
+  "en": "Premium",
+  "es": "\\bPremium\\b",
+  "por": "Prémium"
+ },
+ {
+  "en": "Team Rocket",
+  "es": "Equipo Rocket",
+  "por": "Team Rocket"
+ },
+ {
+  "en": "(?i)pok[eé] ?mart",
+  "es": "Pok[eé] ?[Mm]art",
+  "por": "Tienda Pokémon"
+ },
+ {
+  "en": "(?i)guess (?:that|the) fusion",
+  "es": "Adivina (?:Esa|esa|la) Fusión",
+  "por": "Adivina la Fusión"
+ },
+ {
+  "en": "(?i)cycling road",
+  "es": "V[íi]a (?:Calzada|Ciclista)",
+  "por": "Camino de Bicis"
+ },
+ {
+  "en": "Bianca",
+  "es": "\\bBianca\\b",
+  "por": "Bel"
+ },
+ {
+  "en": "Janine",
+  "es": "\\bJanine\\b",
+  "por": "Sachiko"
+ },
+ {
+  "en": "Alder",
+  "es": "\\bAlder\\b",
+  "por": "Mirto"
+ },
+ {
+  "en": "Colress",
+  "es": "\\bColress\\b",
+  "por": "Acromo"
+ },
+ {
+  "en": "Hall of Fame",
+  "es": "Sal[oó]n de la Fama",
+  "por": "Hall de la Fama"
+ },
+ {
+  "en": "(?i)cycling road",
+  "es": "Carril Bici",
+  "por": "Camino de Bicis"
+ },
+ {
+  "en": "Bond Bridge",
+  "es": "Puente Bond",
+  "por": "Puente Unión"
+ },
+ {
+  "en": "DNA Splicers",
+  "es": "Fusionador(?:es)? de ADN",
+  "por": "Puntas ADN"
+ },
+ {
+  "en": "Odd Keystone",
+  "es": "Roca Rara",
+  "por": "Piedra Espíritu"
+ },
+ {
+  "en": "Focus Band",
+  "es": "Cinta Focus",
+  "por": "Cinta Aguante"
+ },
+ {
+  "en": "Focus Sash",
+  "es": "Banda Focus",
+  "por": "Banda Aguante"
+ },
+ {
+  "en": "\\bMist\\b",
+  "es": "\\bNiebla\\b",
+  "por": "Neblina"
+ },
+ {
+  "en": "Winstrate",
+  "es": "Winstrate",
+  "por": "Estratega"
+ },
+ {
+  "en": "Shelly",
+  "es": "Shelly",
+  "por": "Silvina"
+ },
+ {
+  "en": "Petalburg",
+  "es": "(?:el )?Pueblo Petalia",
+  "por": "Ciudad Petalia"
+ },
+ {
+  "en": "Rydel's Cycles?",
+  "es": "Ciclos Rydel",
+  "por": "Tienda de Bicis de Anacleto"
+ },
+ {
+  "en": "Rydel",
+  "es": "\\bRydel\\b",
+  "por": "Anacleto"
+ },
+ {
+  "en": "Trick Master",
+  "es": "Maestro Truco",
+  "por": "Maestro Treta"
+ },
+ {
+  "en": "Trick House",
+  "es": "Casa Trampa",
+  "por": "Casa Treta"
+ },
+ {
+  "en": "Gabby",
+  "es": "\\bGabby\\b",
+  "por": "Gabi"
+ },
+ {
+  "en": "\\bTy\\b",
+  "es": "\\bTy\\b",
+  "por": "Teo"
+ },
+ {
+  "en": "Cozmo",
+  "es": "\\bCosmo\\b",
+  "por": "Cozmo"
+ },
+ {
+  "en": "Mr\\. Sea\\b",
+  "es": "\\bSr\\. Mar\\b",
+  "por": "Señor Marino"
+ },
+ {
+  "en": "(?i)Oceanic Museum",
+  "es": "Museo Oceanográfico",
+  "por": "Museo Oceánico"
+ },
+ {
+  "en": "Littleroot Crimson",
+  "es": "Littleroot Crimson",
+  "por": "Raíz Carmesí"
+ },
+ {
+  "en": "Mauville Yellow",
+  "es": "Mauville Yellow",
+  "por": "Malvalona Amarillo"
+ },
+ {
+  "en": "Rustboro Ivory",
+  "es": "Rustboro Ivory",
+  "por": "Férrica Marfil"
+ },
+ {
+  "en": "Pacifidlog Cobalt",
+  "es": "Pacifidlog Cobalt",
+  "por": "Oromar Cobalto"
+ },
+ {
+  "en": "Fallarbor Bordeaux",
+  "es": "Fallarbor Bordeaux",
+  "por": "Pardal Burdeos"
+ },
+ {
+  "en": "Sootopolis Void",
+  "es": "Sootopolis Void",
+  "por": "Arrecípolis Vacío"
+ },
+ {
+  "en": "\\bAmy\\b",
+  "es": "\\bAmy\\b",
+  "por": "Ali"
+ },
+ {
+  "en": "\\bLiv\\b",
+  "es": "\\bLiv\\b",
+  "por": "Lía"
+ },
+ {
+  "en": "\\bMia\\b",
+  "es": "\\bMia\\b",
+  "por": "Mía"
+ },
+ {
+  "en": "\\bAnna\\b",
+  "es": "\\bAnna\\b",
+  "por": "Ani"
+ }
+]

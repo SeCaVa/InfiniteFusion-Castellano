@@ -1,0 +1,13 @@
+{
+ "It looks like old machinery.": "Parece maquinaria vieja.",
+ "It's probably safer not to touch it!": "¡Probablemente sea mejor no tocarla!",
+ "\\C[7]GATE FULLY CHARGED": "\\C[7]PUERTA COMPLETAMENTE CARGADA",
+ "\\C[7]OPEN GATE?": "\\C[7]¿ABRIR PUERTA?",
+ "\\C[7]GATE POWER: \\V[128]%": "\\C[7]POTENCIA PUERTA: \\V[128]%",
+ "Insert a battery?": "¿Insertar una pila?",
+ "\\PN inserted a cell battery": "\\PN insertó una pila",
+ "\\PN used an electric move to charge up the gate.": "\\PN usó un movimiento eléctrico para cargar la puerta.",
+ "\\C[7]CLOSE GATE?": "\\C[7]¿CERRAR PUERTA?",
+ "The gate short-circuited and lost some of its charge.": "La puerta hizo cortocircuito y perdió carga.",
+ "The gate is not budging. It looks like it has no power...": "La puerta no se mueve. Parece que no tiene energía..."
+}

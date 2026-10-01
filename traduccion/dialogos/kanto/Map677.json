@@ -1,0 +1,14 @@
+{
+ "An elemental plate can be placed inside the basket.": "Se puede colocar una placa elemental dentro de la cesta.",
+ "The \\V[19] is inside the basket.": "La \\V[19] está dentro de la cesta.",
+ "Swap it for a different plate?": "¿Cambiarla por otra placa?",
+ "Select a plate\\ch[5,\\V[3],\\V[1],Never mind]": "Elige una placa\\ch[5,\\V[3],\\V[1],No importa]",
+ "Place the \\V[3] inside the basket?": "¿Poner la \\V[3] dentro de la cesta?",
+ "\\PN placed the \\V[3] in the basket.": "\\PN puso la \\V[3] en la cesta.",
+ "The room is imbued with the essence of \\V[1]-type.": "La sala está imbuida con la esencia del tipo \\V[1].",
+ "Learn the \\V[1]-type Hidden Power?": "¿Aprender el Poder Oculto tipo \\V[1]?",
+ "What would you like to purchase? \\ch[5,\\V[3],\\V[20]Never mind]": "¿Qué te gustaría comprar? \\ch[5,\\V[3],\\V[20]No importa]",
+ "\\V[3]? Of course!": "¿\\V[3]? ¡Claro!",
+ "\\GThat'll be \\V[1] \\V[19] please.": "\\GSerán \\V[1] \\V[19], por favor.",
+ "Offer an elemental plate.": "Ofrecer una placa elemental."
+}

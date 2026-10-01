@@ -1,0 +1,15 @@
+{
+ "*Clamp* *ClampClamp*": "*Tenaza* *TenazaTenaza*",
+ "Quack Quaquaquack!": "¡Quack Quaquaquack!",
+ "Fwaaaaaa!": "¡Fwaaaaaa!",
+ "Rhaaa! Rhaaaraaa!": "¡Rhaaa! ¡Rhaaaraaa!",
+ "Schweeeee!": "¡Schweeeee!",
+ "I'm looking forward to doing business with you again.": "Espero hacer negocios contigo otra vez.",
+ "Grunt! You have a Pokémon for me?": "¡Recluta! ¿Tienes un Pokémon para mí?",
+ "Don't waste my time!": "¡No me hagas perder el tiempo!",
+ "Bzzzzzzzzz": "Bzzzzzzzzz",
+ "\\GWhich one are you going to buy? \\ch[72,4,\\v[69] ($35 000),\\v[70] ($35 000),\\v[71] ($65 000),Cancel]": "\\G¿Cuál vas a comprar? \\ch[72,4,\\v[69] (35.000$),\\v[70] (35.000$),\\v[71] (65.000$),Cancelar]",
+ "\\GWhich one are you going to buy? \\ch[72,4,\\v[69] ($25 000),\\v[70] ($25 000),\\v[71] ($45 000),Cancel]": "\\G¿Cuál vas a comprar? \\ch[72,4,\\v[69] (25.000$),\\v[70] (25.000$),\\v[71] (45.000$),Cancelar]",
+ "\\GWhich one are you going to buy? \\ch[72,4,\\v[69] ($15 000),\\v[70] ($15 000),\\v[71] ($35 000),Cancel]": "\\G¿Cuál vas a comprar? \\ch[72,4,\\v[69] (15.000$),\\v[70] (15.000$),\\v[71] (35.000$),Cancelar]",
+ "Gauuu! Gugauuu!": "¡Gauuu! ¡Gugauuu!"
+}

@@ -1,0 +1,422 @@
+{
+ "Map000": {
+  "nombre": "",
+  "propias": 32,
+  "comunes": 403
+ },
+ "Map005": {
+  "nombre": "Route 101",
+  "propias": 24,
+  "comunes": 5
+ },
+ "Map006": {
+  "nombre": "Slateport City",
+  "propias": 55,
+  "comunes": 21
+ },
+ "Map007": {
+  "nombre": "Petalburg Town",
+  "propias": 115,
+  "comunes": 15
+ },
+ "Map008": {
+  "nombre": "Oldale Town",
+  "propias": 25,
+  "comunes": 4
+ },
+ "Map009": {
+  "nombre": "Littleroot Town",
+  "propias": 40,
+  "comunes": 2
+ },
+ "Map010": {
+  "nombre": "Route 102",
+  "propias": 34,
+  "comunes": 5
+ },
+ "Map011": {
+  "nombre": "Route 103",
+  "propias": 71,
+  "comunes": 7
+ },
+ "Map012": {
+  "nombre": "Route 104 (South)",
+  "propias": 28,
+  "comunes": 14
+ },
+ "Map013": {
+  "nombre": "Littleroot Interiors",
+  "propias": 85,
+  "comunes": 4
+ },
+ "Map014": {
+  "nombre": "Truck",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map018": {
+  "nombre": "Professor Birch's Lab",
+  "propias": 62,
+  "comunes": 4
+ },
+ "Map019": {
+  "nombre": "Route 104 (South)",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map020": {
+  "nombre": "Route 104 (North)",
+  "propias": 15,
+  "comunes": 30
+ },
+ "Map021": {
+  "nombre": "EVENT_TEMPLATES",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map024": {
+  "nombre": "PokéMart",
+  "propias": 5,
+  "comunes": 6
+ },
+ "Map025": {
+  "nombre": "Pokémon Center",
+  "propias": 69,
+  "comunes": 39
+ },
+ "Map026": {
+  "nombre": "Wonder Trade Center",
+  "propias": 3,
+  "comunes": 38
+ },
+ "Map027": {
+  "nombre": "Happy Birthday!",
+  "propias": 25,
+  "comunes": 32
+ },
+ "Map028": {
+  "nombre": "Rusturf Tunnel",
+  "propias": 57,
+  "comunes": 1
+ },
+ "Map030": {
+  "nombre": "Petalburg Woods",
+  "propias": 42,
+  "comunes": 3
+ },
+ "Map031": {
+  "nombre": "Route 116",
+  "propias": 36,
+  "comunes": 6
+ },
+ "Map032": {
+  "nombre": "Granite Cave 1F",
+  "propias": 12,
+  "comunes": 2
+ },
+ "Map036": {
+  "nombre": "Granite Cave 1F-2",
+  "propias": 43,
+  "comunes": 2
+ },
+ "Map038": {
+  "nombre": "Route 108",
+  "propias": 45,
+  "comunes": 25
+ },
+ "Map039": {
+  "nombre": "Route 109",
+  "propias": 117,
+  "comunes": 17
+ },
+ "Map040": {
+  "nombre": "Route 110",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map041": {
+  "nombre": "quest_route 104N",
+  "propias": 14,
+  "comunes": 29
+ },
+ "Map042": {
+  "nombre": "Orre Desert",
+  "propias": 4,
+  "comunes": 3
+ },
+ "Map047": {
+  "nombre": "Rustboro City",
+  "propias": 93,
+  "comunes": 6
+ },
+ "Map048": {
+  "nombre": "Rustboro Interiors",
+  "propias": 190,
+  "comunes": 17
+ },
+ "Map049": {
+  "nombre": "Route 106",
+  "propias": 16,
+  "comunes": 15
+ },
+ "Map051": {
+  "nombre": "Dewford Town",
+  "propias": 15,
+  "comunes": 2
+ },
+ "Map057": {
+  "nombre": "PokéMart",
+  "propias": 6,
+  "comunes": 7
+ },
+ "Map058": {
+  "nombre": "Seaside Cottage",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map059": {
+  "nombre": "Oldale Interiors",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map060": {
+  "nombre": "Petalburg Interiors",
+  "propias": 16,
+  "comunes": 0
+ },
+ "Map061": {
+  "nombre": "Petalburg Gym",
+  "propias": 53,
+  "comunes": 0
+ },
+ "Map062": {
+  "nombre": "Hidden Clearing",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map063": {
+  "nombre": "Flower Shop",
+  "propias": 39,
+  "comunes": 2
+ },
+ "Map064": {
+  "nombre": "Secret Base",
+  "propias": 19,
+  "comunes": 1
+ },
+ "Map065": {
+  "nombre": "Route 115",
+  "propias": 17,
+  "comunes": 18
+ },
+ "Map066": {
+  "nombre": "Secret Base",
+  "propias": 12,
+  "comunes": 1
+ },
+ "Map067": {
+  "nombre": "On the road!",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map068": {
+  "nombre": "Slateport Interiors",
+  "propias": 54,
+  "comunes": 3
+ },
+ "Map071": {
+  "nombre": "Route 110",
+  "propias": 59,
+  "comunes": 3
+ },
+ "Map072": {
+  "nombre": "testing",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map073": {
+  "nombre": "Mauville City",
+  "propias": 90,
+  "comunes": 9
+ },
+ "Map074": {
+  "nombre": "Route 117",
+  "propias": 31,
+  "comunes": 3
+ },
+ "Map075": {
+  "nombre": "Mauville City Interiors",
+  "propias": 192,
+  "comunes": 17
+ },
+ "Map076": {
+  "nombre": "Route 118",
+  "propias": 5,
+  "comunes": 5
+ },
+ "Map077": {
+  "nombre": "Route 111 (South)",
+  "propias": 21,
+  "comunes": 19
+ },
+ "Map078": {
+  "nombre": "Rustboro Gym",
+  "propias": 37,
+  "comunes": 3
+ },
+ "Map079": {
+  "nombre": "Dewford Gym",
+  "propias": 19,
+  "comunes": 3
+ },
+ "Map080": {
+  "nombre": "Dewford Gym",
+  "propias": 8,
+  "comunes": 0
+ },
+ "Map081": {
+  "nombre": "Dewford Town Interiors",
+  "propias": 45,
+  "comunes": 6
+ },
+ "Map082": {
+  "nombre": "Seashore House",
+  "propias": 15,
+  "comunes": 2
+ },
+ "Map083": {
+  "nombre": "Verdanturf Town",
+  "propias": 48,
+  "comunes": 4
+ },
+ "Map084": {
+  "nombre": "Verdanturf Interiors",
+  "propias": 28,
+  "comunes": 3
+ },
+ "Map086": {
+  "nombre": "Route 116",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map087": {
+  "nombre": "Oceanic Museum",
+  "propias": 160,
+  "comunes": 2
+ },
+ "Map088": {
+  "nombre": "Stern's Shipyard",
+  "propias": 30,
+  "comunes": 0
+ },
+ "Map089": {
+  "nombre": "Slateport Harbor",
+  "propias": 2,
+  "comunes": 9
+ },
+ "Map090": {
+  "nombre": "Magma Camp",
+  "propias": 51,
+  "comunes": 24
+ },
+ "Map091": {
+  "nombre": "cutscene_1",
+  "propias": 26,
+  "comunes": 0
+ },
+ "Map092": {
+  "nombre": "PokéMart_Kanto",
+  "propias": 0,
+  "comunes": 77
+ },
+ "Map093": {
+  "nombre": "QUEST_TEMPLATES",
+  "propias": 13,
+  "comunes": 6
+ },
+ "Map094": {
+  "nombre": "Clothing Boutique",
+  "propias": 19,
+  "comunes": 7
+ },
+ "Map095": {
+  "nombre": "PokéMart_combined",
+  "propias": 1,
+  "comunes": 10
+ },
+ "Map096": {
+  "nombre": "Game Corner",
+  "propias": 30,
+  "comunes": 11
+ },
+ "Map097": {
+  "nombre": "Illusion Grove",
+  "propias": 8,
+  "comunes": 0
+ },
+ "Map098": {
+  "nombre": "Illusion Grove",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map099": {
+  "nombre": "Trick House",
+  "propias": 16,
+  "comunes": 1
+ },
+ "Map100": {
+  "nombre": "Clothes testing",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map101": {
+  "nombre": "Pokémon Day Care",
+  "propias": 0,
+  "comunes": 40
+ },
+ "Map102": {
+  "nombre": "Mauville Gym",
+  "propias": 36,
+  "comunes": 5
+ },
+ "Map106": {
+  "nombre": "New Mauville",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map107": {
+  "nombre": "Trick House 2",
+  "propias": 9,
+  "comunes": 1
+ },
+ "Map108": {
+  "nombre": "Trick House 1",
+  "propias": 9,
+  "comunes": 0
+ },
+ "Map109": {
+  "nombre": "Cliffside Sanctuary",
+  "propias": 0,
+  "comunes": 18
+ },
+ "Map110": {
+  "nombre": "Contest Hall",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map111": {
+  "nombre": "Cliffside Sanctuary",
+  "propias": 0,
+  "comunes": 18
+ },
+ "Map116": {
+  "nombre": "Route 113",
+  "propias": 11,
+  "comunes": 2
+ },
+ "Map295": {
+  "nombre": "Intro",
+  "propias": 4,
+  "comunes": 6
+ }
+}

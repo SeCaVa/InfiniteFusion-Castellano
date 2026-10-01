@@ -1,0 +1,9 @@
+{
+ "The water water is deep here, would you like to use Dive?": "El agua aquí es profunda, ¿quieres usar Buceo?",
+ "Welcome to the Character customization demo!": "¡Bienvenid[[o|a]] a la demo de personalización de personaje!",
+ "You can use the NPCs in this room to select your player's clothes, hats and hairstyles and change their color to test your new sprites.": "Puedes usar los PNJs de esta sala para seleccionar la ropa, gorros y peinados de tu jugador y cambiar su color para probar tus nuevos sprites.",
+ "For the purpose of this demo, all outfits are already unlocked.": "Para los fines de esta demo, todos los conjuntos ya están desbloqueados.",
+ "Custom Sprites that are placed in the correct folder in Graphics/Characters/player/ will automatically be available to select as long as they are named correctly.": "Los Sprites personalizados que se coloquen en la carpeta correcta en Graphics/Characters/player/ estarán disponibles automáticamente para seleccionar siempre que estén nombrados correctamente.",
+ "Please check the Character Customization PIF-Project thread on the game's Discord for details on how to format and name your sprites.": "Por favor, consulta el hilo de Personalización de Personaje del proyecto PIF en el Discord del juego para más detalles sobre cómo formatear y nombrar tus sprites.",
+ "Randomize outfit?": "¿Conjunto aleatorio?"
+}

@@ -1,0 +1,19 @@
+{
+ "\\wuIs this information correct?": "\\wu¿Es correcta esta información?",
+ "Is this information correct?": "¿Es correcta esta información?",
+ "Name: \\PN": "Nombre: \\PN",
+ "Use default randomizer settings? (Randomizes trainers and wild Pokémon to Pokémon with similar stats)?": "¿Usar ajustes predeterminados del aleatorizador? (¿Aleatoriza entrenadores y Pokémon salvajes a Pokémon con estadísticas similares)?",
+ "Please select the Randomizer options.": "Selecciona las opciones del Aleatorizador.",
+ "Randomize trainers?": "¿Aleatorizar entrenadores?",
+ "Randomize Static encounters (Legendaries, etc.)?": "¿Aleatorizar encuentros fijos (Legendarios, etc.)?",
+ "The Pokédex gets shuffled according to their base stats. With a low stats range Pokémon get randomized to other Pokémon with similar stats.": "La Pokédex se baraja según sus estadísticas base. Con un rango bajo de estadísticas, los Pokémon se aleatorizan a otros Pokémon con estadísticas similares.",
+ "Stats range?": "¿Rango de estadísticas?",
+ "Randomize Items?": "¿Aleatorizar Objetos?",
+ "Shuffling trainers...": "Barajando entrenadores...",
+ "\\^Success!": "\\^¡Éxito!",
+ "Modern Mode": "Modo Moderno",
+ "Randomized": "Aleatorizado",
+ "Special": "Especial",
+ "Default settings": "Ajustes por defecto",
+ "Custom settings": "Ajustes personalizados"
+}

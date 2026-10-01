@@ -1,0 +1,3572 @@
+{
+ "Map000": {
+  "nombre": "",
+  "propias": 28,
+  "comunes": 406
+ },
+ "Map001": {
+  "nombre": "Cerulean City",
+  "propias": 87,
+  "comunes": 45
+ },
+ "Map003": {
+  "nombre": "\\PN's House",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map004": {
+  "nombre": "Cerulean City Gym",
+  "propias": 25,
+  "comunes": 4
+ },
+ "Map005": {
+  "nombre": "Cerulean City",
+  "propias": 6,
+  "comunes": 5
+ },
+ "Map006": {
+  "nombre": "Team Rocket HQ",
+  "propias": 108,
+  "comunes": 15
+ },
+ "Map007": {
+  "nombre": "Bike Shop",
+  "propias": 18,
+  "comunes": 2
+ },
+ "Map008": {
+  "nombre": "Route 24",
+  "propias": 57,
+  "comunes": 27
+ },
+ "Map009": {
+  "nombre": "Route 25",
+  "propias": 60,
+  "comunes": 18
+ },
+ "Map010": {
+  "nombre": "Cerulean Cape",
+  "propias": 9,
+  "comunes": 1
+ },
+ "Map011": {
+  "nombre": "Bill's Lighthouse",
+  "propias": 29,
+  "comunes": 2
+ },
+ "Map012": {
+  "nombre": "Route 5",
+  "propias": 36,
+  "comunes": 13
+ },
+ "Map013": {
+  "nombre": "Day Care Center",
+  "propias": 0,
+  "comunes": 41
+ },
+ "Map015": {
+  "nombre": "Northern Gate",
+  "propias": 3,
+  "comunes": 17
+ },
+ "Map016": {
+  "nombre": "Route 6",
+  "propias": 22,
+  "comunes": 15
+ },
+ "Map017": {
+  "nombre": "S.S. Anne",
+  "propias": 74,
+  "comunes": 16
+ },
+ "Map018": {
+  "nombre": "Southern Gate",
+  "propias": 0,
+  "comunes": 16
+ },
+ "Map019": {
+  "nombre": "Vermillion City",
+  "propias": 54,
+  "comunes": 51
+ },
+ "Map020": {
+  "nombre": "Pokemon Center",
+  "propias": 26,
+  "comunes": 18
+ },
+ "Map021": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 16
+ },
+ "Map022": {
+  "nombre": "Vermillion City",
+  "propias": 3,
+  "comunes": 10
+ },
+ "Map023": {
+  "nombre": "Vermillion City",
+  "propias": 6,
+  "comunes": 9
+ },
+ "Map024": {
+  "nombre": "Vermillion City Gym",
+  "propias": 14,
+  "comunes": 21
+ },
+ "Map025": {
+  "nombre": "Pokémon Fan Club",
+  "propias": 35,
+  "comunes": 4
+ },
+ "Map026": {
+  "nombre": "Harbour",
+  "propias": 7,
+  "comunes": 5
+ },
+ "Map027": {
+  "nombre": "S.S. Anne",
+  "propias": 20,
+  "comunes": 2
+ },
+ "Map028": {
+  "nombre": "S.S. Anne",
+  "propias": 24,
+  "comunes": 12
+ },
+ "Map029": {
+  "nombre": "S.S. Anne",
+  "propias": 57,
+  "comunes": 4
+ },
+ "Map030": {
+  "nombre": "S.S. Anne",
+  "propias": 8,
+  "comunes": 2
+ },
+ "Map031": {
+  "nombre": "S.S. Anne",
+  "propias": 16,
+  "comunes": 7
+ },
+ "Map034": {
+  "nombre": "SS.Anne",
+  "propias": 27,
+  "comunes": 11
+ },
+ "Map035": {
+  "nombre": "Captain's Room",
+  "propias": 10,
+  "comunes": 0
+ },
+ "Map036": {
+  "nombre": "SS. Anne",
+  "propias": 7,
+  "comunes": 6
+ },
+ "Map037": {
+  "nombre": "Vermillion City",
+  "propias": 19,
+  "comunes": 10
+ },
+ "Map038": {
+  "nombre": "",
+  "propias": 86,
+  "comunes": 3
+ },
+ "Map039": {
+  "nombre": "Trainer House",
+  "propias": 0,
+  "comunes": 7
+ },
+ "Map040": {
+  "nombre": "Viridian River",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map042": {
+  "nombre": "Pallet Town",
+  "propias": 52,
+  "comunes": 29
+ },
+ "Map043": {
+  "nombre": "\\PN's House",
+  "propias": 44,
+  "comunes": 11
+ },
+ "Map044": {
+  "nombre": "",
+  "propias": 8,
+  "comunes": 4
+ },
+ "Map045": {
+  "nombre": "Team Rocket Hideout",
+  "propias": 115,
+  "comunes": 19
+ },
+ "Map046": {
+  "nombre": "Pinkan Hollow",
+  "propias": 78,
+  "comunes": 5
+ },
+ "Map047": {
+  "nombre": "Mt. Mortar",
+  "propias": 8,
+  "comunes": 5
+ },
+ "Map048": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 10
+ },
+ "Map049": {
+  "nombre": "Mahogany Town",
+  "propias": 5,
+  "comunes": 7
+ },
+ "Map050": {
+  "nombre": "Lavender Town",
+  "propias": 39,
+  "comunes": 3
+ },
+ "Map051": {
+  "nombre": "Pinkan Island",
+  "propias": 138,
+  "comunes": 10
+ },
+ "Map052": {
+  "nombre": "Seafoam Islands.old",
+  "propias": 1,
+  "comunes": 11
+ },
+ "Map054": {
+  "nombre": "Seafoam Islands B3",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map055": {
+  "nombre": "Seafoam Islands B4",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map056": {
+  "nombre": "Surf Race",
+  "propias": 2,
+  "comunes": 11
+ },
+ "Map057": {
+  "nombre": "Route 19",
+  "propias": 24,
+  "comunes": 6
+ },
+ "Map058": {
+  "nombre": "Route 20",
+  "propias": 27,
+  "comunes": 6
+ },
+ "Map059": {
+  "nombre": "Route 21",
+  "propias": 17,
+  "comunes": 7
+ },
+ "Map060": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 17
+ },
+ "Map061": {
+  "nombre": "Vermillion City Gym",
+  "propias": 6,
+  "comunes": 19
+ },
+ "Map062": {
+  "nombre": "Celadon City",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map063": {
+  "nombre": "Celadon City",
+  "propias": 8,
+  "comunes": 6
+ },
+ "Map064": {
+  "nombre": "Celadon City",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map065": {
+  "nombre": "Pokemon Center",
+  "propias": 8,
+  "comunes": 13
+ },
+ "Map066": {
+  "nombre": "Eastern Gate",
+  "propias": 0,
+  "comunes": 21
+ },
+ "Map067": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 9
+ },
+ "Map068": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 9
+ },
+ "Map069": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map070": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 9
+ },
+ "Map071": {
+  "nombre": "\\PN's Room",
+  "propias": 0,
+  "comunes": 9
+ },
+ "Map072": {
+  "nombre": "Celadon Sewers",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map073": {
+  "nombre": "\\PN's Room",
+  "propias": 1,
+  "comunes": 8
+ },
+ "Map074": {
+  "nombre": "Area 1",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map075": {
+  "nombre": "Area 2",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map076": {
+  "nombre": "Pallet Town",
+  "propias": 10,
+  "comunes": 7
+ },
+ "Map077": {
+  "nombre": "Oak's Lab",
+  "propias": 9,
+  "comunes": 147
+ },
+ "Map078": {
+  "nombre": "Route 1",
+  "propias": 1,
+  "comunes": 10
+ },
+ "Map079": {
+  "nombre": "Viridian City",
+  "propias": 3,
+  "comunes": 36
+ },
+ "Map080": {
+  "nombre": "Pokemon Center",
+  "propias": 46,
+  "comunes": 31
+ },
+ "Map081": {
+  "nombre": "PokeMart",
+  "propias": 5,
+  "comunes": 7
+ },
+ "Map082": {
+  "nombre": "Area 3",
+  "propias": 8,
+  "comunes": 5
+ },
+ "Map083": {
+  "nombre": "Viridian City",
+  "propias": 5,
+  "comunes": 6
+ },
+ "Map084": {
+  "nombre": "Viridian City",
+  "propias": 6,
+  "comunes": 5
+ },
+ "Map085": {
+  "nombre": "Viridian City Gym",
+  "propias": 41,
+  "comunes": 4
+ },
+ "Map086": {
+  "nombre": "Route 2",
+  "propias": 4,
+  "comunes": 7
+ },
+ "Map087": {
+  "nombre": "Fuchsia City",
+  "propias": 6,
+  "comunes": 2
+ },
+ "Map088": {
+  "nombre": "Gate",
+  "propias": 5,
+  "comunes": 5
+ },
+ "Map089": {
+  "nombre": "Gate",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map091": {
+  "nombre": "Pewter City",
+  "propias": 6,
+  "comunes": 4
+ },
+ "Map092": {
+  "nombre": "Route 2",
+  "propias": 22,
+  "comunes": 7
+ },
+ "Map093": {
+  "nombre": "Pewter City",
+  "propias": 5,
+  "comunes": 5
+ },
+ "Map095": {
+  "nombre": "Celadon City",
+  "propias": 109,
+  "comunes": 12
+ },
+ "Map096": {
+  "nombre": "Pewter City Museum",
+  "propias": 41,
+  "comunes": 6
+ },
+ "Map097": {
+  "nombre": "Route 1",
+  "propias": 2,
+  "comunes": 3
+ },
+ "Map098": {
+  "nombre": "Cinnabar Island",
+  "propias": 32,
+  "comunes": 25
+ },
+ "Map099": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map100": {
+  "nombre": "Cianwood City Gym_prototype2",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map101": {
+  "nombre": "Littleroot Town",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map102": {
+  "nombre": "Mt. Moon",
+  "propias": 40,
+  "comunes": 11
+ },
+ "Map105": {
+  "nombre": "Mt. Moon B2F",
+  "propias": 26,
+  "comunes": 51
+ },
+ "Map106": {
+  "nombre": "Route 4",
+  "propias": 2,
+  "comunes": 14
+ },
+ "Map107": {
+  "nombre": "Area 4",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map108": {
+  "nombre": "Saffron City",
+  "propias": 71,
+  "comunes": 21
+ },
+ "Map109": {
+  "nombre": "Hidden Tomb",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map110": {
+  "nombre": "Saffron Hotel",
+  "propias": 2,
+  "comunes": 17
+ },
+ "Map111": {
+  "nombre": "Saffron Hotel",
+  "propias": 29,
+  "comunes": 16
+ },
+ "Map112": {
+  "nombre": "Saffron Bar",
+  "propias": 20,
+  "comunes": 8
+ },
+ "Map113": {
+  "nombre": "Saffron Bar",
+  "propias": 8,
+  "comunes": 11
+ },
+ "Map114": {
+  "nombre": "Saffron Nightclub",
+  "propias": 43,
+  "comunes": 23
+ },
+ "Map115": {
+  "nombre": "Saffron Bar",
+  "propias": 17,
+  "comunes": 11
+ },
+ "Map116": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 4
+ },
+ "Map118": {
+  "nombre": "debug",
+  "propias": 59,
+  "comunes": 36
+ },
+ "Map119": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map120": {
+  "nombre": "",
+  "propias": 8,
+  "comunes": 0
+ },
+ "Map121": {
+  "nombre": "Silph Co.",
+  "propias": 11,
+  "comunes": 1
+ },
+ "Map122": {
+  "nombre": "Pokemon Center",
+  "propias": 17,
+  "comunes": 18
+ },
+ "Map124": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map125": {
+  "nombre": "Cinnabar Island",
+  "propias": 7,
+  "comunes": 4
+ },
+ "Map126": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map127": {
+  "nombre": "",
+  "propias": 3,
+  "comunes": 8
+ },
+ "Map128": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 3
+ },
+ "Map129": {
+  "nombre": "Pokémon Trade Center",
+  "propias": 24,
+  "comunes": 47
+ },
+ "Map130": {
+  "nombre": "Pokemon Center",
+  "propias": 9,
+  "comunes": 21
+ },
+ "Map131": {
+  "nombre": "9F --old--",
+  "propias": 13,
+  "comunes": 42
+ },
+ "Map133": {
+  "nombre": "Rocket Mart",
+  "propias": 3,
+  "comunes": 2
+ },
+ "Map135": {
+  "nombre": "Cinnabar Hotel",
+  "propias": 4,
+  "comunes": 16
+ },
+ "Map136": {
+  "nombre": "Cinnabar Hotel",
+  "propias": 39,
+  "comunes": 7
+ },
+ "Map137": {
+  "nombre": "New Bark Town",
+  "propias": 10,
+  "comunes": 10
+ },
+ "Map138": {
+  "nombre": "Olivine City",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map139": {
+  "nombre": "letter",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map140": {
+  "nombre": "Diglett's Cave",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map141": {
+  "nombre": "Saffron City",
+  "propias": 10,
+  "comunes": 0
+ },
+ "Map142": {
+  "nombre": "Pokémon Tower B1",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map143": {
+  "nombre": "Route 23",
+  "propias": 15,
+  "comunes": 30
+ },
+ "Map144": {
+  "nombre": "Power Plant",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map145": {
+  "nombre": "Route 26",
+  "propias": 30,
+  "comunes": 6
+ },
+ "Map146": {
+  "nombre": "Route 17",
+  "propias": 51,
+  "comunes": 6
+ },
+ "Map147": {
+  "nombre": "Route 27",
+  "propias": 33,
+  "comunes": 6
+ },
+ "Map148": {
+  "nombre": "Pokemon League Entrance",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map151": {
+  "nombre": "Saffron Boutique",
+  "propias": 45,
+  "comunes": 12
+ },
+ "Map152": {
+  "nombre": "Saffron City Gym",
+  "propias": 31,
+  "comunes": 5
+ },
+ "Map153": {
+  "nombre": "Saffron City",
+  "propias": 10,
+  "comunes": 2
+ },
+ "Map154": {
+  "nombre": "Route 10",
+  "propias": 23,
+  "comunes": 10
+ },
+ "Map155": {
+  "nombre": "Route 11",
+  "propias": 39,
+  "comunes": 46
+ },
+ "Map156": {
+  "nombre": "Saffron City",
+  "propias": 18,
+  "comunes": 2
+ },
+ "Map157": {
+  "nombre": "Game intro",
+  "propias": 10,
+  "comunes": 0
+ },
+ "Map159": {
+  "nombre": "Route 12",
+  "propias": 48,
+  "comunes": 12
+ },
+ "Map160": {
+  "nombre": "Messages",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map161": {
+  "nombre": "",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map162": {
+  "nombre": "Underwater",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map163": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map164": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 9
+ },
+ "Map165": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 18
+ },
+ "Map166": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map167": {
+  "nombre": "Crimson City",
+  "propias": 24,
+  "comunes": 8
+ },
+ "Map168": {
+  "nombre": "Crimson City",
+  "propias": 6,
+  "comunes": 4
+ },
+ "Map169": {
+  "nombre": "Crimson City",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map170": {
+  "nombre": "Crimson City",
+  "propias": 5,
+  "comunes": 7
+ },
+ "Map171": {
+  "nombre": "Route 22",
+  "propias": 83,
+  "comunes": 7
+ },
+ "Map172": {
+  "nombre": "",
+  "propias": 18,
+  "comunes": 2
+ },
+ "Map173": {
+  "nombre": "Pokémon Mansion",
+  "propias": 16,
+  "comunes": 10
+ },
+ "Map174": {
+  "nombre": "Pokémon Mansion",
+  "propias": 10,
+  "comunes": 11
+ },
+ "Map175": {
+  "nombre": "COMMON",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map176": {
+  "nombre": "Crimson Hotel",
+  "propias": 13,
+  "comunes": 15
+ },
+ "Map177": {
+  "nombre": "Crimson Hotel",
+  "propias": 35,
+  "comunes": 13
+ },
+ "Map179": {
+  "nombre": "Police Station",
+  "propias": 21,
+  "comunes": 2
+ },
+ "Map180": {
+  "nombre": "Saffron City",
+  "propias": 33,
+  "comunes": 0
+ },
+ "Map181": {
+  "nombre": "Pokémon Mansion",
+  "propias": 12,
+  "comunes": 11
+ },
+ "Map182": {
+  "nombre": "Saffron City",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map183": {
+  "nombre": "Saffron City",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map184": {
+  "nombre": "Saffron City",
+  "propias": 6,
+  "comunes": 7
+ },
+ "Map185": {
+  "nombre": "Secret Garden",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map186": {
+  "nombre": "letter2",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map187": {
+  "nombre": "Pokémon Mansion",
+  "propias": 18,
+  "comunes": 10
+ },
+ "Map188": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 17
+ },
+ "Map189": {
+  "nombre": "Cinnabar Island",
+  "propias": 5,
+  "comunes": 8
+ },
+ "Map190": {
+  "nombre": "Cinnabar Island",
+  "propias": 5,
+  "comunes": 3
+ },
+ "Map191": {
+  "nombre": "Fighting Dojo",
+  "propias": 27,
+  "comunes": 5
+ },
+ "Map192": {
+  "nombre": "Train Station",
+  "propias": 13,
+  "comunes": 6
+ },
+ "Map193": {
+  "nombre": "Gate",
+  "propias": 4,
+  "comunes": 7
+ },
+ "Map194": {
+  "nombre": "Saffron City",
+  "propias": 21,
+  "comunes": 8
+ },
+ "Map195": {
+  "nombre": "Saffron Bar",
+  "propias": 8,
+  "comunes": 6
+ },
+ "Map196": {
+  "nombre": "Saffron City",
+  "propias": 18,
+  "comunes": 2
+ },
+ "Map197": {
+  "nombre": "Power Plant",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map198": {
+  "nombre": "Power Plant",
+  "propias": 11,
+  "comunes": 2
+ },
+ "Map199": {
+  "nombre": "Saffron City",
+  "propias": 3,
+  "comunes": 2
+ },
+ "Map200": {
+  "nombre": "Saffron City",
+  "propias": 6,
+  "comunes": 3
+ },
+ "Map202": {
+  "nombre": "backup",
+  "propias": 3,
+  "comunes": 26
+ },
+ "Map204": {
+  "nombre": "Farmhouse",
+  "propias": 23,
+  "comunes": 0
+ },
+ "Map205": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map206": {
+  "nombre": "Cinnabar Lab",
+  "propias": 8,
+  "comunes": 15
+ },
+ "Map207": {
+  "nombre": "Cinnabar Island",
+  "propias": 10,
+  "comunes": 4
+ },
+ "Map208": {
+  "nombre": "Cinnabar Lab",
+  "propias": 23,
+  "comunes": 35
+ },
+ "Map209": {
+  "nombre": "Cinnabar Lab",
+  "propias": 26,
+  "comunes": 6
+ },
+ "Map210": {
+  "nombre": "",
+  "propias": 10,
+  "comunes": 3
+ },
+ "Map211": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map212": {
+  "nombre": "Silph Co.",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map213": {
+  "nombre": "Gate",
+  "propias": 10,
+  "comunes": 8
+ },
+ "Map214": {
+  "nombre": "Day Care Center",
+  "propias": 30,
+  "comunes": 7
+ },
+ "Map215": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 18
+ },
+ "Map217": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 6
+ },
+ "Map218": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 26
+ },
+ "Map219": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map221": {
+  "nombre": "Cinnabar Island Gym",
+  "propias": 83,
+  "comunes": 3
+ },
+ "Map222": {
+  "nombre": "Route 2",
+  "propias": 16,
+  "comunes": 4
+ },
+ "Map226": {
+  "nombre": "",
+  "propias": 4,
+  "comunes": 26
+ },
+ "Map229": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map230": {
+  "nombre": "Violet City",
+  "propias": 22,
+  "comunes": 8
+ },
+ "Map232": {
+  "nombre": "Saffron City",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map233": {
+  "nombre": "Route 4",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map235": {
+  "nombre": "Ruins of Alph",
+  "propias": 10,
+  "comunes": 5
+ },
+ "Map237": {
+  "nombre": "Goldenrod City",
+  "propias": 65,
+  "comunes": 23
+ },
+ "Map239": {
+  "nombre": "Pokémon Center",
+  "propias": 18,
+  "comunes": 22
+ },
+ "Map240": {
+  "nombre": "Goldenrod Tunnel",
+  "propias": 68,
+  "comunes": 22
+ },
+ "Map241": {
+  "nombre": "Goldenrod City",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map242": {
+  "nombre": "Goldenrod City",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map243": {
+  "nombre": "Goldenrod Hotel",
+  "propias": 2,
+  "comunes": 17
+ },
+ "Map244": {
+  "nombre": "Goldenrod Hotel",
+  "propias": 29,
+  "comunes": 4
+ },
+ "Map245": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 2
+ },
+ "Map246": {
+  "nombre": "Radio Tower",
+  "propias": 18,
+  "comunes": 3
+ },
+ "Map247": {
+  "nombre": "Radio Tower",
+  "propias": 66,
+  "comunes": 6
+ },
+ "Map248": {
+  "nombre": "Train Station",
+  "propias": 17,
+  "comunes": 9
+ },
+ "Map249": {
+  "nombre": "Goldenrod City",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map250": {
+  "nombre": "Goldenrod City",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map251": {
+  "nombre": "Goldenrod City",
+  "propias": 3,
+  "comunes": 6
+ },
+ "Map254": {
+  "nombre": "Route 35",
+  "propias": 27,
+  "comunes": 8
+ },
+ "Map255": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map256": {
+  "nombre": "Gate",
+  "propias": 7,
+  "comunes": 7
+ },
+ "Map257": {
+  "nombre": "",
+  "propias": 3,
+  "comunes": 65
+ },
+ "Map258": {
+  "nombre": "Tohjo Falls",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map259": {
+  "nombre": "Route 26",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map260": {
+  "nombre": "Pokemon League Gate",
+  "propias": 15,
+  "comunes": 4
+ },
+ "Map261": {
+  "nombre": "Route 31",
+  "propias": 3,
+  "comunes": 4
+ },
+ "Map262": {
+  "nombre": "Route 30",
+  "propias": 9,
+  "comunes": 13
+ },
+ "Map263": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map264": {
+  "nombre": "Pokémon Center",
+  "propias": 7,
+  "comunes": 16
+ },
+ "Map265": {
+  "nombre": "Route 34",
+  "propias": 64,
+  "comunes": 8
+ },
+ "Map266": {
+  "nombre": "Ilex Forest",
+  "propias": 27,
+  "comunes": 5
+ },
+ "Map267": {
+  "nombre": "Route 36",
+  "propias": 19,
+  "comunes": 4
+ },
+ "Map268": {
+  "nombre": "Violet City",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map269": {
+  "nombre": "Violet City",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map270": {
+  "nombre": "Violet City",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map271": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map272": {
+  "nombre": "Sprout Tower",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map273": {
+  "nombre": "Violet Hotel",
+  "propias": 1,
+  "comunes": 16
+ },
+ "Map274": {
+  "nombre": "Violet Hotel",
+  "propias": 18,
+  "comunes": 15
+ },
+ "Map275": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 7
+ },
+ "Map276": {
+  "nombre": "Gate",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map278": {
+  "nombre": "Azalea Town",
+  "propias": 11,
+  "comunes": 11
+ },
+ "Map279": {
+  "nombre": "Pokémon Center",
+  "propias": 6,
+  "comunes": 13
+ },
+ "Map280": {
+  "nombre": "PokeMart",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map281": {
+  "nombre": "Azalea Town",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map282": {
+  "nombre": "Azalea Town",
+  "propias": 11,
+  "comunes": 0
+ },
+ "Map283": {
+  "nombre": "Slowpoke Well",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map284": {
+  "nombre": "Route 33",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map285": {
+  "nombre": "Union Cave",
+  "propias": 23,
+  "comunes": 3
+ },
+ "Map286": {
+  "nombre": "Union Cave B1",
+  "propias": 11,
+  "comunes": 6
+ },
+ "Map287": {
+  "nombre": "Union Cave B2",
+  "propias": 17,
+  "comunes": 2
+ },
+ "Map288": {
+  "nombre": "Route 32",
+  "propias": 38,
+  "comunes": 6
+ },
+ "Map289": {
+  "nombre": "Pokémon Center",
+  "propias": 4,
+  "comunes": 13
+ },
+ "Map290": {
+  "nombre": "BW2",
+  "propias": 32,
+  "comunes": 1
+ },
+ "Map291": {
+  "nombre": "Route 4",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map292": {
+  "nombre": "Dept. Store",
+  "propias": 10,
+  "comunes": 9
+ },
+ "Map293": {
+  "nombre": "Dept. Store",
+  "propias": 3,
+  "comunes": 2
+ },
+ "Map294": {
+  "nombre": "Dept. Store",
+  "propias": 8,
+  "comunes": 2
+ },
+ "Map295": {
+  "nombre": "Intro",
+  "propias": 17,
+  "comunes": 15
+ },
+ "Map296": {
+  "nombre": "Dept. Store",
+  "propias": 7,
+  "comunes": 2
+ },
+ "Map297": {
+  "nombre": "Dept Store",
+  "propias": 7,
+  "comunes": 6
+ },
+ "Map298": {
+  "nombre": "Dept. Store Basement",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map299": {
+  "nombre": "Goldenrod Tunnel",
+  "propias": 37,
+  "comunes": 15
+ },
+ "Map300": {
+  "nombre": "National Park",
+  "propias": 45,
+  "comunes": 7
+ },
+ "Map303": {
+  "nombre": "Indigo Plateau",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map304": {
+  "nombre": "Victory Road",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map305": {
+  "nombre": "11F.old",
+  "propias": 14,
+  "comunes": 44
+ },
+ "Map306": {
+  "nombre": "Victory Road",
+  "propias": 20,
+  "comunes": 4
+ },
+ "Map307": {
+  "nombre": "Victory Road",
+  "propias": 21,
+  "comunes": 6
+ },
+ "Map308": {
+  "nombre": "Day Care Center",
+  "propias": 12,
+  "comunes": 0
+ },
+ "Map309": {
+  "nombre": "Goldenrod City",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map310": {
+  "nombre": "Cherrygrove City",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map311": {
+  "nombre": "Route 29",
+  "propias": 8,
+  "comunes": 8
+ },
+ "Map312": {
+  "nombre": "Route 46",
+  "propias": 9,
+  "comunes": 4
+ },
+ "Map313": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map314": {
+  "nombre": "Pokémon League",
+  "propias": 39,
+  "comunes": 24
+ },
+ "Map315": {
+  "nombre": "Elite 1",
+  "propias": 10,
+  "comunes": 1
+ },
+ "Map316": {
+  "nombre": "Elite 2",
+  "propias": 9,
+  "comunes": 1
+ },
+ "Map317": {
+  "nombre": "Elite 3",
+  "propias": 12,
+  "comunes": 1
+ },
+ "Map318": {
+  "nombre": "Elite 4",
+  "propias": 15,
+  "comunes": 1
+ },
+ "Map319": {
+  "nombre": "Route 30",
+  "propias": 30,
+  "comunes": 5
+ },
+ "Map321": {
+  "nombre": "Route 27",
+  "propias": 27,
+  "comunes": 2
+ },
+ "Map324": {
+  "nombre": "Cerulean Cave",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map325": {
+  "nombre": "Prof. Elm Lab.",
+  "propias": 38,
+  "comunes": 9
+ },
+ "Map326": {
+  "nombre": "New Bark Town",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map327": {
+  "nombre": "New Bark Town",
+  "propias": 5,
+  "comunes": 7
+ },
+ "Map328": {
+  "nombre": "Champion",
+  "propias": 18,
+  "comunes": 1
+ },
+ "Map329": {
+  "nombre": "Blackthorn City",
+  "propias": 8,
+  "comunes": 3
+ },
+ "Map330": {
+  "nombre": "Pokémon Center",
+  "propias": 9,
+  "comunes": 14
+ },
+ "Map331": {
+  "nombre": "Blackthorn Hotel",
+  "propias": 1,
+  "comunes": 16
+ },
+ "Map332": {
+  "nombre": "Blackthorn Hotel",
+  "propias": 28,
+  "comunes": 8
+ },
+ "Map333": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 7
+ },
+ "Map334": {
+  "nombre": "Blackthorn City",
+  "propias": 6,
+  "comunes": 4
+ },
+ "Map335": {
+  "nombre": "Dragon's Den",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map336": {
+  "nombre": "Dragon's Den",
+  "propias": 16,
+  "comunes": 2
+ },
+ "Map337": {
+  "nombre": "Azalea Town Gym",
+  "propias": 19,
+  "comunes": 6
+ },
+ "Map338": {
+  "nombre": "Azalea Town",
+  "propias": 42,
+  "comunes": 7
+ },
+ "Map339": {
+  "nombre": "Pokémon Center",
+  "propias": 7,
+  "comunes": 16
+ },
+ "Map340": {
+  "nombre": "Slowpoke Well (flooded)",
+  "propias": 7,
+  "comunes": 2
+ },
+ "Map341": {
+  "nombre": "Hall of Fame",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map342": {
+  "nombre": "Ruins of Alph",
+  "propias": 29,
+  "comunes": 4
+ },
+ "Map343": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map345": {
+  "nombre": "Chamber A",
+  "propias": 6,
+  "comunes": 5
+ },
+ "Map346": {
+  "nombre": "Ruins of Alph",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map347": {
+  "nombre": "Chamber B",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map348": {
+  "nombre": "Chamber C",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map349": {
+  "nombre": "Rock Tunnel",
+  "propias": 34,
+  "comunes": 10
+ },
+ "Map350": {
+  "nombre": "Rock Tunnel",
+  "propias": 39,
+  "comunes": 18
+ },
+ "Map351": {
+  "nombre": "Route 9",
+  "propias": 9,
+  "comunes": 0
+ },
+ "Map352": {
+  "nombre": "Chamber D",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map353": {
+  "nombre": "Chamber E",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map354": {
+  "nombre": "Ruins of Alph",
+  "propias": 11,
+  "comunes": 4
+ },
+ "Map355": {
+  "nombre": "Testing Room",
+  "propias": 44,
+  "comunes": 19
+ },
+ "Map356": {
+  "nombre": "Debug Island",
+  "propias": 20,
+  "comunes": 17
+ },
+ "Map357": {
+  "nombre": "PokéMart",
+  "propias": 4,
+  "comunes": 94
+ },
+ "Map358": {
+  "nombre": "Art Gallery",
+  "propias": 2,
+  "comunes": 6
+ },
+ "Map359": {
+  "nombre": "Ecruteak City",
+  "propias": 12,
+  "comunes": 12
+ },
+ "Map360": {
+  "nombre": "Pokémon School",
+  "propias": 29,
+  "comunes": 5
+ },
+ "Map361": {
+  "nombre": "Navel Rock",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map362": {
+  "nombre": "Navel Rock",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map363": {
+  "nombre": "Violet City Gym",
+  "propias": 27,
+  "comunes": 3
+ },
+ "Map364": {
+  "nombre": "Dark Cave",
+  "propias": 19,
+  "comunes": 0
+ },
+ "Map365": {
+  "nombre": "",
+  "propias": 6,
+  "comunes": 29
+ },
+ "Map366": {
+  "nombre": "Cherrygrove City",
+  "propias": 7,
+  "comunes": 5
+ },
+ "Map367": {
+  "nombre": "Cherrygrove City",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map368": {
+  "nombre": "Pokémon Center",
+  "propias": 4,
+  "comunes": 14
+ },
+ "Map370": {
+  "nombre": "PokeMart",
+  "propias": 1,
+  "comunes": 6
+ },
+ "Map371": {
+  "nombre": "Pokemon Center",
+  "propias": 10,
+  "comunes": 12
+ },
+ "Map375": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 18
+ },
+ "Map376": {
+  "nombre": "Hall of Origin",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map377": {
+  "nombre": "Blackthorn City Gym",
+  "propias": 19,
+  "comunes": 3
+ },
+ "Map378": {
+  "nombre": "Mewtwo Intro",
+  "propias": 57,
+  "comunes": 2
+ },
+ "Map379": {
+  "nombre": "Pokemon Center",
+  "propias": 17,
+  "comunes": 13
+ },
+ "Map380": {
+  "nombre": "Pewter City",
+  "propias": 63,
+  "comunes": 15
+ },
+ "Map381": {
+  "nombre": "Pewter City Museum",
+  "propias": 29,
+  "comunes": 18
+ },
+ "Map382": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map383": {
+  "nombre": "Gate",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map384": {
+  "nombre": "Bill's Lighthouse",
+  "propias": 50,
+  "comunes": 4
+ },
+ "Map385": {
+  "nombre": "Pewter City Museum",
+  "propias": 16,
+  "comunes": 0
+ },
+ "Map386": {
+  "nombre": "Pewter City Gym",
+  "propias": 23,
+  "comunes": 4
+ },
+ "Map387": {
+  "nombre": "Cerulean City",
+  "propias": 2,
+  "comunes": 12
+ },
+ "Map388": {
+  "nombre": "Cerulean City",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map389": {
+  "nombre": "Cerulean City",
+  "propias": 3,
+  "comunes": 10
+ },
+ "Map391": {
+  "nombre": "Pokemon Center",
+  "propias": 6,
+  "comunes": 12
+ },
+ "Map392": {
+  "nombre": "Pokémon Center",
+  "propias": 16,
+  "comunes": 14
+ },
+ "Map393": {
+  "nombre": "Celadon City",
+  "propias": 4,
+  "comunes": 6
+ },
+ "Map394": {
+  "nombre": "Vermillion City",
+  "propias": 6,
+  "comunes": 6
+ },
+ "Map395": {
+  "nombre": "Vermillion City",
+  "propias": 9,
+  "comunes": 7
+ },
+ "Map396": {
+  "nombre": "Underground Gate",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map397": {
+  "nombre": "Underground Gate",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map398": {
+  "nombre": "Diglett's Cave",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map399": {
+  "nombre": "Diglett's Cave",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map400": {
+  "nombre": "Pokémon Tower",
+  "propias": 10,
+  "comunes": 2
+ },
+ "Map401": {
+  "nombre": "Pokemon Tower F2",
+  "propias": 46,
+  "comunes": 6
+ },
+ "Map402": {
+  "nombre": "Pokemon Tower F3",
+  "propias": 9,
+  "comunes": 3
+ },
+ "Map403": {
+  "nombre": "Pokemon Tower F4",
+  "propias": 8,
+  "comunes": 3
+ },
+ "Map404": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map405": {
+  "nombre": "Game Corner",
+  "propias": 25,
+  "comunes": 6
+ },
+ "Map406": {
+  "nombre": "Celadon Café",
+  "propias": 28,
+  "comunes": 33
+ },
+ "Map407": {
+  "nombre": "Celadon Café Backstore",
+  "propias": 13,
+  "comunes": 42
+ },
+ "Map408": {
+  "nombre": "Pokemon Center",
+  "propias": 15,
+  "comunes": 19
+ },
+ "Map409": {
+  "nombre": "Route 8",
+  "propias": 40,
+  "comunes": 57
+ },
+ "Map410": {
+  "nombre": "Underground Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map411": {
+  "nombre": "Underground",
+  "propias": 18,
+  "comunes": 2
+ },
+ "Map413": {
+  "nombre": "Route 7",
+  "propias": 68,
+  "comunes": 21
+ },
+ "Map414": {
+  "nombre": "",
+  "propias": 4,
+  "comunes": 39
+ },
+ "Map415": {
+  "nombre": "Western Gate",
+  "propias": 1,
+  "comunes": 17
+ },
+ "Map416": {
+  "nombre": "Pokemon Center",
+  "propias": 28,
+  "comunes": 25
+ },
+ "Map417": {
+  "nombre": "Gate",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map418": {
+  "nombre": "Pokémon House",
+  "propias": 33,
+  "comunes": 9
+ },
+ "Map419": {
+  "nombre": "Lavender Town",
+  "propias": 4,
+  "comunes": 4
+ },
+ "Map420": {
+  "nombre": "Lavender Town",
+  "propias": 5,
+  "comunes": 8
+ },
+ "Map421": {
+  "nombre": "Nicknaming Club",
+  "propias": 32,
+  "comunes": 3
+ },
+ "Map422": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map423": {
+  "nombre": "Cyberspace",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map425": {
+  "nombre": "Underground Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map426": {
+  "nombre": "Blackthorn City Gym",
+  "propias": 7,
+  "comunes": 0
+ },
+ "Map427": {
+  "nombre": "",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map428": {
+  "nombre": "Ranger Cabin",
+  "propias": 34,
+  "comunes": 5
+ },
+ "Map430": {
+  "nombre": "Oak's Lab.oldest",
+  "propias": 23,
+  "comunes": 41
+ },
+ "Map431": {
+  "nombre": "Celadon Sewers",
+  "propias": 11,
+  "comunes": 30
+ },
+ "Map432": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 15,
+  "comunes": 2
+ },
+ "Map433": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map434": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 10,
+  "comunes": 11
+ },
+ "Map435": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 8,
+  "comunes": 2
+ },
+ "Map436": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 19,
+  "comunes": 8
+ },
+ "Map437": {
+  "nombre": "Route 13",
+  "propias": 98,
+  "comunes": 21
+ },
+ "Map438": {
+  "nombre": "Route 16",
+  "propias": 0,
+  "comunes": 7
+ },
+ "Map439": {
+  "nombre": "House",
+  "propias": 8,
+  "comunes": 1
+ },
+ "Map440": {
+  "nombre": "Route 14",
+  "propias": 16,
+  "comunes": 15
+ },
+ "Map444": {
+  "nombre": "Route 15",
+  "propias": 26,
+  "comunes": 24
+ },
+ "Map445": {
+  "nombre": "Area 1",
+  "propias": 2,
+  "comunes": 3
+ },
+ "Map446": {
+  "nombre": "Celadon Sewers",
+  "propias": 5,
+  "comunes": 30
+ },
+ "Map447": {
+  "nombre": "Control Room",
+  "propias": 0,
+  "comunes": 13
+ },
+ "Map448": {
+  "nombre": "Control Room",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map449": {
+  "nombre": "Team Rocket Hideout",
+  "propias": 15,
+  "comunes": 9
+ },
+ "Map450": {
+  "nombre": "",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map451": {
+  "nombre": "Celadon City",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map452": {
+  "nombre": "",
+  "propias": 7,
+  "comunes": 0
+ },
+ "Map453": {
+  "nombre": "Celadon City",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map454": {
+  "nombre": "Celadon City",
+  "propias": 6,
+  "comunes": 5
+ },
+ "Map455": {
+  "nombre": "Team Rocket Hideout",
+  "propias": 1,
+  "comunes": 12
+ },
+ "Map456": {
+  "nombre": "Team Rocket Hideout",
+  "propias": 1,
+  "comunes": 14
+ },
+ "Map457": {
+  "nombre": "Team Rocket Hideout",
+  "propias": 27,
+  "comunes": 4
+ },
+ "Map458": {
+  "nombre": "Pokémon Academy",
+  "propias": 39,
+  "comunes": 2
+ },
+ "Map459": {
+  "nombre": "Pewter Hotel",
+  "propias": 5,
+  "comunes": 16
+ },
+ "Map460": {
+  "nombre": "Pewter Hotel",
+  "propias": 32,
+  "comunes": 19
+ },
+ "Map461": {
+  "nombre": "Cerulean Hotel",
+  "propias": 3,
+  "comunes": 16
+ },
+ "Map462": {
+  "nombre": "Cerulean Hotel",
+  "propias": 18,
+  "comunes": 12
+ },
+ "Map463": {
+  "nombre": "Vermillion Hotel",
+  "propias": 1,
+  "comunes": 23
+ },
+ "Map464": {
+  "nombre": "Vermillion Hotel",
+  "propias": 63,
+  "comunes": 12
+ },
+ "Map465": {
+  "nombre": "Celadon Hotel",
+  "propias": 1,
+  "comunes": 15
+ },
+ "Map466": {
+  "nombre": "Celadon Hotel",
+  "propias": 131,
+  "comunes": 5
+ },
+ "Map467": {
+  "nombre": "Pokemon Tower F5",
+  "propias": 20,
+  "comunes": 5
+ },
+ "Map468": {
+  "nombre": "Pokemon Tower F6",
+  "propias": 7,
+  "comunes": 2
+ },
+ "Map469": {
+  "nombre": "Pokemon Tower F7",
+  "propias": 26,
+  "comunes": 11
+ },
+ "Map470": {
+  "nombre": "",
+  "propias": 7,
+  "comunes": 1
+ },
+ "Map471": {
+  "nombre": "Fishing Hut",
+  "propias": 3,
+  "comunes": 8
+ },
+ "Map472": {
+  "nombre": "Fuchsia City",
+  "propias": 70,
+  "comunes": 21
+ },
+ "Map473": {
+  "nombre": "Safari Zone Gate",
+  "propias": 12,
+  "comunes": 6
+ },
+ "Map474": {
+  "nombre": "Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map475": {
+  "nombre": "Gate",
+  "propias": 11,
+  "comunes": 0
+ },
+ "Map476": {
+  "nombre": "Pokemon Center",
+  "propias": 13,
+  "comunes": 15
+ },
+ "Map477": {
+  "nombre": "Fuchsia Hotel",
+  "propias": 6,
+  "comunes": 16
+ },
+ "Map478": {
+  "nombre": "Fuchsia Hotel",
+  "propias": 50,
+  "comunes": 7
+ },
+ "Map479": {
+  "nombre": "Fuchsia City Gym",
+  "propias": 54,
+  "comunes": 5
+ },
+ "Map481": {
+  "nombre": "Fuchsia City",
+  "propias": 5,
+  "comunes": 7
+ },
+ "Map482": {
+  "nombre": "Fuchsia City",
+  "propias": 14,
+  "comunes": 5
+ },
+ "Map484": {
+  "nombre": "Area 2",
+  "propias": 4,
+  "comunes": 5
+ },
+ "Map485": {
+  "nombre": "Area 3",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map486": {
+  "nombre": "Area 4",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map487": {
+  "nombre": "Area 5",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map488": {
+  "nombre": "Area 5",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map489": {
+  "nombre": "Seafoam Islands.old",
+  "propias": 7,
+  "comunes": 22
+ },
+ "Map490": {
+  "nombre": "Route 3",
+  "propias": 75,
+  "comunes": 33
+ },
+ "Map491": {
+  "nombre": "Viridian Forest",
+  "propias": 49,
+  "comunes": 17
+ },
+ "Map494": {
+  "nombre": "Mt. Moon Square",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map495": {
+  "nombre": "Route 9",
+  "propias": 37,
+  "comunes": 11
+ },
+ "Map498": {
+  "nombre": "Celadon City",
+  "propias": 14,
+  "comunes": 4
+ },
+ "Map499": {
+  "nombre": "",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map500": {
+  "nombre": "Celadon City",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map501": {
+  "nombre": "Celadon City",
+  "propias": 20,
+  "comunes": 5
+ },
+ "Map502": {
+  "nombre": "Celadon City",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map503": {
+  "nombre": "Celadon City",
+  "propias": 7,
+  "comunes": 2
+ },
+ "Map504": {
+  "nombre": "Celadon City",
+  "propias": 3,
+  "comunes": 4
+ },
+ "Map505": {
+  "nombre": "Celadon Condominiums",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map506": {
+  "nombre": "Celadon Condominiums",
+  "propias": 25,
+  "comunes": 3
+ },
+ "Map507": {
+  "nombre": "Celadon Condominiums",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map509": {
+  "nombre": "Celadon Condominiums",
+  "propias": 23,
+  "comunes": 2
+ },
+ "Map510": {
+  "nombre": "Game Corner",
+  "propias": 26,
+  "comunes": 2
+ },
+ "Map511": {
+  "nombre": "Gate",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map513": {
+  "nombre": "Rock Tunnel",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map514": {
+  "nombre": "Celadon Dpt. Store",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map515": {
+  "nombre": "Mt. Moon Square",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map517": {
+  "nombre": "Route 18",
+  "propias": 24,
+  "comunes": 10
+ },
+ "Map518": {
+  "nombre": "Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map519": {
+  "nombre": "Azalea Town",
+  "propias": 13,
+  "comunes": 0
+ },
+ "Map520": {
+  "nombre": "New Bark Town",
+  "propias": 50,
+  "comunes": 17
+ },
+ "Map521": {
+  "nombre": "New Bark Town",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map522": {
+  "nombre": "Sprout Tower",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map523": {
+  "nombre": "Waterfall Cave",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map524": {
+  "nombre": "Goldenrod City Gym",
+  "propias": 43,
+  "comunes": 3
+ },
+ "Map526": {
+  "nombre": "Knot Island",
+  "propias": 9,
+  "comunes": 0
+ },
+ "Map527": {
+  "nombre": "Knot Island Harbor",
+  "propias": 6,
+  "comunes": 10
+ },
+ "Map528": {
+  "nombre": "Treasure Beach",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map530": {
+  "nombre": "Pokemon Center",
+  "propias": 0,
+  "comunes": 13
+ },
+ "Map531": {
+  "nombre": "Pinkan Forest",
+  "propias": 29,
+  "comunes": 10
+ },
+ "Map532": {
+  "nombre": "Pokémon Center",
+  "propias": 35,
+  "comunes": 22
+ },
+ "Map533": {
+  "nombre": "Knot Island",
+  "propias": 26,
+  "comunes": 9
+ },
+ "Map534": {
+  "nombre": "",
+  "propias": 27,
+  "comunes": 7
+ },
+ "Map535": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map536": {
+  "nombre": "Sprout Tower",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map537": {
+  "nombre": "Sprout Tower",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map538": {
+  "nombre": "Sprout Tower",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map539": {
+  "nombre": "Sprout Tower",
+  "propias": 2,
+  "comunes": 2
+ },
+ "Map540": {
+  "nombre": "Route 30",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map541": {
+  "nombre": "Blackthorn City",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map542": {
+  "nombre": "Celadon City Gym",
+  "propias": 8,
+  "comunes": 40
+ },
+ "Map544": {
+  "nombre": "Cerulean Cave WTF",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map545": {
+  "nombre": "Cherrygrove City",
+  "propias": 6,
+  "comunes": 25
+ },
+ "Map546": {
+  "nombre": "Fighting Arena",
+  "propias": 105,
+  "comunes": 16
+ },
+ "Map547": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 3
+ },
+ "Map548": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 6
+ },
+ "Map549": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map550": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 4
+ },
+ "Map551": {
+  "nombre": "Oak's Lab _Johto",
+  "propias": 0,
+  "comunes": 89
+ },
+ "Map552": {
+  "nombre": "Oak's Lab _Hoenn",
+  "propias": 3,
+  "comunes": 86
+ },
+ "Map554": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map556": {
+  "nombre": "Pokemon Tower F3",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map559": {
+  "nombre": "Kindle Road",
+  "propias": 33,
+  "comunes": 11
+ },
+ "Map560": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map561": {
+  "nombre": "Mt. Ember",
+  "propias": 32,
+  "comunes": 10
+ },
+ "Map562": {
+  "nombre": "Boon Island",
+  "propias": 34,
+  "comunes": 24
+ },
+ "Map563": {
+  "nombre": "Kin Island",
+  "propias": 17,
+  "comunes": 1
+ },
+ "Map564": {
+  "nombre": "Brine Road",
+  "propias": 28,
+  "comunes": 3
+ },
+ "Map565": {
+  "nombre": "Kin Hotel",
+  "propias": 32,
+  "comunes": 15
+ },
+ "Map567": {
+  "nombre": "Pokémon Center",
+  "propias": 17,
+  "comunes": 19
+ },
+ "Map568": {
+  "nombre": "Pokémon Center",
+  "propias": 6,
+  "comunes": 19
+ },
+ "Map569": {
+  "nombre": "Ruby Chamber",
+  "propias": 19,
+  "comunes": 4
+ },
+ "Map570": {
+  "nombre": "Deep Sea",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map571": {
+  "nombre": "",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map572": {
+  "nombre": "",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map574": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map575": {
+  "nombre": "Ecruteak Hotel",
+  "propias": 11,
+  "comunes": 16
+ },
+ "Map576": {
+  "nombre": "Ecruteak Hotel",
+  "propias": 5,
+  "comunes": 6
+ },
+ "Map577": {
+  "nombre": "Pokémon Center",
+  "propias": 5,
+  "comunes": 13
+ },
+ "Map578": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map579": {
+  "nombre": "Ecruteak City",
+  "propias": 44,
+  "comunes": 0
+ },
+ "Map580": {
+  "nombre": "Route 42",
+  "propias": 13,
+  "comunes": 6
+ },
+ "Map582": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map583": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map584": {
+  "nombre": "Ecruteak City",
+  "propias": 8,
+  "comunes": 0
+ },
+ "Map586": {
+  "nombre": "Route 37",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map587": {
+  "nombre": "Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map588": {
+  "nombre": "Sapphire Cave",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map589": {
+  "nombre": "Sinjoh ruins",
+  "propias": 10,
+  "comunes": 0
+ },
+ "Map590": {
+  "nombre": "Sinjoh Ruins",
+  "propias": 17,
+  "comunes": 3
+ },
+ "Map591": {
+  "nombre": "Sinjoh Ruins",
+  "propias": 22,
+  "comunes": 0
+ },
+ "Map592": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 28
+ },
+ "Map593": {
+  "nombre": "Oak's Lab _Sinnoh",
+  "propias": 0,
+  "comunes": 89
+ },
+ "Map596": {
+  "nombre": "Sky Pillar",
+  "propias": 2,
+  "comunes": 5
+ },
+ "Map598": {
+  "nombre": "Boon Island Harbor",
+  "propias": 2,
+  "comunes": 15
+ },
+ "Map599": {
+  "nombre": "Kin Island Harbor",
+  "propias": 15,
+  "comunes": 9
+ },
+ "Map600": {
+  "nombre": "Bond Bridge",
+  "propias": 41,
+  "comunes": 15
+ },
+ "Map601": {
+  "nombre": "",
+  "propias": 3,
+  "comunes": 13
+ },
+ "Map602": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map603": {
+  "nombre": "Chrono Island",
+  "propias": 27,
+  "comunes": 16
+ },
+ "Map604": {
+  "nombre": "Pokémon Center",
+  "propias": 3,
+  "comunes": 19
+ },
+ "Map605": {
+  "nombre": "Chrono Island Harbor",
+  "propias": 14,
+  "comunes": 10
+ },
+ "Map606": {
+  "nombre": "Underwater",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map607": {
+  "nombre": "Birth Island",
+  "propias": 1,
+  "comunes": 4
+ },
+ "Map608": {
+  "nombre": "Ember Spa",
+  "propias": 11,
+  "comunes": 0
+ },
+ "Map610": {
+  "nombre": "Old Shipwreck",
+  "propias": 2,
+  "comunes": 4
+ },
+ "Map612": {
+  "nombre": "Boon Island",
+  "propias": 5,
+  "comunes": 0
+ },
+ "Map613": {
+  "nombre": "",
+  "propias": 42,
+  "comunes": 7
+ },
+ "Map614": {
+  "nombre": "",
+  "propias": 5,
+  "comunes": 2
+ },
+ "Map615": {
+  "nombre": "",
+  "propias": 5,
+  "comunes": 2
+ },
+ "Map616": {
+  "nombre": "Cinnabar Island Harbor",
+  "propias": 8,
+  "comunes": 9
+ },
+ "Map617": {
+  "nombre": "Chrono Island",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map618": {
+  "nombre": "Chrono Island",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map619": {
+  "nombre": "Berry Forest",
+  "propias": 47,
+  "comunes": 3
+ },
+ "Map621": {
+  "nombre": "P2 Laboratory",
+  "propias": 2,
+  "comunes": 4
+ },
+ "Map622": {
+  "nombre": "P2 Laboratory",
+  "propias": 12,
+  "comunes": 0
+ },
+ "Map623": {
+  "nombre": "P2 Laboratory",
+  "propias": 11,
+  "comunes": 3
+ },
+ "Map624": {
+  "nombre": "Boon Island",
+  "propias": 14,
+  "comunes": 6
+ },
+ "Map625": {
+  "nombre": "Rocket Warehouse",
+  "propias": 43,
+  "comunes": 5
+ },
+ "Map626": {
+  "nombre": "Kin Island",
+  "propias": 5,
+  "comunes": 1
+ },
+ "Map627": {
+  "nombre": "Kin Island",
+  "propias": 16,
+  "comunes": 0
+ },
+ "Map628": {
+  "nombre": "Kin Island",
+  "propias": 24,
+  "comunes": 4
+ },
+ "Map629": {
+  "nombre": "Kin Island",
+  "propias": 9,
+  "comunes": 0
+ },
+ "Map630": {
+  "nombre": "Resort Gorgeous",
+  "propias": 8,
+  "comunes": 0
+ },
+ "Map631": {
+  "nombre": "Mahogany Town",
+  "propias": 6,
+  "comunes": 7
+ },
+ "Map632": {
+  "nombre": "Pokémon Center",
+  "propias": 6,
+  "comunes": 13
+ },
+ "Map635": {
+  "nombre": "Route 43",
+  "propias": 11,
+  "comunes": 1
+ },
+ "Map636": {
+  "nombre": "Gate",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map637": {
+  "nombre": "Gate",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map638": {
+  "nombre": "Lake of Rage",
+  "propias": 31,
+  "comunes": 10
+ },
+ "Map642": {
+  "nombre": "Sky Pillar",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map643": {
+  "nombre": "Rocket Warehouse",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map644": {
+  "nombre": "Mahogany Town",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map645": {
+  "nombre": "Lake of Rage",
+  "propias": 19,
+  "comunes": 11
+ },
+ "Map646": {
+  "nombre": "Lake of Rage",
+  "propias": 8,
+  "comunes": 2
+ },
+ "Map647": {
+  "nombre": "Magogany Town Gym",
+  "propias": 27,
+  "comunes": 7
+ },
+ "Map648": {
+  "nombre": "Ecruteak City Gym",
+  "propias": 17,
+  "comunes": 6
+ },
+ "Map649": {
+  "nombre": "Bell Tower 1F",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map650": {
+  "nombre": "Bell Tower 4F",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map651": {
+  "nombre": "Bell Tower",
+  "propias": 5,
+  "comunes": 3
+ },
+ "Map652": {
+  "nombre": "Bell Tower 3F",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map653": {
+  "nombre": "Bell Tower 2F",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map656": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map659": {
+  "nombre": "Oak's Lab _Custom",
+  "propias": 6,
+  "comunes": 79
+ },
+ "Map660": {
+  "nombre": "2F",
+  "propias": 22,
+  "comunes": 6
+ },
+ "Map661": {
+  "nombre": "3F",
+  "propias": 12,
+  "comunes": 4
+ },
+ "Map662": {
+  "nombre": "4F",
+  "propias": 17,
+  "comunes": 5
+ },
+ "Map663": {
+  "nombre": "5F",
+  "propias": 22,
+  "comunes": 11
+ },
+ "Map664": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 25
+ },
+ "Map665": {
+  "nombre": "7F",
+  "propias": 27,
+  "comunes": 15
+ },
+ "Map666": {
+  "nombre": "8F",
+  "propias": 20,
+  "comunes": 12
+ },
+ "Map667": {
+  "nombre": "9F",
+  "propias": 13,
+  "comunes": 8
+ },
+ "Map668": {
+  "nombre": "10F",
+  "propias": 9,
+  "comunes": 3
+ },
+ "Map669": {
+  "nombre": "Viridian River",
+  "propias": 3,
+  "comunes": 0
+ },
+ "Map670": {
+  "nombre": "Ice Mountains",
+  "propias": 48,
+  "comunes": 8
+ },
+ "Map671": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map672": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map673": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map674": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map675": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map676": {
+  "nombre": "Ecruteak City",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map677": {
+  "nombre": "Hidden Chamber",
+  "propias": 12,
+  "comunes": 12
+ },
+ "Map678": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map679": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map680": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map681": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map682": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map683": {
+  "nombre": "Underwater",
+  "propias": 1,
+  "comunes": 5
+ },
+ "Map684": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map685": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map686": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 7
+ },
+ "Map687": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map688": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map689": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map690": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 10
+ },
+ "Map691": {
+  "nombre": "Underwater",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map692": {
+  "nombre": "Route 44",
+  "propias": 11,
+  "comunes": 3
+ },
+ "Map694": {
+  "nombre": "Ice Mountains Peak",
+  "propias": 2,
+  "comunes": 2
+ },
+ "Map695": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 10
+ },
+ "Map697": {
+  "nombre": "Burned Tower",
+  "propias": 5,
+  "comunes": 10
+ },
+ "Map698": {
+  "nombre": "Ice Cavern",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map699": {
+  "nombre": "",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map700": {
+  "nombre": "",
+  "propias": 3,
+  "comunes": 7
+ },
+ "Map701": {
+  "nombre": "Saffron Hotel",
+  "propias": 9,
+  "comunes": 7
+ },
+ "Map702": {
+  "nombre": "Saffron Hotel",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map703": {
+  "nombre": "Cinnabar Lab",
+  "propias": 10,
+  "comunes": 36
+ },
+ "Map704": {
+  "nombre": "Burned Tower",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map707": {
+  "nombre": "Unknown location",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map709": {
+  "nombre": "Cianwood City",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map710": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 45
+ },
+ "Map711": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 47
+ },
+ "Map712": {
+  "nombre": "Creepy House",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map713": {
+  "nombre": "Creepy House",
+  "propias": 2,
+  "comunes": 6
+ },
+ "Map714": {
+  "nombre": "Creepy House",
+  "propias": 0,
+  "comunes": 12
+ },
+ "Map716": {
+  "nombre": "Goldenrod City",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map717": {
+  "nombre": "Area 5",
+  "propias": 7,
+  "comunes": 0
+ },
+ "Map720": {
+  "nombre": "\\PN's Room?",
+  "propias": 4,
+  "comunes": 1
+ },
+ "Map721": {
+  "nombre": "Cinnabar Lab",
+  "propias": 4,
+  "comunes": 35
+ },
+ "Map722": {
+  "nombre": "\\PN's House?",
+  "propias": 2,
+  "comunes": 3
+ },
+ "Map723": {
+  "nombre": "Pallet Town?",
+  "propias": 2,
+  "comunes": 8
+ },
+ "Map724": {
+  "nombre": "Oak's Lab?",
+  "propias": 11,
+  "comunes": 13
+ },
+ "Map727": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map730": {
+  "nombre": "Route 38",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map731": {
+  "nombre": "Triple Battle Lounge",
+  "propias": 13,
+  "comunes": 6
+ },
+ "Map732": {
+  "nombre": "Triple Battle Lounge",
+  "propias": 64,
+  "comunes": 0
+ },
+ "Map733": {
+  "nombre": "",
+  "propias": 7,
+  "comunes": 53
+ },
+ "Map734": {
+  "nombre": "Battle Factory",
+  "propias": 25,
+  "comunes": 23
+ },
+ "Map735": {
+  "nombre": "Battle Factory",
+  "propias": 2,
+  "comunes": 12
+ },
+ "Map736": {
+  "nombre": "Battle Factory",
+  "propias": 1,
+  "comunes": 12
+ },
+ "Map737": {
+  "nombre": "Battle Factory Arena",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map739": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 42
+ },
+ "Map740": {
+  "nombre": "Oak's Lab.old",
+  "propias": 1,
+  "comunes": 97
+ },
+ "Map744": {
+  "nombre": "Radio Tower",
+  "propias": 41,
+  "comunes": 8
+ },
+ "Map745": {
+  "nombre": "Radio Tower",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map746": {
+  "nombre": "Viridian City",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map747": {
+  "nombre": "Radio Tower",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map748": {
+  "nombre": "",
+  "propias": 3,
+  "comunes": 10
+ },
+ "Map749": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 51
+ },
+ "Map750": {
+  "nombre": "",
+  "propias": 2,
+  "comunes": 46
+ },
+ "Map752": {
+  "nombre": "Mt. Ember",
+  "propias": 3,
+  "comunes": 1
+ },
+ "Map753": {
+  "nombre": "Mt. Ember",
+  "propias": 0,
+  "comunes": 6
+ },
+ "Map754": {
+  "nombre": "Mt. Ember",
+  "propias": 4,
+  "comunes": 3
+ },
+ "Map755": {
+  "nombre": "Mt. Ember",
+  "propias": 51,
+  "comunes": 6
+ },
+ "Map756": {
+  "nombre": "Mt. Ember",
+  "propias": 4,
+  "comunes": 3
+ },
+ "Map757": {
+  "nombre": "11F",
+  "propias": 11,
+  "comunes": 37
+ },
+ "Map758": {
+  "nombre": "6F",
+  "propias": 28,
+  "comunes": 22
+ },
+ "Map759": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 25
+ },
+ "Map760": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 26
+ },
+ "Map761": {
+  "nombre": "Cinnabar Island Harbor",
+  "propias": 15,
+  "comunes": 10
+ },
+ "Map763": {
+  "nombre": "Contest Hall",
+  "propias": 4,
+  "comunes": 0
+ },
+ "Map765": {
+  "nombre": "Knot Island",
+  "propias": 10,
+  "comunes": 20
+ },
+ "Map766": {
+  "nombre": "Boon Island",
+  "propias": 4,
+  "comunes": 10
+ },
+ "Map768": {
+  "nombre": "Celadon Café",
+  "propias": 0,
+  "comunes": 27
+ },
+ "Map770": {
+  "nombre": "Pokémon Center",
+  "propias": 4,
+  "comunes": 26
+ },
+ "Map771": {
+  "nombre": "Celadon City",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map772": {
+  "nombre": "Saffron City",
+  "propias": 0,
+  "comunes": 5
+ },
+ "Map778": {
+  "nombre": "Mt Silver",
+  "propias": 2,
+  "comunes": 11
+ },
+ "Map782": {
+  "nombre": "Mt. Silver",
+  "propias": 14,
+  "comunes": 1
+ },
+ "Map783": {
+  "nombre": "Mt. Silver Summit",
+  "propias": 8,
+  "comunes": 4
+ },
+ "Map784": {
+  "nombre": "Mt. Silver Summit (Future)",
+  "propias": 1,
+  "comunes": 1
+ },
+ "Map785": {
+  "nombre": "Power Plant.old",
+  "propias": 8,
+  "comunes": 24
+ },
+ "Map786": {
+  "nombre": "Prize Exchange",
+  "propias": 9,
+  "comunes": 9
+ },
+ "Map787": {
+  "nombre": "Battle Tower",
+  "propias": 11,
+  "comunes": 23
+ },
+ "Map788": {
+  "nombre": "Art Gallery",
+  "propias": 41,
+  "comunes": 6
+ },
+ "Map789": {
+  "nombre": "Battle Tower Arena",
+  "propias": 3,
+  "comunes": 8
+ },
+ "Map797": {
+  "nombre": "Unknown location",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map798": {
+  "nombre": "Unknown location",
+  "propias": 0,
+  "comunes": 4
+ },
+ "Map799": {
+  "nombre": "Debug Arena",
+  "propias": 2,
+  "comunes": 33
+ },
+ "Map802": {
+  "nombre": "Mt. Moon",
+  "propias": 2,
+  "comunes": 0
+ },
+ "Map803": {
+  "nombre": "Saffron City",
+  "propias": 25,
+  "comunes": 2
+ },
+ "Map804": {
+  "nombre": "Safari Zone Gate",
+  "propias": 6,
+  "comunes": 0
+ },
+ "Map805": {
+  "nombre": "Waterfall Cave",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map806": {
+  "nombre": "Old Shipwreck",
+  "propias": 1,
+  "comunes": 0
+ },
+ "Map807": {
+  "nombre": "11F",
+  "propias": 2,
+  "comunes": 26
+ },
+ "Map808": {
+  "nombre": "Seafoam Islands B1",
+  "propias": 2,
+  "comunes": 17
+ },
+ "Map809": {
+  "nombre": "Creepy House_backup",
+  "propias": 0,
+  "comunes": 12
+ },
+ "Map810": {
+  "nombre": "Sealed Chamber",
+  "propias": 1,
+  "comunes": 10
+ },
+ "Map811": {
+  "nombre": "Submerged Temple",
+  "propias": 4,
+  "comunes": 3
+ },
+ "Map813": {
+  "nombre": "Sealed Chamber",
+  "propias": 0,
+  "comunes": 10
+ },
+ "Map814": {
+  "nombre": "Sealed Chamber",
+  "propias": 0,
+  "comunes": 8
+ },
+ "Map816": {
+  "nombre": "Dressing Room",
+  "propias": 5,
+  "comunes": 13
+ },
+ "Map819": {
+  "nombre": "Halfmoon Island",
+  "propias": 8,
+  "comunes": 6
+ },
+ "Map820": {
+  "nombre": "Route 39",
+  "propias": 0,
+  "comunes": 2
+ },
+ "Map821": {
+  "nombre": "Newmoon Island",
+  "propias": 4,
+  "comunes": 17
+ },
+ "Map822": {
+  "nombre": "Moonlit Forest",
+  "propias": 0,
+  "comunes": 1
+ },
+ "Map823": {
+  "nombre": "Fullmoon Island",
+  "propias": 11,
+  "comunes": 4
+ },
+ "Map824": {
+  "nombre": "Moonlit Forest",
+  "propias": 16,
+  "comunes": 1
+ },
+ "Map825": {
+  "nombre": "Saffron Bar",
+  "propias": 56,
+  "comunes": 11
+ },
+ "Map826": {
+  "nombre": "Oricorio Clearing",
+  "propias": 12,
+  "comunes": 2
+ },
+ "Map827": {
+  "nombre": "Mt. Moon Summit",
+  "propias": 4,
+  "comunes": 6
+ },
+ "Map828": {
+  "nombre": "Mt. Moon Observatory",
+  "propias": 17,
+  "comunes": 2
+ },
+ "Map829": {
+  "nombre": "Saffron Bar",
+  "propias": 34,
+  "comunes": 10
+ },
+ "Map830": {
+  "nombre": "Nightsky",
+  "propias": 1,
+  "comunes": 4
+ },
+ "Map831": {
+  "nombre": "Nightsky",
+  "propias": 0,
+  "comunes": 3
+ },
+ "Map832": {
+  "nombre": "Ecruteak City",
+  "propias": 4,
+  "comunes": 2
+ },
+ "Map833": {
+  "nombre": "Dressing room",
+  "propias": 7,
+  "comunes": 7
+ },
+ "Map834": {
+  "nombre": "PokeMart (Olivine)",
+  "propias": 5,
+  "comunes": 14
+ },
+ "Map835": {
+  "nombre": "Newmoon Island",
+  "propias": 4,
+  "comunes": 17
+ },
+ "Map836": {
+  "nombre": "Route 39",
+  "propias": 3,
+  "comunes": 2
+ },
+ "Map838": {
+  "nombre": "Elevator",
+  "propias": 2,
+  "comunes": 1
+ },
+ "Map845": {
+  "nombre": "Hotel",
+  "propias": 1,
+  "comunes": 12
+ },
+ "Map847": {
+  "nombre": "Oak's Lab_backup",
+  "propias": 3,
+  "comunes": 151
+ },
+ "Map848": {
+  "nombre": "",
+  "propias": 1,
+  "comunes": 2
+ },
+ "Map849": {
+  "nombre": "",
+  "propias": 0,
+  "comunes": 1
+ }
+}

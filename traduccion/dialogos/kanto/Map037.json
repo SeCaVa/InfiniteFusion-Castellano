@@ -1,0 +1,21 @@
+{
+ "There's a HM that someone threw away... Better get going!": "Hay una MO que alguien tiró... ¡Será mejor que me vaya!",
+ "Uh...\\nOh, yes, I'm the Move Deleter.": "Eh...\\nOh, sí, soy el Eliminador de Movimientos.",
+ "Pokémon can forget any move when they learn a new one, even HMs.": "Los Pokémon pueden olvidar cualquier movimiento al aprender uno nuevo, incluso las MO.",
+ "But if you want your Pokémon to forget a move for another reason, I can do that for you.": "Pero si quieres que tu Pokémon olvide un movimiento por otro motivo, puedo hacerlo.",
+ "Would you like me to make your Pokémon forget a move?": "¿Quieres que haga que tu Pokémon olvide un movimiento?",
+ "The weather forecast is on tv...": "Están dando el pronóstico del tiempo en la tele...",
+ "It's going to be fairly warm!": "¡Va a hacer bastante calor!",
+ "\\bUh...\\nOh, yes, I'm the Move Deleter.": "\\bEh...\\nOh, sí, soy el Eliminador de Movimientos.",
+ "\\bI can make Pokémon forget their moves.": "\\bPuedo hacer que los Pokémon olviden sus movimientos.",
+ "\\bWould you like me to do that?": "\\b¿Quieres que lo haga?",
+ "\\bWhich Pokémon should forget a move?": "\\b¿Qué Pokémon debe olvidar un movimiento?",
+ "\\bCome again if there are moves that need to be forgotten.": "\\bVuelve si hay movimientos que necesiten ser olvidados.",
+ "\\bWhat? No Egg should know any moves.": "\\b¿Qué? Un Huevo no debería saber movimientos.",
+ "\\bWhat? I can't make a Shadow Pokémon forget a move.": "\\b¿Qué? No puedo hacer que un Pokémon Oscuro olvide un movimiento.",
+ "\\b\\v[3] seems to know only one move...": "\\b\\v[3] parece saber solo un movimiento...",
+ "\\bWhich move should be forgotten?": "\\b¿Qué movimiento debe olvidarse?",
+ "\\bHm! \\v[3]'s \\v[4]? That move should be forgotten?": "\\b¡Hm! ¿\\v[4] de \\v[3]? ¿Ese movimiento debe olvidarse?",
+ "\\bIt worked to perfection!": "\\b¡Funcionó a la perfección!",
+ "\\b\\v[3] has forgotten \\v[4] completely.": "\\b\\v[3] ha olvidado \\v[4] por completo."
+}

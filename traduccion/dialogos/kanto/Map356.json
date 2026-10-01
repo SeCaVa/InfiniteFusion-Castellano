@@ -1,0 +1,22 @@
+{
+ "\\V[1] switched to the Sensu Style": "\\V[1] cambió al Estilo Sensu",
+ "\\V[1] switched to the Pom-Pom Style": "\\V[1] cambió al Estilo Pom-Pom",
+ "Obtain specific outfit?": "¿Obtener atuendo específico?",
+ "I am the triple fusion generator. This is an experimental feature.": "Soy el generador de triple fusión. Una función experimental.",
+ "Select 3 Pokémon and I'll try to combine them.": "Elige 3 Pokémon e intentaré combinarlos.",
+ "\\V[1] switched to the Pa'u Style": "\\V[1] cambió al Estilo Pa'u",
+ "\\V[1] switched to the Baile Style": "\\V[1] cambió al Estilo Baile",
+ "custom sprites battle m8": "sprites personalizados combate colega",
+ "Hello, would you like to learn how to use the DEBUG mode?": "Hola, ¿quieres aprender a usar el modo debug?",
+ "When DEBUG mode is activated, you can hold CTRL to walk anywhere or to skip any battles.": "Con el modo debug activo, mantén CTRL para andar por cualquier sitio o saltarte cualquier combate.",
+ "You can also press F9 to bring up the Debug menu.": "También puedes pulsar F9 para abrir el menú Debug.",
+ "You can select any option in the menu. Be careful however, since some of these options can probably crash your game or ruin your savefile indefinitely.": "Puedes seleccionar cualquier opción del menú. Pero ten cuidado, ya que algunas de estas opciones pueden hacer que el juego se cuelgue o estropear tu partida guardada permanentemente.",
+ "It is wise to make a backup of your savefile before exploring the various options of the Debug menu.": "Es aconsejable hacer una copia de seguridad de tu partida guardada antes de explorar las distintas opciones del menú de depuración.",
+ "You can talk to my colleague if you need help creating a backup file.": "Habla con mi colega si necesitas crear una copia de seguridad.",
+ "\\C[3]Do you want me to take you back to Celadon City?": "\\C[3]¿Quieres que te lleve de vuelta a Ciudad Azulona?",
+ "Ah! Can you feel the energy in here? The rain brings out the power of \\V[2]-type Pokémon!": "¡Ah! ¿Sientes la energía? ¡La lluvia realza a los Pokémon tipo \\V[2]!",
+ "I'm all dried up!": "¡Me he secado!",
+ "Clothes": "Ropa",
+ "Hat": "Gorra",
+ "Ok": "Vale"
+}

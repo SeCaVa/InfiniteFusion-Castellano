@@ -1,0 +1,9 @@
+{
+ "Do you know about \\C[1]Metal Powder\\C[0]?": "¿Conoces el \\C[1]Polvo Metálico\\C[0]?",
+ "It's a rare powder that can sometimes be found on wild Ditto.": "Es un polvo raro que a veces se encuentra en Ditto salvajes.",
+ "If you bring me some, I could smelt it into a \\C[1]Metal Coat\\C[0] for you.": "Si me traes un poco, podría fundirlo en un \\C[1]Revest. Metálico\\C[0] para ti.",
+ "If you bring me some more Metal Powder, I can smelt it into a \\C[1]Metal Coat\\C[0] for you.": "Si me traes más Polvo Metálico, puedo fundirlo en un \\C[1]Revest. Metálico\\C[0] para ti.",
+ "\\GSmelt a \\C[1]Metal Powder\\C[0] into a \\C[1]Metal Coat\\C[0] for $\\V[1]?": "\\G¿Fundir un \\C[1]Polvo Metálico\\C[0] en un \\C[1]Revest. Metálico\\C[0] por $\\V[1]?",
+ "\\G\\PN paid $\\V[1]": "\\G\\PN pagó $\\V[1]",
+ "Here you go! One \\C[1]Metal Coat\\C[0], fresh out of the oven!": "¡Aquí tienes! ¡Un \\C[1]Revest. Metálico\\C[0] recién salido del horno!"
+}

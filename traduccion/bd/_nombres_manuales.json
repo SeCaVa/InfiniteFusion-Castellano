@@ -1,0 +1,25 @@
+{
+ "bd/objetos": {
+  "Racing Bicycle": "Bici Veloz",
+  "unknown_item": "objeto_desconocido",
+  "Tequila": "Tequila",
+  "Pizza": "Pizza",
+  "Unknown item": "Objeto desconocido",
+  "Necrozium": "Necrozium",
+  "MMMMemorabilia": "Recuerdos MMMM",
+  "Exp. Candy": "Caramelo Exp.",
+  "Seaweed": "Algas",
+  "Resoli Berry": "Baya Hibis",
+  "Spray Can": "Espray",
+  "Spawner": "Generador",
+  "Present": "Regalo",
+  "Thing": "Cosa",
+  "HM11": "MO11",
+  "Comfy Sleeping Bag": "Saco de Dormir Cómodo",
+  "Blue Nectar": "Néctar Azul",
+  "Quest Notebook": "Cuaderno de Misiones",
+  "Team Aqua Uniform": "Uniforme del Equipo Aqua",
+  "Magma Uniform": "Uniforme del Equipo Magma",
+  "PokéNav": "PokéNav"
+ }
+}

@@ -1,0 +1,5 @@
+{
+ "Thanks for playing. Let me heal your party.": "Gracias por jugar. Déjame curar a tu equipo.",
+ "Battle number \\v[1] is next. Are you ready?\\ch[2,0,Go on,Rest,Retire,Record]": "El combate n.º \\v[1] es el siguiente. ¿List[[o|a]]?\\ch[2,0,Continuar,Descansar,Retirarse,Grabar]",
+ "Battle number \\v[1] is next. Are you ready?\\ch[2,0,Go on,Rest,Retire]": "El combate n.º \\v[1] es el siguiente. ¿List[[o|a]]?\\ch[2,0,Continuar,Descansar,Retirarse]"
+}

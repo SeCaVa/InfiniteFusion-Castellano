@@ -1,0 +1,20 @@
+{
+ "Thank you for using the Individual Values Analyser!": "¡Gracias por usar el Analizador de Valores Individuales!",
+ "\\GPerform an IV analysis for $1000?": "\\G¿Hacer análisis de IV por 1000$?",
+ "\\G\\PN inserted $1000.": "\\G\\PN insertó 1000$.",
+ "\\C[7]computing...": "\\C[7]calculando...",
+ "\\C[7]Your analysis is ready!": "\\C[7]¡Tu análisis está listo!",
+ "\\C[7]Here are the results of the analysis for \\V[2]:": "\\C[7]Aquí los resultados del análisis de \\V[2]:",
+ "\\C[7]HP = \\V[5]": "\\C[7]PS = \\V[5]",
+ "\\C[7]Attack = \\V[5]": "\\C[7]Ataque = \\V[5]",
+ "\\C[7]Defense = \\V[5]": "\\C[7]Defensa = \\V[5]",
+ "\\C[7]Special Attack = \\V[5]": "\\C[7]Ataque Especial = \\V[5]",
+ "\\C[7]Special Defense = \\V[5]": "\\C[7]Defensa Especial = \\V[5]",
+ "\\C[7]Speed = \\V[5]": "\\C[7]Velocidad = \\V[5]",
+ "This machine can compute the Individual Values of your Pokémon with unprecedented precision.": "Esta máquina calcula los Valores Individuales de tus Pokémon con una precisión sin precedentes.",
+ "Science really is amazing!": "¡La ciencia es increíble!",
+ "Individual Values are the hidden values that determine a Pokémon's potential.": "Los IV son los valores ocultos que determinan el potencial de un Pokémon.",
+ "You can use this machine to calculate them accurately!": "¡Puedes usar esta máquina para calcularlos con precisión!",
+ "A Pokémon can have an Individual Value of up to 31 in any given stat.": "Un Pokémon puede tener un Valor Individual de hasta 31 en cada estadística.",
+ "But IVs aren't the only thing that can make a Pokémon good or bad, obviously!": "¡Pero los IV no son lo único que hace bueno o malo a un Pokémon!"
+}
