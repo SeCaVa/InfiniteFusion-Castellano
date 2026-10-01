@@ -17,5 +17,6 @@ python tools/lugares.py
 python tools/plurales.py
 python tools/genero.py
 python tools/sustituir.py
+python tools/corregir_incidencias_20261001.py
 python tools/generar_dat.py
 python tools/revisar.py

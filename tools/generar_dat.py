@@ -65,6 +65,16 @@ def generar(juego):
         total += len(oh)
         trad += len(h)
         mapas.append(h)
+    # El juego consulta el mapa 0 como respaldo cuando un evento reutilizado
+    # muestra el texto desde otro mapa. Incluir todas las cadenas comunes,
+    # no solo las que messages.dat enumera originalmente dentro del mapa 0.
+    if not mapas:
+        mapas.append(rm.OrderedHash())
+    if not isinstance(mapas[0], dict):
+        mapas[0] = rm.OrderedHash()
+    for k, v in comun.items():
+        if k not in mapas[0]:
+            mapas[0][k] = v
     out[0] = mapas
     stats.append(('dialogos', trad, total))
 

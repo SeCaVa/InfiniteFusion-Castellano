@@ -19,6 +19,10 @@ Cada carpeta lleva archivos de código modificados del juego. Con otra versión 
 
 ## Instalación
 
+También puedes usar el **lanzador en castellano** de [Releases](https://github.com/SeCaVa/InfiniteFusion-Castellano/releases). Descarga `PokemonInfiniteFusion-Launcher_1.1-Castellano.exe`, elige Kanto o Hoenn y una carpeta. Instala la base oficial y aplica la traducción de esta rama; al actualizar vuelve a aplicarla. Los botones conservan sus sprites y su fuente originales con rótulos españoles. Dentro del juego, elige **Español**.
+
+Las fuentes del lanzador y las instrucciones para recompilar están en [`launcher/`](launcher/README.md). El ejecutable se distribuye como adjunto de una release.
+
 1. Haz una copia de seguridad de la carpeta del juego.
 2. Copia el contenido de `kanto/` (o de `hoenn/`) dentro de la carpeta del juego y acepta reemplazar los archivos.
 3. Abre el juego y elige **Español** en el selector de idioma.

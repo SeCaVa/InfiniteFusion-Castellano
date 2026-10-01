@@ -1,0 +1,29 @@
+{
+  "runtime": "ok",
+  "tk_buttons": [
+    "launch",
+    "install",
+    "update",
+    "back",
+    "retry",
+    "open_folder"
+  ],
+  "button_style": "original sprites + Power Clear labels",
+  "button_states": [
+    "normal",
+    "selected"
+  ],
+  "ui_themes": [
+    "kanto",
+    "hoenn"
+  ],
+  "ui_states": [
+    "install",
+    "update",
+    "log",
+    "menu"
+  ],
+  "translation_repository": "https://github.com/SeCaVa/InfiniteFusion-Castellano",
+  "branch": "traduccion",
+  "network_used": false
+}

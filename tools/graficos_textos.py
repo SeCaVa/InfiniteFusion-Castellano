@@ -123,8 +123,8 @@ def aplicar(t, archivo):
     im = Image.open(origen).convert('RGBA')
     x0, y0, x1, y1 = t['region']
     letra, sombra, pts = detectar(im, t['region'], t.get('oscuro'))
-    if t.get('sombra') is False:
-        sombra = None
+    # Borrar siempre la sombra original, aunque el texto nuevo no lleve sombra.
+    sombra_nueva = sombra if t.get('sombra') is not False else None
     if t.get('izq'):
         # palabra seguida de una línea de puntos del mismo color: la palabra son las
         # columnas con 3 o más píxeles de letra (los puntos solo tienen 1 o 2)
@@ -179,7 +179,7 @@ def aplicar(t, archivo):
         cx = t.get('centro_x', (min(xs) + max(xs)) // 2)
         x = max(x0, min(cx - m.width // 2, x1 - m.width - 1))
     y = max(ys) - m.height + 1   # misma línea base
-    for dx, dy, col in (((1, 1, sombra),) if sombra else ()) + ((0, 0, letra),):
+    for dx, dy, col in (((1, 1, sombra_nueva),) if sombra_nueva else ()) + ((0, 0, letra),):
         for py in range(m.height):
             for px in range(m.width):
                 if m.getpixel((px, py)):
@@ -187,7 +187,7 @@ def aplicar(t, archivo):
     dest = os.path.join(G, DESTINO, archivo)
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     im.save(dest)
-    print(f'-> {archivo}: {t["fuente"]} {tam}, letra {letra[:3]}, sombra {sombra and sombra[:3]}')
+    print(f'-> {archivo}: {t["fuente"]} {tam}, letra {letra[:3]}, sombra {sombra_nueva and sombra_nueva[:3]}')
 
 
 def main():

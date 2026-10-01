@@ -308,7 +308,7 @@ class Window_PokemonOption < Window_DrawableCommand
   def drawItem(index, _count, rect)
     return if dont_draw_item(index)
     rect = drawCursor(index, rect)
-    optionwidth = rect.width * 9 / 20
+    optionwidth = (index == @options.length) ? rect.width : rect.width * 9 / 20
 
     optionname = (index == @options.length) ? _INTL("Confirm") : @options[index].name
 
@@ -332,7 +332,7 @@ class Window_PokemonOption < Window_DrawableCommand
     font_size = self.contents.font.size
     # Long translated names and values: narrower font so that they fit
     pbFitTextToWidth(self.contents, optionname, optionwidth - 8)
-    pbDrawShadowText(self.contents, rect.x, rect.y, optionwidth, rect.height, optionname,
+    pbDrawShadowText(self.contents, rect.x, rect.y - 4 + (font_size - self.contents.font.size) / 2, optionwidth, rect.height, optionname,
                      base_color, shadow_color)
     self.contents.font.name = font_name
     self.contents.font.size = font_size
@@ -504,7 +504,7 @@ class PokemonOption_Scene
 
   def initOptionsWindow
     width = Graphics.width
-    height = (Graphics.height - @sprites["title"].height - @sprites["textbox"].height) +32
+    height = Graphics.height - @sprites["title"].height - @sprites["textbox"].height
     optionsWindow = Window_PokemonOption.new(@PokemonOptions, 0,
                                              @sprites["title"].height,
                                              width, height)

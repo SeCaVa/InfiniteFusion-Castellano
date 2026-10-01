@@ -296,7 +296,7 @@ class PokemonBag_Scene
       pnBase, pnShadow = pnShadow, pnBase
     end
     pbDrawTextPositions(overlay,[
-      [PokemonBag.pocketNames[@bag.lastpocket],94,176,2,pnBase,pnShadow]
+      [PokemonBag.pocketNames[@bag.lastpocket],94,176,2,pnBase,pnShadow,false,172]
     ])
     # Draw slider arrows
     showslider = false
