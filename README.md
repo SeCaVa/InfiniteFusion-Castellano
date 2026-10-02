@@ -6,7 +6,7 @@ Traduce diálogos, menús, objetos, movimientos, habilidades, descripciones de P
 
 Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex y PkParaíso. Los nombres propios de Hoenn siguen Pokémon Rubí.
 
-> Estado: 960 de los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están revisados (1,45 %). Las entradas pendientes muestran el original. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Falta una prueba completa en partida. Si encuentras errores, abre una *issue*.
+> Estado: 960 de los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están revisados (1,45 %). Las entradas pendientes muestran el original. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Si encuentras errores, abre una *issue*.
 
 ## Versiones
 
