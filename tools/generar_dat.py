@@ -85,6 +85,11 @@ def generar(juego):
             continue          # sección sin textos traducibles: nil
         d = dict(dic(archivo))
         d.update(dic(f'{archivo}_{juego}'))   # ajustes solo para este juego (p. ej. nombres_hoenn)
+        if sec == 24:
+            for en, es in dic('pokedex/fusiones').items():
+                if en in d and d[en] != es:
+                    raise ValueError(f'Traducciones incompatibles para una entrada de Pokédex: {en}')
+                d[en] = es
         nombre = rm.SECCIONES.get(sec, str(sec))
         if isinstance(orig, list):
             lista = []

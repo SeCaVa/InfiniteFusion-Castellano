@@ -2,11 +2,11 @@
 
 Traducción no oficial al castellano (España) de **Pokémon Infinite Fusion**: el juego de Kanto y el de Hoenn.
 
-Incluye todos los textos del juego: diálogos, menús, objetos, movimientos, habilidades, Pokédex, entrenadores, ropa y lugares. También traduce las imágenes que llevan texto en inglés, como las etiquetas de tipo, los estados, los botones de combate y la Ficha de Entrenador.
+Traduce diálogos, menús, objetos, movimientos, habilidades, descripciones de Pokémon base, entrenadores, ropa y lugares. Las descripciones propias de fusiones se incorporan por tandas revisadas. También traduce imágenes con texto, como etiquetas de tipo, estados, botones de combate y la Ficha de Entrenador.
 
 Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex y PkParaíso. Los nombres propios de Hoenn siguen Pokémon Rubí.
 
-> Estado: los textos están traducidos casi al 100 %, pero aún no se ha probado a fondo en partida. Si encuentras errores, abre una *issue*.
+> Estado: 960 de los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están revisados (1,45 %). Las entradas pendientes muestran el original. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Falta una prueba completa en partida. Si encuentras errores, abre una *issue*.
 
 ## Versiones
 
@@ -29,7 +29,7 @@ Las fuentes del lanzador y las instrucciones para recompilar están en [`launche
 
 Cada carpeta contiene:
 
-- `Data/spanish.dat`: todos los textos.
+- `Data/spanish.dat`: textos traducidos y revisados disponibles.
 - `Data/Scripts/...`: cambios de código.
   - Activa el idioma español.
   - Elige el género gramatical según el del jugador.
@@ -43,6 +43,7 @@ Los textos están en `traduccion/` como diccionarios JSON `{"inglés": "español
 | Carpeta o archivo | Contenido |
 |---|---|
 | `bd/` | Datos del juego: Pokémon, movimientos, objetos, habilidades… |
+| `pokedex/fusiones.json` | Descripciones de fusiones revisadas, sin modificar las entradas originales ni sus autores. |
 | `dialogos/` | Diálogos, por mapa y por juego. |
 | `entrenadores/` | Clases, nombres y frases de entrenadores. |
 | `lugares/` | Mapas y lugares. |

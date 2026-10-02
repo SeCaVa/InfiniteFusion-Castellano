@@ -28,7 +28,18 @@
 | Quest Journal / Quest Notebook | Diario de Misiones / Cuaderno de Misiones | |
 | Seaweed | Algas | |
 
-## Fuentes de nombres
+## Descripciones de la Pokédex
+
+- Los gritos escritos de los Pokémon se conservan como en el original; no se adaptan fonéticamente al castellano. Por ejemplo: «¡Beeb Beehoo!».
+- Castellano de España, con voz enciclopédica clara y natural. Conservar los datos, matices, relaciones causales y cantidades del texto que muestra el juego.
+- Las entradas de fusiones son textos propios: no sustituirlas por descripciones oficiales de otras especies o versiones.
+- `POKENAME` se conserva literalmente hasta que el juego lo sustituye. Pokémon es invariable en plural.
+- Bulbo vegetal → **bulbo**; seed → **semilla**; flower bud → **capullo floral**; vine → **liana**; hive mind → **mente colectiva**. Light bulb → **bombilla**, según el contexto.
+- Los nombres oficiales de movimientos, habilidades, objetos y tipos se aplican solo cuando el texto se refiere a ellos. Una palabra común que coincida con un nombre inglés no se convierte automáticamente en una habilidad.
+- «Entrenador» y «baya» como nombres comunes se escriben en minúsculas. Los nombres propios de objetos conservan la grafía del diccionario.
+- Mantener autores y referencias a sprites. Encajar las descripciones por páginas medidas con la fuente del juego, sin suprimir frases ni detalles.
+
+## Fuentes de nombres oficiales
 
 - Lugares: `referencias/lugares_wikidex.json` (WikiDex, nombres actuales; leído con el navegador del usuario, despacio) > PokeAPI > `referencias/lugares_rojo_fuego.json` (ROM oficial de Rojo Fuego). Herramienta: `tools/lugares.py`.
 - Clases de entrenador: `referencias/clases_rojo_fuego.json` (ROM, 3.ª gen.) como respaldo; comprobar los actuales en WikiDex.

@@ -249,7 +249,7 @@ class PokemonPokedexInfo_Scene
   end
 
   def drawPageInfo(reloading = false)
-    @entry_author = nil
+    @entry_author = nil unless reloading
     pbUpdateDummyPokemon
     @sprites["background"].setBitmap("Graphics/Pictures/Pokedex/bg_info")
     overlay = @sprites["overlay"].bitmap
@@ -338,6 +338,7 @@ class PokemonPokedexInfo_Scene
   end
 
   def drawEntryText(overlay, species_data, reloading = false)
+    @entry_text = nil unless reloading
     baseColor = Color.new(88, 88, 80)
     shadow = Color.new(168, 184, 184)
     baseCustom = Color.new(88, 88, 80)
@@ -350,7 +351,12 @@ class PokemonPokedexInfo_Scene
     end
 
     if species_data.is_fusion
-      customEntry, entryAuthor = getCustomEntryText(species_data)
+      # Keep the same description and credit when turning its pages.
+      if reloading && @entry_text
+        customEntry, entryAuthor = @entry_text, @entry_author
+      else
+        customEntry, entryAuthor = getCustomEntryText(species_data)
+      end
       if customEntry
         entryText = customEntry
         @entry_text = entryText
@@ -372,9 +378,8 @@ class PokemonPokedexInfo_Scene
       shadowColor = shadow
     end
 
-    max_chars_per_page = 150
-    pages = splitTextIntoPages(entryText, max_chars_per_page)
-    @entry_page = 0 if !@entry_page || pages.length == 1
+    pages = splitTextIntoPages(entryText)
+    @entry_page = (@entry_page || 0) % pages.length
     displayedText = pages[@entry_page]
     if pages.length > 1
       page_indicator_text = "#{@entry_page + 1}/#{pages.length}"
@@ -386,23 +391,39 @@ class PokemonPokedexInfo_Scene
                displayedText, baseColor, shadowColor)
   end
 
-  def splitTextIntoPages(text, max_chars_per_page)
-    words = text.split
-    pages = []
-    current_page = ""
-
-    words.each do |word|
-      if current_page.length + word.length + 1 > max_chars_per_page
-        pages << current_page.strip
-        current_page = word
+  def splitTextIntoPages(text)
+    # Measure with the actual overlay font; reserve the fourth line for paging.
+    bitmap = @sprites["overlay"].bitmap
+    max_width = Graphics.width - 88
+    lines = []
+    current_line = ""
+    text.split.each do |word|
+      candidate = current_line.empty? ? word : current_line + " " + word
+      if !current_line.empty? && bitmap.text_size(candidate).width > max_width
+        lines << current_line
+        current_line = word
       else
-        current_page += " " unless current_page.empty?
-        current_page += word
+        current_line = candidate
+      end
+      # An unusually long unbroken word must not overflow the text panel.
+      if bitmap.text_size(current_line).width > max_width
+        fragment = ""
+        current_line.each_char do |char|
+          if !fragment.empty? && bitmap.text_size(fragment + char).width > max_width
+            lines << fragment
+            fragment = char
+          else
+            fragment += char
+          end
+        end
+        current_line = fragment
       end
     end
-
-    pages << current_page.strip unless current_page.empty?
-    pages
+    lines << current_line unless current_line.empty?
+    pages = lines.each_slice(3).map { |page| page.join("\n") }
+    pages = [""] if pages.empty?
+    @entry_pages_count = pages.length
+    return pages
   end
 
   def reloadDexEntry()
@@ -413,7 +434,7 @@ class PokemonPokedexInfo_Scene
 
   def changeEntryPage()
     pbSEPlay("GUI sel cursor")
-    @entry_page = @entry_page == 1 ? 0 : 1
+    @entry_page = ((@entry_page || 0) + 1) % (@entry_pages_count || 1)
     reloadDexEntry
   end
 
@@ -447,7 +468,16 @@ class PokemonPokedexInfo_Scene
 
     entries = parsed_data.select { |entry| entry["sprite"] == sprite }
     if entries.any?
-      return entries.map { |entry| [entry["entry"], entry["author"]] }
+      # Translate before substituting POKENAME; preserve each original author.
+      localized = entries.select { |entry|
+        original = entry["entry"].gsub(/[[:space:]]+/, " ").strip
+        _INTL(original) != original
+      }
+      entries = localized unless localized.empty?
+      return entries.map { |entry|
+        original = entry["entry"].gsub(/[[:space:]]+/, " ").strip
+        [_INTL(original), entry["author"]]
+      }
     else
       echoln "No custom entry found for sprite " + sprite.to_s
       return nil
