@@ -19,5 +19,7 @@ python tools/genero.py
 python tools/sustituir.py
 python tools/corregir_incidencias_20261001.py
 python tools/aplicar_pokedex_fusiones.py
+python tools/concordancia_objetos.py
+python tools/ajustar_descripciones_mochila.py
 python tools/generar_dat.py
 python tools/revisar.py

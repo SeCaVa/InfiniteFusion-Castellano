@@ -53,3 +53,9 @@
 
 - Personajes de Hoenn (Steven → Máximo…), líderes, Alto Mando, Equipo Magma/Aqua.
 - Clases de entrenador actuales (Camper, Picnicker, Beauty…): la base mezcla nombres antiguos y nuevos.
+
+## Concordancia en diálogos y objetos
+
+- El género de quien habla se comprueba con el personaje y su sprite; las marcas del jugador solo se usan cuando la frase se refiere al jugador. Los eventos de conversación pueden señalar a otro NPC.
+- Una frase compartida por NPC de distintos géneros puede usar una redacción neutra que conserve su significado.
+- Los artículos de objetos dependen del nombre: la Punta ADN, las Puntas ADN, el Agua Fresca, esta Agua Fresca, las Gafas Elegidas y los Restos. El género del jugador no cambia el del objeto.

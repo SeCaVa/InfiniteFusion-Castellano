@@ -132,6 +132,74 @@ end
 #===============================================================================
 # Bag visuals
 #===============================================================================
+
+# BEGIN BAG DESCRIPTION PAGES
+class BagDescriptionSprite < BitmapSprite
+  attr_reader :text
+
+  def self.newWithSize(text, x, y, width, height, viewport = nil)
+    sprite = self.new(width, height, viewport)
+    sprite.x, sprite.y = x, y
+    sprite.text = text
+    return sprite
+  end
+
+  def baseColor=(color); @baseColor = color; refresh; end
+  def shadowColor=(color); @shadowColor = color; refresh; end
+  def windowskin=(skin); end
+
+  def text=(value)
+    return if @text == value
+    @text = value
+    @page = 0
+    @elapsed = 0
+    pbSetSystemFont(self.bitmap)
+    chunks = getLineBrokenChunks(self.bitmap, value, self.bitmap.width - 4, nil, true)
+    @line_height = 32
+    @paged = chunks.any? { |chunk| chunk[2] >= 96 }
+    if @paged
+      self.bitmap.font.size = 25
+      @line_height = 28
+      chunks = getLineBrokenChunks(self.bitmap, value, self.bitmap.width - 4, nil, true)
+    end
+    lines = chunks.group_by { |chunk| chunk[2] / 32 }.values
+    @pages = lines.each_slice(3).to_a
+    @pages = [[]] if @pages.empty?
+    refresh
+  end
+
+  def refresh
+    return if !@pages || !@baseColor || !@shadowColor
+    self.bitmap.clear
+    @pages[@page].each_with_index do |line, i|
+      line.each do |chunk|
+        pbDrawShadowText(self.bitmap, chunk[1], i * @line_height,
+                         chunk[3] + 4, @line_height, chunk[0], @baseColor, @shadowColor)
+      end
+    end
+    if @pages.length > 1
+      size = self.bitmap.font.size
+      self.bitmap.font.size = 16
+      self.bitmap.font.color = @baseColor
+      self.bitmap.draw_text(0, 84, self.bitmap.width - 4, 16,
+                            "#{@page + 1}/#{@pages.length}", 2)
+      self.bitmap.font.size = size
+    end
+  end
+
+  def update
+    super
+    return if !self.visible || !@pages || @pages.length <= 1
+    @elapsed += 1
+    if @elapsed >= Graphics.frame_rate * 7
+      @elapsed = 0
+      @page = (@page + 1) % @pages.length
+      refresh
+    end
+  end
+end
+# END BAG DESCRIPTION PAGES
+
 class PokemonBag_Scene
   ITEMLISTBASECOLOR     = Color.new(88,88,80)
   ITEMLISTSHADOWCOLOR   = Color.new(168,184,184)
@@ -205,8 +273,8 @@ class PokemonBag_Scene
     @sprites["itemlist"].baseColor   = ITEMLISTBASECOLOR
     @sprites["itemlist"].shadowColor = ITEMLISTSHADOWCOLOR
     @sprites["itemicon"] = ItemIconSprite.new(48,Graphics.height-48,nil,@viewport)
-    @sprites["itemtext"] = Window_UnformattedTextPokemon.newWithSize("",
-       72, 270, Graphics.width - 72 - 24, 128, @viewport)
+    @sprites["itemtext"] = BagDescriptionSprite.newWithSize("",
+       88, 284, Graphics.width - 88 - 20, Graphics.height - 284, @viewport)
     @sprites["itemtext"].baseColor   = ITEMTEXTBASECOLOR
     @sprites["itemtext"].shadowColor = ITEMTEXTSHADOWCOLOR
     @sprites["itemtext"].visible     = true
