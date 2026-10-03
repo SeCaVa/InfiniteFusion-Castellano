@@ -1,24 +1,20 @@
-Lanzador 1.1 en castellano para Pokémon Infinite Fusion (Kanto y Hoenn), con los sprites, iconos y fuente originales de los botones.
+Actualización del lanzador 1.1 en castellano para Pokémon Infinite Fusion (Kanto y Hoenn).
+
+### Novedades
+
+- En cada instalación o actualización, comprueba la última revisión de la rama `traduccion` y descarga ese paquete exacto. Evita reutilizar un ZIP antiguo de la rama y muestra la revisión aplicada.
+- Descarga la presentación de SeCaVa: eclipse dorado, créditos y jingle, después de la imagen de carga y antes de la cinemática original. Incluye los ajustes de separación y altura del nombre.
+- La traducción incorpora 3040 de los 66.093 textos distintos de fusiones revisados (4,60 %). Las entradas pendientes conservan el original y los gritos escritos de los Pokémon se mantienen.
+- Conserva las correcciones de fichas, mochila, Pokédex y combate ya publicadas, y los sprites y la fuente originales de los botones del lanzador.
 
 ### Uso
 
-1. Descarga `PokemonInfiniteFusion-Launcher_1.1-Castellano.exe` de los adjuntos de esta release.
-2. Ábrelo, elige Kanto o Hoenn y una carpeta de instalación.
-3. **Instalar** obtiene la base oficial y aplica el castellano de `SeCaVa/InfiniteFusion-Castellano`, rama `traduccion`. **Actualizar** vuelve a aplicar el idioma después de actualizar la base oficial.
-4. Dentro del juego, selecciona **Español**. Si ya lo tenías abierto, ciérralo completamente y vuelve a abrirlo.
+1. Descarga `PokemonInfiniteFusion-Launcher_1.1-Castellano.exe` de esta release.
+2. Elige Kanto o Hoenn y la carpeta del juego. **Instalar** descarga la base oficial y aplica la traducción; **Actualizar** vuelve a aplicar el castellano tras actualizar la base oficial.
+3. Dentro del juego, selecciona **Español**. Reinicia el juego si ya estaba abierto.
 
-### Correcciones del juego incluidas en la rama de traducción
-
-- Aviso inicial, opciones de procedencia de la descarga y título «Mensajes» en castellano.
-- Menús de sistema y sonido, textos del PC y recuadro del pelo ajustados para que quepan.
-- Texto de la gorra y etiquetas DELANTE/DETRÁS corregidos.
-- Pregunta del apodo del rival traducida y valor inicial «Azul» para nuevas partidas.
-- Respaldo global de las preguntas de elección del Pokémon inicial.
-
-Los archivos del juego corresponden a Kanto 6.8.2 y Hoenn 1.2.2. Las fuentes y las instrucciones de recompilación están en la carpeta `launcher/` de la rama `traduccion`.
+Si utilizabas un lanzador anterior, descarga este nuevo ejecutable para que también instale el gráfico y el jingle de los créditos. Las fuentes y las instrucciones de recompilación están en `launcher/`.
 
 ### Comprobaciones
 
-Arranque del ejecutable, ambos temas y los doce estados de los botones comprobados. Pruebas aisladas de descarga, selección de paquetes, instalación/actualización simulada y restauración ante fallos superadas. Correcciones y copias del idioma comprobadas. Todavía falta una instalación completa y una revisión en partida.
-
-Se conserva el lanzador oficial original como base de compilación; el adjunto es la versión modificada en castellano.
+Diagnóstico del ejecutable, ambos temas y estados de los botones, pruebas de descarga de la última revisión, selección de archivos y aplicación del idioma superadas. Escena de créditos comprobada con Ruby 3.0 y 3.1 y copia de los archivos verificada para Kanto y Hoenn.

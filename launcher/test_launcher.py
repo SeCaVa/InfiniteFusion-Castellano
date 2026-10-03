@@ -1,5 +1,6 @@
 """Pruebas aisladas: nunca llaman a Git/red ni utilizan el juego o AppData."""
 import io
+import json
 import importlib.util
 from pathlib import Path
 import sys
@@ -21,6 +22,30 @@ def archive(entries):
     return out.getvalue()
 
 class TranslationTests(unittest.TestCase):
+    def test_download_checks_latest_head_for_each_operation(self):
+        first, second = '1' * 40, '2' * 40
+        payloads = [io.BytesIO(json.dumps({'object': {'sha': first}}).encode()),
+                    io.BytesIO(archive([('kanto/Data/spanish.dat', b'first')])),
+                    io.BytesIO(json.dumps({'object': {'sha': second}}).encode()),
+                    io.BytesIO(archive([('kanto/Data/spanish.dat', b'second')]))]
+        with patch.object(es.urllib.request, 'urlopen', side_effect=payloads) as request:
+            self.assertEqual(es.download_translation('kanto', lambda _: None), [('Data/spanish.dat', b'first')])
+            self.assertEqual(es.download_translation('kanto', lambda _: None), [('Data/spanish.dat', b'second')])
+        urls = [call.args[0].full_url for call in request.call_args_list]
+        self.assertTrue(urls[0].startswith(es.LATEST_COMMIT_URL + '?t='))
+        self.assertTrue(urls[2].startswith(es.LATEST_COMMIT_URL + '?t='))
+        self.assertNotEqual(urls[0], urls[2])
+        self.assertTrue(urls[1].endswith('/' + first))
+        self.assertTrue(urls[3].endswith('/' + second))
+        for call in request.call_args_list:
+            self.assertEqual(call.args[0].get_header('Cache-control'), 'no-cache')
+
+    def test_invalid_latest_revision_stops_download(self):
+        with patch.object(es.urllib.request, 'urlopen', return_value=io.BytesIO(b'{"object":{"sha":"invalid"}}')) as request:
+            with self.assertRaises(ValueError):
+                es.download_translation('kanto', lambda _: None)
+            self.assertEqual(request.call_count, 1)
+
     def test_real_remote_packages(self):
         sample = ROOT / 'translation-sample.zip'
         if not sample.exists():
@@ -43,6 +68,16 @@ class TranslationTests(unittest.TestCase):
                     archive([('kanto/Data/Scripts/Words.rb', b'first'), ('kanto/Data/Scripts/words.rb', b'second')])):
             with self.assertRaises(ValueError):
                 es.translation_files(raw, 'kanto')
+
+    def test_intro_assets_have_exact_paths(self):
+        raw = archive([('kanto/Data/spanish.dat', b'es'),
+                       ('kanto/Graphics/Titles/SeCaVa/logo.png', b'logo'),
+                       ('kanto/Audio/ME/SeCaVa_intro.wav', b'jingle'),
+                       ('kanto/Audio/ME/other.wav', b'excluded'),
+                       ('kanto/Graphics/Titles/other.png', b'excluded')])
+        self.assertEqual(dict(es.translation_files(raw, 'kanto')), {
+            'Data/spanish.dat': b'es', 'Graphics/Titles/SeCaVa/logo.png': b'logo',
+            'Audio/ME/SeCaVa_intro.wav': b'jingle'})
 
     def test_apply_preserves_game_and_save(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as tmp:

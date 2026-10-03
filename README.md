@@ -6,7 +6,7 @@ Traduce diálogos, menús, objetos, movimientos, habilidades, descripciones de P
 
 Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex y PkParaíso. Los nombres propios de Hoenn siguen Pokémon Rubí.
 
-> Estado: 960 de los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están revisados (1,45 %). Las entradas pendientes muestran el original. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Si encuentras errores, abre una *issue*.
+> Estado: 3040 de los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están revisados (4,60 %). Las entradas pendientes muestran el original. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Si encuentras errores, abre una *issue*.
 
 ## Versiones
 
@@ -35,6 +35,7 @@ Cada carpeta contiene:
   - Elige el género gramatical según el del jugador.
   - Encaja los nombres largos en los menús de ancho fijo.
 - `Graphics/Localized/es/...`: imágenes con texto en castellano. El juego las usa solo cuando el idioma es español.
+- `Graphics/Titles/SeCaVa/logo.png` y `Audio/ME/SeCaVa_intro.wav`: presentación de la traducción con el eclipse de SeCaVa y su jingle. Aparece después de la primera imagen de carga y antes de la cinemática original; puede saltarse con los controles habituales de la portada.
 
 ## Regenerar la traducción
 

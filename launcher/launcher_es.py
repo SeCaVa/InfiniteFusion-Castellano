@@ -1,15 +1,19 @@
 """Descarga y aplica exclusivamente los archivos de idioma del fork del usuario."""
 import io
+import json
 import os
+import re
 from pathlib import Path, PurePosixPath
 import stat
 import tempfile
+import time
 import urllib.request
 import zipfile
 
 REPOSITORY = 'https://github.com/SeCaVa/InfiniteFusion-Castellano'
 BRANCH = 'traduccion'
 ARCHIVE_URL = 'https://codeload.github.com/SeCaVa/InfiniteFusion-Castellano/zip/refs/heads/traduccion'
+LATEST_COMMIT_URL = 'https://api.github.com/repos/SeCaVa/InfiniteFusion-Castellano/git/ref/heads/traduccion'
 MAX_DOWNLOAD = 64 * 1024 * 1024
 MAX_CONTENT = 128 * 1024 * 1024
 
@@ -30,6 +34,7 @@ def translation_files(raw, game):
                 raise ValueError('El paquete contiene un enlace no válido.')
             rel = PurePosixPath(*parts[2:])
             allowed = (str(rel) == 'Data/spanish.dat' or
+                       str(rel) in ('Graphics/Titles/SeCaVa/logo.png', 'Audio/ME/SeCaVa_intro.wav') or
                        (rel.parts[:2] == ('Data', 'Scripts') and rel.suffix == '.rb') or
                        (rel.parts[:3] == ('Graphics', 'Localized', 'es') and rel.suffix.lower() == '.png'))
             if not allowed:
@@ -46,14 +51,27 @@ def translation_files(raw, game):
     return files
 
 def download_translation(game, log_fn):
-    log_fn('Descargando la traducción al castellano…')
-    req = urllib.request.Request(ARCHIVE_URL, headers={'User-Agent': 'InfiniteFusion-Castellano-Launcher/1.1'})
+    log_fn('Buscando la traducción al castellano más reciente…')
+    headers = {'User-Agent': 'InfiniteFusion-Castellano-Launcher/1.1',
+               'Cache-Control': 'no-cache', 'Pragma': 'no-cache'}
+    latest = urllib.request.Request(f'{LATEST_COMMIT_URL}?t={time.time_ns()}',
+                                    headers={**headers, 'Accept': 'application/vnd.github+json'})
+    with urllib.request.urlopen(latest, timeout=30) as response:
+        metadata = response.read(1024 * 1024 + 1)
+    if len(metadata) > 1024 * 1024:
+        raise ValueError('La respuesta de GitHub supera el tamaño permitido.')
+    sha = json.loads(metadata).get('object', {}).get('sha', '')
+    if not isinstance(sha, str) or not re.fullmatch(r'[0-9a-f]{40}', sha):
+        raise ValueError('No se ha podido comprobar la última revisión de la traducción.')
+    # Fetch an immutable snapshot of the head checked above, never a cached branch ZIP.
+    archive_url = f'https://codeload.github.com/SeCaVa/InfiniteFusion-Castellano/zip/{sha}'
+    req = urllib.request.Request(archive_url, headers=headers)
     with urllib.request.urlopen(req, timeout=60) as response:
         raw = response.read(MAX_DOWNLOAD + 1)
     if len(raw) > MAX_DOWNLOAD:
         raise ValueError('La descarga de la traducción supera el tamaño permitido.')
     files = translation_files(raw, game)
-    log_fn(f'Traducción descargada y comprobada: {len(files)} archivos.')
+    log_fn(f'Traducción más reciente descargada y comprobada: {len(files)} archivos ({sha[:12]}).')
     return files
 
 def _write_atomic(path, data):

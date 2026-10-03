@@ -4,9 +4,9 @@ Abre `installation/PokemonInfiniteFusion-Launcher_1.1-Castellano.exe`, situado u
 
 Elige Kanto o Hoenn y la carpeta de instalación. **Instalar** descarga el juego oficial y aplica la traducción. **Actualizar** actualiza la base oficial y vuelve a aplicar el castellano. Dentro del juego, selecciona **Español** si no está seleccionado.
 
-La traducción se descarga de [SeCaVa/InfiniteFusion-Castellano, rama traduccion](https://github.com/SeCaVa/InfiniteFusion-Castellano/tree/traduccion). El fork contiene los archivos de idioma, por lo que la base del juego se obtiene primero de los repositorios oficiales. La versión descargada es la publicada en GitHub: los cambios que solo estén en tu carpeta local aún no se incluyen.
+La traducción se descarga de [SeCaVa/InfiniteFusion-Castellano, rama traduccion](https://github.com/SeCaVa/InfiniteFusion-Castellano/tree/traduccion). En cada instalación o actualización, el lanzador consulta la última revisión publicada y descarga su paquete exacto, evitando reutilizar un ZIP antiguo de la rama. El fork contiene los archivos de idioma, por lo que la base del juego se obtiene primero de los repositorios oficiales. Los cambios que solo estén en tu carpeta local aún no se incluyen.
 
-El paquete de idioma se descarga y comprueba antes de modificar la instalación. Si su descarga falla, la operación se detiene. Solo se aplican `Data/spanish.dat`, scripts Ruby de `Data/Scripts/` y gráficos PNG de `Graphics/Localized/es/` del juego elegido. Si falla una escritura del idioma, se restauran los archivos que esa aplicación de idioma haya tocado. Esa restauración no deshace una actualización previa de la base oficial.
+El paquete de idioma se descarga y comprueba antes de modificar la instalación. Si su descarga falla, la operación se detiene. Solo se aplican `Data/spanish.dat`, scripts Ruby de `Data/Scripts/`, gráficos PNG de `Graphics/Localized/es/` y los dos archivos de la presentación de SeCaVa: `Graphics/Titles/SeCaVa/logo.png` y `Audio/ME/SeCaVa_intro.wav`, del juego elegido. Si falla una escritura del idioma, se restauran los archivos que esa aplicación de idioma haya tocado. Esa restauración no deshace una actualización previa de la base oficial.
 
 ## Archivos para continuar el trabajo
 

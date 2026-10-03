@@ -22,5 +22,6 @@ python tools/aplicar_pokedex_fusiones.py
 python tools/concordancia_objetos.py
 python tools/ajustar_descripciones_mochila.py
 python tools/corregir_incidencias_20261003.py
+python tools/instalar_intro.py
 python tools/generar_dat.py
 python tools/revisar.py

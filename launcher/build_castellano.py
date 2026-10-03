@@ -129,7 +129,7 @@ def compile_translated(src, name, translations):
     tree = Translate(translations).visit(ast.parse(src, filename=name))
     ast.fix_missing_locations(tree)
     source = ast.unparse(tree) + '\n'
-    (ROOT / 'src' / name).write_text(source, encoding='utf-8')
+    (ROOT / 'src' / name).write_text(source, encoding='utf-8', newline='\n')
     return marshal.dumps(compile(tree, name, 'exec'))
 
 def main():
@@ -142,7 +142,7 @@ def main():
     installer = compile_translated(source_installer(), 'installer.py', translations)
     helper = (ROOT / 'launcher_es.py').read_text(encoding='utf-8')
     helper += '\nLABELS = ' + repr(translations) + '\ndef translate_label(label):\n    return LABELS.get(label, label)\n'
-    (ROOT / 'src/launcher_es.py').write_text(helper, encoding='utf-8')
+    (ROOT / 'src/launcher_es.py').write_text(helper, encoding='utf-8', newline='\n')
     helper_code = marshal.dumps(compile(helper, 'launcher_es.py', 'exec'))
     # Font rasterization needs Pillow's FreeType extension, omitted by the
     # original launcher. Keep Python and native Pillow components at one version.
@@ -203,7 +203,7 @@ def main():
               'translation_repo': 'https://github.com/SeCaVa/InfiniteFusion-Castellano',
               'translation_branch': 'traduccion', 'entries_verified': len(entries),
               'pillow_version': PIL.__version__, 'button_style': 'original sprites + Power Clear labels'}
-    (ROOT / 'build-info.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
+    (ROOT / 'build-info.json').write_text(json.dumps(report, indent=2), encoding='utf-8', newline='\n')
     print(f'Creado y verificado: {OUTPUT.name} ({len(result) / 1e6:.1f} MB)')
 
 if __name__ == '__main__':
