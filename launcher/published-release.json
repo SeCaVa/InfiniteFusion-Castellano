@@ -1,16 +1,23 @@
 {
-  "release_url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/tag/launcher-es-1.1-20261001",
-  "tag": "launcher-es-1.1-20261001",
+  "release_url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/tag/launcher-es-1.1-20261003",
+  "tag": "launcher-es-1.1-20261003",
   "source_branch": "traduccion",
-  "source_tag": "launcher-es-1.1-20261001",
-  "release_id": 401316550,
-  "exe_sha256": "b83d68ea35d630e43d0c4c558bd0babfb347e0cf6f7909736a210ca99a60fcea",
+  "source_tag": "launcher-es-1.1-20261003",
+  "source_commit": "5c33176c65add62f4a0b72b376506b07a12ac12f",
+  "release_id": 402435477,
+  "exe_sha256": "9c98b6fa2d4b4d7705d15438794b8551113f0672732f46b48acd1a874a4bb4be",
   "assets": [
     {
       "name": "PokemonInfiniteFusion-Launcher_1.1-Castellano.exe",
-      "url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/download/launcher-es-1.1-20261001/PokemonInfiniteFusion-Launcher_1.1-Castellano.exe",
-      "size": 35366062,
-      "digest": "sha256:b83d68ea35d630e43d0c4c558bd0babfb347e0cf6f7909736a210ca99a60fcea"
+      "url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/download/launcher-es-1.1-20261003/PokemonInfiniteFusion-Launcher_1.1-Castellano.exe",
+      "size": 35366817,
+      "digest": "sha256:9c98b6fa2d4b4d7705d15438794b8551113f0672732f46b48acd1a874a4bb4be"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/download/launcher-es-1.1-20261003/SHA256SUMS.txt",
+      "size": 116,
+      "digest": "sha256:3e1e5be5d7ff0ea0f36a740b1baa22f1491fc5bbf7e7602022258a196079a4a1"
     }
   ]
 }
