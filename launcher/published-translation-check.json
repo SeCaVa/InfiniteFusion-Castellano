@@ -1,5 +1,21 @@
 {
-  "kanto": 35,
-  "hoenn": 39,
-  "matches_local_files": true
+  "branch": "traduccion",
+  "head": "836ad03c1d40c35922b9c81396ac6f153fda96a6",
+  "games": {
+    "kanto": {
+      "files_verified": 46,
+      "head": "836ad03c1d40c35922b9c81396ac6f153fda96a6",
+      "spanish_dat_sha256": "27a5e4e3bcd9f404553f543ac297c0171fa8d948c5ec73c4273a1e8beabbaf7f",
+      "intro_included": true
+    },
+    "hoenn": {
+      "files_verified": 50,
+      "head": "836ad03c1d40c35922b9c81396ac6f153fda96a6",
+      "spanish_dat_sha256": "defa6cae14aa4d5373cbac45794acd431e3e6ae39673685ad2be60b4fde9308f",
+      "intro_included": true
+    }
+  },
+  "release_url": "https://github.com/SeCaVa/InfiniteFusion-Castellano/releases/tag/launcher-es-1.1-20261003",
+  "exe_sha256": "9c98b6fa2d4b4d7705d15438794b8551113f0672732f46b48acd1a874a4bb4be",
+  "packaged_code_verified": true
 }
