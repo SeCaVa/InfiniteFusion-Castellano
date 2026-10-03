@@ -51,6 +51,7 @@ HELPER = r'''
 TABLE
 
 def pbResolveItemArticles(text, args)
+  return text if !text.is_a?(String)
   return text if !text.include?("{art:")
   return text.gsub(/\{art:(\d+):(el|un|este|del|al|otro)\}/) do
     index, kind = $1.to_i, $2

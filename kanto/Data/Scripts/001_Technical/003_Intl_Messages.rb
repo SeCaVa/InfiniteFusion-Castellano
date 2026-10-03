@@ -681,6 +681,7 @@ SPANISH_ITEM_FORMS = {}
 ["Ánforas"].each { |name| SPANISH_ITEM_FORMS[name] = 7 }
 
 def pbResolveItemArticles(text, args)
+  return text if !text.is_a?(String)
   return text if !text.include?("{art:")
   return text.gsub(/\{art:(\d+):(el|un|este|del|al|otro)\}/) do
     index, kind = $1.to_i, $2
@@ -840,6 +841,35 @@ def _OUTFIT_INTL(str)
   return MessageTypes.getFromHash(MessageTypes::OutfitTexts, str)
 end
 
+# BEGIN SPANISH BATTLE REFERENCES
+# Only generated battler/team references carry this type; nicknames stay untouched.
+class SpanishBattleReference < String; end
+
+def pbResolveBattleReferences(text, args)
+  return text if !text.is_a?(String)
+  for i in 1...args.length
+    reference = args[i]
+    next if !reference.is_a?(SpanishBattleReference) || reference !~ /\A(?:[Ee]l|[Tt]u) /
+    lower = reference.sub(/\A./) { |char| char.downcase }
+    # Spanish contractions belong to the sentence, never to the nickname.
+    if lower.start_with?("el ")
+      text.gsub!(/\b([Dd]e|[Aa])\s+\{#{i}\}/) do
+        preposition = $1
+        contraction = preposition.downcase == "de" ? "del " : "al "
+        contraction = contraction.sub(/\A./) { |char| char.upcase } if preposition =~ /\A[A-Z]/
+        contraction + lower.sub(/\Ael /, "")
+      end
+    end
+    text.gsub!(/\{#{i}\}/) do
+      prefix = $`.gsub(/<[^>]*>/, "").gsub(/\\[a-z]+\[[^\]]*\]/i, "")
+      beginning = prefix =~ /\A\s*[¡¿]*\s*\z/ || prefix =~ /[.!?…]\s*[¡¿]*\s*\z/
+      beginning ? lower.sub(/\A./) { |char| char.upcase } : lower
+    end
+  end
+  return text
+end
+# END SPANISH BATTLE REFERENCES
+
 def _INTL(*arg)
   begin
     string = MessageTypes.getFromHash(MessageTypes::ScriptTexts, arg[0])
@@ -847,6 +877,7 @@ def _INTL(*arg)
     string = arg[0]
   end
   string = pbResolveItemArticles(string.clone, arg)
+  string = pbResolveBattleReferences(string, arg)
   for i in 1...arg.length
     string.gsub!(/\{#{i}\}/, "#{arg[i]}")
   end
@@ -878,6 +909,7 @@ end
 def _MAPINTL(mapid, *arg)
   string = MessageTypes.getFromMapHash(mapid, arg[0])
   string = pbResolveItemArticles(string.clone, arg)
+  string = pbResolveBattleReferences(string, arg)
   for i in 1...arg.length
     string.gsub!(/\{#{i}\}/, "#{arg[i]}")
   end

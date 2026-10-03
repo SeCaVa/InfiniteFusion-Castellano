@@ -51,7 +51,7 @@ TRABAJOS = [
          en='PRESS ANY KEY', es='PULSA CUALQUIER TECLA', fuente='power clear bold.ttf', interpolar='v'),
     dict(archivos=['Titles/intro_pressKey2.png'], region=(20, 4, 254, 22),
          en='PRESS ANY KEY TO CONTINUE', es='PULSA UNA TECLA PARA CONTINUAR', fuente='power clear bold.ttf',
-         interpolar='v'),
+         interpolar='v', compact_l=True),
     dict(archivos=['Pictures/Fusion/previewScreen_Cancel.png'], region=(70, 12, 180, 44),
          en='CANCEL', es='CANCELAR', fuente='power clear bold.ttf', oscuro=True, interpolar=True),
     dict(archivos=['Pictures/pokegearbg.png', 'Pictures/pokegearbgf.png'], region=(436, 4, 508, 24),
@@ -69,7 +69,7 @@ def luz(p):
 SIN_TILDE = str.maketrans('ÁÉÍÓÚ', 'AEIOU')
 
 
-def render(texto, fuente, tam):
+def render(texto, fuente, tam, compact_l=False):
     """Texto en mayúsculas a 1x. Las tildes se ponen a mano (dos píxeles en diagonal
     justo encima de la letra): las de estas fuentes salen sueltas y muy altas."""
     f = ImageFont.truetype(os.path.join(FUENTES, fuente), tam)
@@ -78,14 +78,7 @@ def render(texto, fuente, tam):
     d = ImageDraw.Draw(m)
     d.fontmode = '1'
     d.text((4, 4), base_txt, font=f, fill=1)
-    tope = m.getbbox()[1] if m.getbbox() else 4
-    for i, c in enumerate(texto):
-        if c in 'ÁÉÍÓÚ':
-            x0 = 4 + int(f.getlength(base_txt[:i]))
-            xc = x0 + int(f.getlength(base_txt[i])) // 2
-            m.putpixel((xc, tope - 3), 1)
-            m.putpixel((xc - 1, tope - 2), 1)
-    # línea base: fila inferior de la 'E' (solo mayúsculas): fuera los píxeles de debajo
+    # Remove pixels below the baseline before measuring visible glyphs.
     e = Image.new('1', (tam * 2, tam * 2), 0)
     de = ImageDraw.Draw(e)
     de.fontmode = '1'
@@ -94,6 +87,41 @@ def render(texto, fuente, tam):
     for y in range(base, m.height):
         for x in range(m.width):
             m.putpixel((x, y), 0)
+    if compact_l:
+        spans, start = [], None
+        for x in range(m.width):
+            ink = any(m.getpixel((x, y)) for y in range(m.height))
+            if ink and start is None:
+                start = x
+            if not ink and start is not None:
+                spans.append((start, x))
+                start = None
+        letters = base_txt.replace(' ', '')
+        assert len(spans) == len(letters), (base_txt, spans)
+        # Recompose the whole line after trimming: keep one clear column
+        # between letters, including LS and LA, and five between words.
+        composed = Image.new('1', m.size, 0)
+        cursor, glyph_index = 4, 0
+        for c in base_txt:
+            if c == ' ':
+                cursor += 4
+                continue
+            left, right = spans[glyph_index]
+            glyph_index += 1
+            if c == 'L':
+                right -= max(1, (right - left) // 4)
+            glyph = m.crop((left, 0, right, m.height))
+            assert cursor + glyph.width <= composed.width
+            composed.paste(glyph, (cursor, 0))
+            cursor += glyph.width + 1
+        m = composed
+    tope = m.getbbox()[1] if m.getbbox() else 4
+    for i, c in enumerate(texto):
+        if c in 'ÁÉÍÓÚ':
+            x0 = 4 + int(f.getlength(base_txt[:i]))
+            xc = x0 + int(f.getlength(base_txt[i])) // 2
+            m.putpixel((xc, tope - 3), 1)
+            m.putpixel((xc - 1, tope - 2), 1)
     bb = m.getbbox()
     return m.crop(bb)
 
@@ -138,7 +166,7 @@ def aplicar(t, archivo):
     tam = t.get('tam') or min(range(8, 40), key=lambda s: abs(render(t['en'], t['fuente'], s).width * e - ancho_en))
 
     def hacer(tam):
-        m = render(t['es'], t['fuente'], tam)
+        m = render(t['es'], t['fuente'], tam, t.get('compact_l', False))
         return m.resize((m.width * e, m.height * e), Image.NEAREST) if e > 1 else m
 
     m = hacer(tam)

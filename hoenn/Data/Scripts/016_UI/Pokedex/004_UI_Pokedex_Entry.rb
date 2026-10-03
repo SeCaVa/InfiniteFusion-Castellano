@@ -189,6 +189,7 @@ class PokemonPokedexInfo_Scene
       @sprites["areahighlight"].opacity = intensity
     end
     pbUpdateSpriteHash(@sprites)
+    updatePokedexCredits
   end
 
   def pbUpdateDummyPokemon
@@ -222,6 +223,7 @@ class PokemonPokedexInfo_Scene
   def drawPage(page)
     overlay = @sprites["overlay"].bitmap
     overlay.clear
+    ["sprite_credit", "entry_credit"].each { |key| @sprites[key].visible = false if @sprites[key] }
     @creditsOverlay.clear if @creditsOverlay && !@creditsOverlay.disposed?
     # Make certain sprites visible
     @sprites["infosprite"].visible = (@page == 1)
@@ -296,8 +298,8 @@ class PokemonPokedexInfo_Scene
         height_text = _INTL("{1} {2}", height_value, height_unit)
       end
       weight_text = _INTL("{1} {2}", weight_value, weight_unit)
-      textpos.push(["#{height_text}", 224, 102, 0, base, shadow])
-      textpos.push(["#{weight_text}", 224, 124, 0, base, shadow])
+      drawPokedexMeasurement(overlay, height_text, 100, base, shadow)
+      drawPokedexMeasurement(overlay, weight_text, 122, base, shadow)
 
       drawEntryText(overlay, species_data, reloading)
 
@@ -328,13 +330,76 @@ class PokemonPokedexInfo_Scene
       dex_author = _INTL("None") unless $PokemonSystem.use_generated_dex_entries
       dex_author = _INTL("Game Freak") unless getDexNumberForSpecies(@species) > NB_POKEMON
     end
-    textpos.push([_INTL("Sprite: {1}", sprite_author), 224, 156, 0, base, shadow])
-    textpos.push([_INTL("Entry:  {1}", dex_author), 224, 188, 0, base, shadow]) if $Trainer.owned?(@species)
+    drawPokedexCredit(overlay, "sprite_credit", "Sprite: {1}", sprite_author, 156, base, shadow)
+    drawPokedexCredit(overlay, "entry_credit", "Entry:  {1}", dex_author, 188, base, shadow) if $Trainer.owned?(@species)
 
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
     # Draw all images
     pbDrawImagePositions(overlay, imagepos)
+  end
+
+  # Fit measurements inside the original small panel, including the shadow.
+  def drawPokedexMeasurement(overlay, text, y, base, shadow)
+    name, size = overlay.font.name, overlay.font.size
+    begin
+      overlay.font.size = [size, 24].min
+      pbFitTextToWidth(overlay, text, 64)
+      while overlay.text_size(text).width > 64 && overlay.font.size > 16
+        overlay.font.size -= 1
+      end
+      text_y = y + 2 + (24 - overlay.font.size) / 2
+      pbDrawTextPositions(overlay, [[text, 224, text_y, 0, base, shadow]])
+    ensure
+      overlay.font.name, overlay.font.size = name, size
+    end
+  end
+
+  # Keep labels stationary. Very long credits scroll at a readable font size.
+  def drawPokedexCredit(overlay, key, template, author, y, base, shadow)
+    label = _INTL(template, "").sub(/:\s*$/, "")
+    label_width = overlay.text_size(label).width
+    colon_x = 224 + label_width
+    pbDrawTextPositions(overlay, [[label, 224, y, 0, base, shadow],
+      [":", colon_x, y + 2, 0, base, shadow]])
+    author_x = colon_x + overlay.text_size(": ").width + 2
+    available = 496 - author_x - 2
+    text = author.to_s.strip
+    name, size = overlay.font.name, overlay.font.size
+    begin
+      if overlay.text_size(text).width > available
+        overlay.font.name = MessageConfig.pbGetNarrowFontName
+        while overlay.text_size(text).width > available && overlay.font.size > 24
+          overlay.font.size -= 1
+        end
+      end
+      width = [overlay.text_size(text).width + 2, available].max
+      @sprites[key].dispose if @sprites[key]
+      sprite = BitmapSprite.new(width, 40, @viewport)
+      @sprites[key] = sprite
+      sprite.x, sprite.y = author_x, y
+      sprite.bitmap.font.name, sprite.bitmap.font.size = overlay.font.name, overlay.font.size
+      text_y = (size - overlay.font.size) / 2
+      pbDrawTextPositions(sprite.bitmap, [[text, 0, text_y, 0, base, shadow]])
+      sprite.src_rect.set(0, 0, available, 40)
+      @pokedex_credit_scroll ||= {}
+      @pokedex_credit_scroll[key] = [width - available, Graphics.frame_count]
+    ensure
+      overlay.font.name, overlay.font.size = name, size
+    end
+  end
+
+  def updatePokedexCredits
+    return if @page != 1 || !@pokedex_credit_scroll
+    @pokedex_credit_scroll.each do |key, data|
+      distance, start = data
+      next if distance <= 0 || !@sprites[key] || !@sprites[key].visible
+      elapsed = (Graphics.frame_count - start).to_f / Graphics.frame_rate
+      travel = distance / 30.0
+      phase = elapsed % (travel + 4.0)
+      offset = [[(phase - 2.0) * 30, 0].max, distance].min.to_i
+      @sprites[key].src_rect.x = offset
+    end
   end
 
   def drawEntryText(overlay, species_data, reloading = false)

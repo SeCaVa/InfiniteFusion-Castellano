@@ -93,13 +93,15 @@ class PokemonEntryScene
     @viewport=Viewport.new(0,0,Graphics.width,Graphics.height)
     @viewport.z=99999
     if USEKEYBOARD
+      entry_width = (helptext == _INTL("Enter code to redeem")) ? Graphics.width - 64 : 400 - 112
       @sprites["entry"]=Window_TextEntry_Keyboard.new(initialText,
-         0,0,400-112,96,helptext,true)
+         0,0,entry_width,96,helptext,true)
       Input.text_input = true
     else
       @sprites["entry"]=Window_TextEntry.new(initialText,0,0,400,96,helptext,true)
     end
-    @sprites["entry"].x=(Graphics.width/2)-(@sprites["entry"].width/2)+32
+    entry_offset = (helptext == _INTL("Enter code to redeem")) ? 0 : 32
+    @sprites["entry"].x=(Graphics.width/2)-(@sprites["entry"].width/2)+entry_offset
     @sprites["entry"].viewport=@viewport
     @sprites["entry"].visible=true
     @minlength=minlength
@@ -532,8 +534,11 @@ class PokemonEntryScene2
     bgoverlay = @sprites["bgoverlay"].bitmap
     bgoverlay.clear
     pbSetSystemFont(bgoverlay)
+    code_prompt = (@helptext == _INTL("Enter code to redeem"))
+    heading_x = code_prompt ? 48 : 160
+    heading_width = code_prompt ? Graphics.width - 96 : Graphics.width - 176
     textPositions = [
-       [@helptext, 160, 6, false, @text_color_base, @text_color_shadow]
+       [@helptext, heading_x, 6, false, @text_color_base, @text_color_shadow, false, heading_width]
     ]
     chars = @helper.textChars
     x = 166

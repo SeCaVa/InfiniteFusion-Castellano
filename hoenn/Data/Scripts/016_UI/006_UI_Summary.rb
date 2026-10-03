@@ -570,19 +570,19 @@ class PokemonSummary_Scene
       date = @pokemon.timeReceived.day
       month = pbGetMonthName(@pokemon.timeReceived.mon)
       year = @pokemon.timeReceived.year
-      memo += _INTL("{1} {2}, {3}\n", date, month, year)
+      memo += _INTL("{1} {2}, {3}", date, month, year) + "\n"
     end
     # Write map name egg was received on
     mapname = pbGetMapNameFromId(@pokemon.obtain_map)
     mapname = @pokemon.obtain_text if @pokemon.obtain_text && !@pokemon.obtain_text.empty?
     if mapname && mapname != ""
-      memo += _INTL("A mysterious Pokémon Egg received from <c3=F83820,E09890>{1}.\n", mapname)
+      memo += _INTL("A mysterious Pokémon Egg received from <c3=F83820,E09890>{1}.", mapname) + "\n"
     else
-      memo += _INTL("A mysterious Pokémon Egg.\n", mapname)
+      memo += _INTL("A mysterious Pokémon Egg.", mapname) + "\n"
     end
     memo += "\n" # Empty line
     # Write Egg Watch blurb
-    memo += _INTL("\"The Egg Watch\"\n")
+    memo += _INTL("\"The Egg Watch\"") + "\n"
     eggstate = _INTL("It looks like this Egg will take a long time to hatch.")
     eggstate = _INTL("What will hatch from this? It doesn't seem close to hatching.") if @pokemon.steps_to_hatch < 10200
     eggstate = _INTL("It appears to move occasionally. It may be close to hatching.") if @pokemon.steps_to_hatch < 2550
@@ -601,14 +601,14 @@ class PokemonSummary_Scene
     showNature = !@pokemon.shadowPokemon? || @pokemon.heartStage > 3
     if showNature
       natureName = @pokemon.nature.name
-      memo += _INTL("{1} nature.\n", natureName)
+      memo += _INTL("{1} nature.", natureName) + "\n"
     end
     # Write date received
     if @pokemon.timeReceived
       date = @pokemon.timeReceived.day
       month = pbGetMonthName(@pokemon.timeReceived.mon)
       year = @pokemon.timeReceived.year
-      memo += _INTL("{1} {2}, {3}\n", date, month, year)
+      memo += _INTL("{1} {2}, {3}", date, month, year) + "\n"
     end
     # Write map name Pokémon was received on
     mapname = pbGetMapNameFromId(@pokemon.obtain_map)
@@ -629,12 +629,12 @@ class PokemonSummary_Scene
         date = @pokemon.timeEggHatched.day
         month = pbGetMonthName(@pokemon.timeEggHatched.mon)
         year = @pokemon.timeEggHatched.year
-        memo += _INTL("{1} {2}, {3}\n", date, month, year)
+        memo += _INTL("{1} {2}, {3}", date, month, year) + "\n"
       end
       mapname = pbGetMapNameFromId(@pokemon.hatched_map)
       mapname = _INTL("Faraway place") if nil_or_empty?(mapname)
       memo += sprintf("%s\n", mapname)
-      memo += _INTL("Egg hatched.\n")
+      memo += _INTL("Egg hatched.") + "\n"
     else
       memo += "\n" # Empty line
     end
@@ -716,14 +716,27 @@ class PokemonSummary_Scene
       [sprintf("%d", @pokemon.spdef), 456, 210, 1, @text_color_base, @text_color_shadow],
       [_INTL("Speed"), 248, 242, 0, base, statshadows[:SPEED]],
       [sprintf("%d", @pokemon.speed), 456, 242, 1, @text_color_base, @text_color_shadow],
-      [_INTL("Ability"), 224, 278, 0, base, shadow]
+      [_INTL("Ability"), 248, 278, 0, base, shadow, false, 100]
     ]
     # Draw ability name and description
     ability = @pokemon.ability
 
     if ability
-      ability_x = [224 + overlay.text_size(_INTL("Ability")).width + 16, 362].min
-      textpos.push([ability.name, ability_x, 278, 0, @text_color_base, @text_color_shadow, false, 506 - ability_x])
+      # Keep the original value column, with room for accents above it.
+      background = @sprites["background"].bitmap
+      overlay.fill_rect(356, 274, 156, 40, background.get_pixel(400, 298))
+      font_name, font_size = overlay.font.name, overlay.font.size
+      begin
+        pbFitTextToWidth(overlay, ability.name, 142)
+        while overlay.text_size(ability.name).width > 142 && overlay.font.size > 18
+          overlay.font.size -= 1
+        end
+        ability_y = 276 + (font_size - overlay.font.size) / 2
+        pbDrawTextPositions(overlay, [[ability.name, 364, ability_y, 0,
+          @text_color_base, @text_color_shadow]])
+      ensure
+        overlay.font.name, overlay.font.size = font_name, font_size
+      end
       drawTextEx(overlay, 224, 320, 282, 2, ability.description, @text_color_base, @text_color_shadow)
     end
 
