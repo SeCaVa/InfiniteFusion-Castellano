@@ -679,6 +679,8 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
     last_text = text.clone
     text.gsub!(/\\v\[([0-9]+)\]/i) do
       value = $game_variables[$1.to_i]
+      # Blackjack cards (rank and suit) are stored without _INTL by some events.
+      value = _INTL(value) if value.is_a?(String) && [28, 31].include?($1.to_i)
       prefix = $`.gsub(/<[^>]*>|\\[cC]\[\d+\]/, "")
       if getCurrentLanguage == :SPANISH && prefix =~ /tipo(?:[^[:alnum:]]|\s)*\z/i && value.is_a?(String)
         type = GameData::Type.try_get(value.upcase.to_sym)
