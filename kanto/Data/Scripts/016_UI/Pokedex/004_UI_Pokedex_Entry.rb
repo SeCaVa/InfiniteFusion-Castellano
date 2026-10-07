@@ -327,7 +327,7 @@ class PokemonPokedexInfo_Scene
     dex_author = @entry_author if @entry_author
     unless dex_author
       dex_author = _INTL("Auto-generated")
-      dex_author = _INTL("None") unless $PokemonSystem.use_generated_dex_entries
+      dex_author = _INTL("None") unless $PokemonSystem.use_generated_dex_entries || @untranslated_custom_entry
       dex_author = _INTL("Game Freak") unless getDexNumberForSpecies(@species) > NB_POKEMON
     end
     drawPokedexCredit(overlay, "sprite_credit", "Sprite: {1}", sprite_author, 156, base, shadow)
@@ -429,7 +429,7 @@ class PokemonPokedexInfo_Scene
         baseColor = baseCustom
         shadowColor = shadowCustom
       else
-        if $PokemonSystem.use_generated_dex_entries && species_data.is_a?(GameData::FusedSpecies)
+        if ($PokemonSystem.use_generated_dex_entries || @untranslated_custom_entry) && species_data.is_a?(GameData::FusedSpecies)
           @randomEntryText = species_data.get_random_dex_entry if !reloading || @randomEntryText.nil?
           entryText = @randomEntryText
           shadowColor = shadow
@@ -510,6 +510,7 @@ class PokemonPokedexInfo_Scene
   # Returns array
   # [text, author]
   def getCustomEntryText(species_data)
+    @untranslated_custom_entry = false
     spriteLoader = BattleSpriteLoader.new
     if @displayed_pif_sprite
       pif_sprite = @displayed_pif_sprite
@@ -538,6 +539,12 @@ class PokemonPokedexInfo_Scene
         original = entry["entry"].gsub(/[[:space:]]+/, " ").strip
         _INTL(original) != original
       }
+      # Entries downloaded after the last translation pass are still in English:
+      # show the generated Spanish entry instead.
+      if localized.empty? && getCurrentLanguage == :SPANISH
+        @untranslated_custom_entry = true
+        return nil
+      end
       entries = localized unless localized.empty?
       return entries.map { |entry|
         original = entry["entry"].gsub(/[[:space:]]+/, " ").strip
