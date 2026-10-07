@@ -43,7 +43,6 @@ Cada carpeta contiene:
   - Elige el género gramatical según el del jugador.
   - Encaja los nombres largos en los menús de ancho fijo.
 - `Graphics/Localized/es/...`: imágenes con texto en castellano. El juego las usa solo cuando el idioma es español.
-- `Graphics/Titles/SeCaVa/logo.png` y `Audio/ME/SeCaVa_intro.wav`: presentación de la traducción con el eclipse de SeCaVa y su jingle. Aparece después de la primera imagen de carga y antes de la cinemática original; puede saltarse con los controles habituales de la portada.
 
 ## Créditos
 
