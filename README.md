@@ -10,6 +10,7 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 
 ## Cambios recientes
 
+- 8 de octubre de 2026: versión congelada. El lanzador instala siempre la versión del juego base para la que está hecha la traducción (Kanto 6.8.2 y Hoenn 1.2.2) y, con el juego en español, los mensajes de inicio y enlaces del menú que se descargan al arrancar quedan fijados a los del 30 de septiembre de 2026, todos traducidos.
 - 8 de octubre de 2026: la Pokédex de fusiones queda fijada a la versión traducida. Con el juego en español se descargan las entradas de la comunidad del 6 de octubre de 2026 (commit `86aa014` de [pokedex-entries](https://github.com/infinitefusion/pokedex-entries)), así que no aparecen entradas nuevas sin traducir. En los demás idiomas el juego sigue descargando la versión más reciente. Las entradas posteriores se incorporarán por tandas.
 - 13.678 descripciones de fusiones más (79.771 en total), «Piedra Espíritu» unificada en las fusiones de Spiritomb y «Archi7» en la descripción del Pase Seagallop.
 - Las entradas automáticas de las fusiones se componen con las descripciones españolas de sus especies base.
@@ -30,7 +31,7 @@ Cada carpeta lleva archivos de código modificados del juego. Con otra versión 
 
 ## Instalación
 
-También puedes usar el **lanzador en castellano** de [Releases](https://github.com/SeCaVa/InfiniteFusion-Castellano/releases). Descarga `PokemonInfiniteFusion-Launcher_1.1-Castellano.exe`, elige Kanto o Hoenn y una carpeta. Instala la base oficial y aplica la traducción de esta rama; al actualizar vuelve a aplicarla. Los botones conservan sus sprites y su fuente originales con rótulos españoles. Dentro del juego, elige **Español**.
+También puedes usar el **lanzador en castellano** de [Releases](https://github.com/SeCaVa/InfiniteFusion-Castellano/releases). Descarga `PokemonInfiniteFusion-Launcher_1.1-Castellano.exe`, elige Kanto o Hoenn y una carpeta. Instala la versión oficial del juego para la que está hecha la traducción (Kanto 6.8.2 y Hoenn 1.2.2) y aplica la traducción de esta rama; al actualizar vuelve a aplicarla. Los botones conservan sus sprites y su fuente originales con rótulos españoles. Dentro del juego, elige **Español**.
 
 
 1. Haz una copia de seguridad de la carpeta del juego.
@@ -44,7 +45,7 @@ Cada carpeta contiene:
   - Activa el idioma español.
   - Elige el género gramatical según el del jugador.
   - Encaja los nombres largos en los menús de ancho fijo.
-  - Fija la Pokédex de fusiones a la versión traducida (6 de octubre de 2026).
+  - Fija la Pokédex de fusiones (6 de octubre de 2026) y los mensajes de inicio (30 de septiembre de 2026) a las versiones traducidas.
 - `Graphics/Localized/es/...`: imágenes con texto en castellano. El juego las usa solo cuando el idioma es español.
 
 ## Créditos

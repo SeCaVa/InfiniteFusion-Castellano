@@ -6,10 +6,15 @@ def test_http_get
   end
 end
 
+# Spanish translation: settings version whose messages are translated.
+SPANISH_HTTP_CONFIGS_FILE_URL = "https://raw.githubusercontent.com/infinitefusion/pif-downloadables/1d412279d0cdf4b6b73da660aaec42d6ed68e31b/Settings.rb"
+
 def updateHttpSettingsFile
   return if !downloadAllowed?()
   echoln "UPDATING SETTINGS"
-  download_file(Settings::HTTP_CONFIGS_FILE_URL, Settings::HTTP_CONFIGS_FILE_PATH,)
+  url = Settings::HTTP_CONFIGS_FILE_URL
+  url = SPANISH_HTTP_CONFIGS_FILE_URL if getCurrentLanguage == :SPANISH
+  download_file(url, Settings::HTTP_CONFIGS_FILE_PATH,)
 end
 
 def updateCreditsFile
