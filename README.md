@@ -6,10 +6,12 @@ Traduce diálogos, menús, objetos, movimientos, habilidades, descripciones de P
 
 Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex y PkParaíso. Los nombres propios de Hoenn siguen Pokémon Rubí.
 
-> Estado: los 66.093 textos distintos de fusiones de las versiones actuales de Kanto y Hoenn están traducidos y revisados. Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Si encuentras errores, abre una *issue*.
+> Estado: los 79.771 textos distintos de la Pokédex de fusiones están traducidos y revisados (entradas de la comunidad del 6 de octubre de 2026, fijadas el 8 de octubre de 2026). Los textos del resto del juego están ampliamente traducidos y continúan en revisión. Si encuentras errores, abre una *issue*.
 
 ## Cambios recientes
 
+- 8 de octubre de 2026: la Pokédex de fusiones queda fijada a la versión traducida. Con el juego en español se descargan las entradas de la comunidad del 6 de octubre de 2026 (commit `86aa014` de [pokedex-entries](https://github.com/infinitefusion/pokedex-entries)), así que no aparecen entradas nuevas sin traducir. En los demás idiomas el juego sigue descargando la versión más reciente. Las entradas posteriores se incorporarán por tandas.
+- 13.678 descripciones de fusiones más (79.771 en total), «Piedra Espíritu» unificada en las fusiones de Spiritomb y «Archi7» en la descripción del Pase Seagallop.
 - Las entradas automáticas de las fusiones se componen con las descripciones españolas de sus especies base.
 - Rótulos «Nv.» y «PS» en castellano, y el icono de estado de combate ya no se corta (veneno grave incluido).
 - Pokédex de fusiones completa: 66.093 descripciones revisadas, con los marcadores de nombres y los autores originales conservados. Las descripciones largas se reparten en páginas.
@@ -42,6 +44,7 @@ Cada carpeta contiene:
   - Activa el idioma español.
   - Elige el género gramatical según el del jugador.
   - Encaja los nombres largos en los menús de ancho fijo.
+  - Fija la Pokédex de fusiones a la versión traducida (6 de octubre de 2026).
 - `Graphics/Localized/es/...`: imágenes con texto en castellano. El juego las usa solo cuando el idioma es español.
 
 ## Créditos
