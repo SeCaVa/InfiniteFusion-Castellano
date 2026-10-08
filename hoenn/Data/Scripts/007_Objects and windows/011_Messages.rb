@@ -458,7 +458,7 @@ def pbGetCosmeticsMoneyString
 end
 
 def pbDisplayBattleFactoryPointsWindow(msgwindow)
-  pbDisplayVariableWindow(msgwindow, "Tokens", VAR_BATTLE_FACTORY_TOKENS)
+  pbDisplayVariableWindow(msgwindow, _INTL("Tokens"), VAR_BATTLE_FACTORY_TOKENS)
 end
 
 def pbDisplayVariableWindow(msgwindow, name, variable_id)
@@ -942,6 +942,9 @@ end
 # Message-displaying functions
 #===============================================================================
 def pbMessage(message, commands = nil, cmdIfCancel = 0, skin = nil, defaultCmd = 0, &block)
+  if message == "There doesn't seem to be \nanything." || message == "Woah! A Pokémon jumped out!"
+    message = _INTL(message)
+  end
   ret = 0
   msgwindow = pbCreateMessageWindow(nil, skin)
   if commands

@@ -91,7 +91,7 @@ class HairMartAdapter < OutfitsMartAdapter
   end
 
   def getDescription(item)
-    return DEFAULT_DESCRIPTION if !item.description
+    return _INTL(DEFAULT_DESCRIPTION) if !item.description
     return item.description
   end
 
