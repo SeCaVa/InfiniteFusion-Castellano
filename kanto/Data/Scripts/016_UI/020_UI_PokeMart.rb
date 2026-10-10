@@ -217,18 +217,19 @@ class Window_PokemonMart < Window_DrawableCommand
   end
 
   def drawItem(index, count, rect)
+    pbSetSystemFont(self.contents) if getCurrentLanguage == :SPANISH
     textpos = []
     rect = drawCursor(index, rect)
     ypos = rect.y
     if index == count - 1
-      textpos.push([_INTL("CANCEL"), rect.x, ypos - 4, false, self.baseColor, self.shadowColor, false, rect.width - 16, true])
+      textpos.push([_INTL("CANCEL"), rect.x, ypos - 4, false, self.baseColor, self.shadowColor, false, rect.width - 16, false])
     else
       item = @stock[index]
       if item.is_a?(Symbol) && @adapter.getAdapter().is_a?(OutfitsMartAdapter)
         itemname = @adapter.getSpecialItemCaption(item)
         baseColor = @adapter.getSpecialItemBaseColor(item) || self.baseColor
         shadowColor = @adapter.getSpecialItemShadowColor(item) || self.shadowColor
-        textpos.push([itemname, rect.x, ypos - 4, false, baseColor, shadowColor, false, rect.width - 16, true])
+        textpos.push([itemname, rect.x, ypos - 4, false, baseColor, shadowColor, false, rect.width - 16, false])
       else
         itemname = @adapter.getDisplayName(item)
         baseColorOverride = @adapter.getBaseColorOverride(item)
@@ -240,7 +241,7 @@ class Window_PokemonMart < Window_DrawableCommand
         qty = @adapter.getDisplayPrice(item)
         sizeQty = self.contents.text_size(qty).width
         xQty = rect.x + rect.width - sizeQty - 2 - 16
-        textpos.push([itemname, rect.x, ypos - 4, false, baseColor, shadowColor, false, xQty - rect.x - 8, true])
+        textpos.push([itemname, rect.x, ypos - 4, false, baseColor, shadowColor, false, xQty - rect.x - 8, false])
         textpos.push([qty, xQty, ypos - 4, false, baseColor, shadowColor])
       end
     end
@@ -405,6 +406,7 @@ class PokemonMart_Scene
   end
 
   def pbPrepareWindow(window)
+    pbSetSystemFont(window.contents) if getCurrentLanguage == :SPANISH
     window.visible = true
     window.letterbyletter = false
   end

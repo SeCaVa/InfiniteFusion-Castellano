@@ -444,6 +444,9 @@ def getFormattedText(bitmap,xDst,yDst,widthDst,heightDst,text,lineheight=32,
   if !bitmap || bitmap.disposed? || widthDst<=0 || heightDst==0 || text.length==0
     return []
   end
+  if getCurrentLanguage == :SPANISH && text.include?("$")
+    text = text.gsub(/\$(?=\s*[0-9])/, '<fn=Power Green>$</fn>')
+  end
   textchunks=[]
   controls=[]
   oldtext=text

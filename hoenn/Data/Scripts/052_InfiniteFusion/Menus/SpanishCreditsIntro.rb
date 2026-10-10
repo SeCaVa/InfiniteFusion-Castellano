@@ -88,7 +88,7 @@ class SpanishCreditsIntro
     @letter_c.src_rect.set(330, 390, 152, 207)
     @letter_c.zoom_x = @letter_c.zoom_y = 0.34 * @scale
     @letter_c.x = @offset_x + (x + left - 4) * @scale
-    @letter_c.y = @offset_y + 160 * @scale
+    @letter_c.y = @offset_y + 154 * @scale
     @letter_c.opacity = 0
     @sprites << @letter_c
   end
