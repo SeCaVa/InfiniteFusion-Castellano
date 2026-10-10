@@ -468,8 +468,7 @@ class PokemonLoadScreen
     end
 
     pbMessage(_INTL(
-                "The save file is corrupt. The most recent backup will be loaded instead.\n" +
-                  "\\C[2]{1}\\C[0]\nBackup date: \\C[3]{2}",
+                "The save file is corrupt. The most recent backup will be loaded instead.\n\\C[2]{1}\\C[0]\nBackup date: \\C[3]{2}",
                 latest, formatted_time
               ))
 

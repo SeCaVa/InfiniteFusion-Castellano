@@ -487,7 +487,8 @@ class PokemonSummary_Scene
         ownerbase = Color.new(248, 56, 32)
         ownershadow = Color.new(224, 152, 144)
       end
-      textpos.push([@pokemon.owner.name, 435, ot_y, 2, ownerbase, ownershadow])
+      owner_name = @pokemon.owner.name == "RENTAL" ? _INTL("RENTAL") : @pokemon.owner.name
+      textpos.push([owner_name, 435, ot_y, 2, ownerbase, ownershadow])
       # textpos.push([sprintf("%05d", @pokemon.owner.public_id), 435, 202, 2, @text_color_base_LIGHT, @text_color_shadow_LIGHT])
     end
     # Write Exp text OR heart gauge message (if a Shadow Pokémon)

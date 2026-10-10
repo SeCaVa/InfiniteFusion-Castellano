@@ -285,7 +285,7 @@ class PokemonPokedexInfo_Scene
       weight_unit = _INTL("kg")
       height_value = species_data.height / 10.0
       height_unit = _INTL("m")
-      if System.user_language[3..4] == "US"
+      if getCurrentLanguage != :SPANISH && System.user_language[3..4] == "US"
         weight_value = ((weight_value / 0.45359) * 10).round / 10.0  # e.g. 13.2
         weight_unit = _INTL("lbs")
 
