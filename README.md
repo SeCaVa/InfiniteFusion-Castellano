@@ -10,6 +10,10 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 
 ## Cambios recientes
 
+- 13 de octubre de 2026: «Complemento» y «Complementos» para la categoría de accesorios de cabeza, conservando los nombres específicos de gorras y sombreros. Corregido «Género Ball».
+- Ajustadas las cantidades de objetos en mochila, PC y tiendas, y su selección, con una fuente más equilibrada. Los precios conservan su tamaño habitual.
+- Corregida la separación de «VISTOS» y «ATRAPADOS» y la altura de sus dos puntos en la Pokédex de Hoenn. Ajustado el rótulo de ropa y complementos en la ficha de entrenador.
+
 - 10 de octubre de 2026: correcciones de nombres de objetos, movimientos y habilidades en diálogos y Pokédex, concordancia y expresiones de personajes. Se conservan los gritos originales de los Pokémon interactuables. Unificados Caramelo Furia, Fusión Ball y Rocket Ball.
 - Traducidos los rótulos del teclado, concursos y Pokéblocks y los avisos de las pantallas de carga. La carga inicial muestra la versión española.
 - La Pokédex en español usa metros y kilogramos, también en sus filtros de búsqueda, independientemente de la región del equipo.

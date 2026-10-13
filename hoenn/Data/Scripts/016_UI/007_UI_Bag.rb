@@ -62,6 +62,8 @@ class Window_PokemonBag < Window_DrawableCommand
   end
 
   def drawItem(index,_count,rect)
+    pbSetSystemFont(self.contents) if getCurrentLanguage == :SPANISH
+    quantity_draw = nil
     textpos = []
     rect = Rect.new(rect.x+16,rect.y+16,rect.width-16,rect.height)
     thispocket = @bag.pockets[@pocket]
@@ -84,7 +86,7 @@ class Window_PokemonBag < Window_DrawableCommand
         baseColor   = Color.new(224,0,0)
         shadowColor = Color.new(248,144,144)
       end
-      qtywidth = (GameData::Item.get(item).is_important?) ? 72 : self.contents.text_size("x 999").width+16
+      qtywidth = (GameData::Item.get(item).is_important?) ? 72 : pbItemQuantityWidth(self.contents,"x 999")+16
       textpos.push(
          [@adapter.getDisplayName(item),rect.x,rect.y-2,false,baseColor,shadowColor,false,rect.width-qtywidth-8,true]
       )
@@ -101,11 +103,11 @@ class Window_PokemonBag < Window_DrawableCommand
       else
         qty = (@filterlist) ? thispocket[@filterlist[@pocket][index]][1] : thispocket[index][1]
         qtytext = _ISPRINTF("x{1: 3d}",qty)
-        xQty    = rect.x+rect.width-self.contents.text_size(qtytext).width-16
-        textpos.push([qtytext,xQty,rect.y-2,false,baseColor,shadowColor])
+        quantity_draw = [qtytext,rect.x+rect.width-16,rect.y-2,baseColor,shadowColor]
       end
     end
     pbDrawTextPositions(self.contents,textpos)
+    pbDrawItemQuantity(self.contents,*quantity_draw) if quantity_draw
   end
 
   def refresh

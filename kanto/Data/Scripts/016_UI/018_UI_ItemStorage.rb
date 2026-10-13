@@ -29,6 +29,8 @@ class Window_PokemonItemStorage < Window_DrawableCommand
   end
 
   def drawItem(index,_count,rect)
+    pbSetSystemFont(self.contents) if getCurrentLanguage == :SPANISH
+    quantity_draw = nil
     rect = drawCursor(index,rect)
     textpos = []
     if index==@bag.length
@@ -37,16 +39,15 @@ class Window_PokemonItemStorage < Window_DrawableCommand
       item     = @bag[index][0]
       itemname = @adapter.getDisplayName(item)
       baseColor = (index==@sortIndex) ? Color.new(248,24,24) : self.baseColor
-      maxwidth = (GameData::Item.get(item).is_important?) ? rect.width : rect.width-self.contents.text_size("x 99").width-10
+      maxwidth = (GameData::Item.get(item).is_important?) ? rect.width : rect.width-pbItemQuantityWidth(self.contents,"x 99")-10
       textpos.push([itemname,rect.x,rect.y-6,false,self.baseColor,self.shadowColor,false,maxwidth,true])
       if !GameData::Item.get(item).is_important?   # Not a Key item/HM/TM
         qty     = _ISPRINTF("x{1: 2d}",@bag[index][1])
-        sizeQty = self.contents.text_size(qty).width
-        xQty = rect.x+rect.width-sizeQty-2
-        textpos.push([qty,xQty,rect.y-6,false,baseColor,self.shadowColor])
+        quantity_draw = [qty,rect.x+rect.width-2,rect.y-6,baseColor,self.shadowColor]
       end
     end
     pbDrawTextPositions(self.contents,textpos)
+    pbDrawItemQuantity(self.contents,*quantity_draw) if quantity_draw
   end
 end
 
@@ -70,7 +71,7 @@ class ItemStorage_Scene
     if isDarkMode
       @item_list_base_color, @item_list_shadow_color = @item_list_shadow_color, @item_list_base_color
     end
-    
+
   end
 
   def update
@@ -291,6 +292,10 @@ module UIHelper
     curnumber = initnum
     ret = 0
     numwindow = Window_UnformattedTextPokemon.new("x000")
+    if getCurrentLanguage == :SPANISH
+      pbSetSystemFont(numwindow.contents)
+      numwindow.contents.font.size = MessageConfig::FONT_SIZE - 3
+    end
     numwindow.viewport       = helpwindow.viewport
     numwindow.letterbyletter = false
     numwindow.text           = _ISPRINTF("x{1:03d}",curnumber)

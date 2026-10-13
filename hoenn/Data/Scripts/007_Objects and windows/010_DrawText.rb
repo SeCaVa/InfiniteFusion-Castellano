@@ -1417,3 +1417,39 @@ def drawTextExMulti(bitmap,x,y,width,numlines,text,baseColor,shadowColor)
   normtext=getLineBrokenChunks(bitmap,text,width,nil,true)
   renderMultiLine(bitmap,x,y,normtext,numlines*32,baseColor,shadowColor)
 end
+
+# BEGIN SPANISH ITEM QUANTITY STYLE
+def pbItemQuantityWidth(bitmap, text)
+  return bitmap.text_size(text).width if getCurrentLanguage != :SPANISH
+  saved_font = bitmap.font.clone
+  begin
+    pbSetSystemFont(bitmap)
+    bitmap.font.size = [saved_font.size, MessageConfig::FONT_SIZE - 3].min
+    return bitmap.text_size(text).width
+  ensure
+    bitmap.font = saved_font
+  end
+end
+
+def pbDrawItemQuantity(bitmap, text, right, y, base, shadow)
+  saved_font = bitmap.font.clone
+  begin
+    if getCurrentLanguage == :SPANISH
+      pbSetSystemFont(bitmap)
+      bitmap.font.size = [saved_font.size, MessageConfig::FONT_SIZE - 3].min
+      y += [saved_font.size - bitmap.font.size, 0].max / 2
+    end
+    pbDrawTextPositions(bitmap, [[text, right, y, 1, base, shadow]])
+  ensure
+    bitmap.font = saved_font
+  end
+end
+
+def pbFormatItemQuantity(text)
+  return text if getCurrentLanguage != :SPANISH
+  size = MessageConfig::FONT_SIZE - 3
+  text.sub(/\Ax[\s\d]+/) { |quantity|
+    "<fn=#{MessageConfig.pbGetSystemFontName}><fs=#{size}>#{quantity}</fs></fn>"
+  }
+end
+# END SPANISH ITEM QUANTITY STYLE

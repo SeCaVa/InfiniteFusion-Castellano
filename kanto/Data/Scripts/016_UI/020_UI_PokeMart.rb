@@ -219,6 +219,7 @@ class Window_PokemonMart < Window_DrawableCommand
   def drawItem(index, count, rect)
     pbSetSystemFont(self.contents) if getCurrentLanguage == :SPANISH
     textpos = []
+    quantity_draw = nil
     rect = drawCursor(index, rect)
     ypos = rect.y
     if index == count - 1
@@ -239,13 +240,19 @@ class Window_PokemonMart < Window_DrawableCommand
         shadowColor = shadowColorOverride ? shadowColorOverride : self.shadowColor
 
         qty = @adapter.getDisplayPrice(item)
-        sizeQty = self.contents.text_size(qty).width
+        item_quantity = @adapter.isSelling? && qty.start_with?("x")
+        sizeQty = item_quantity ? pbItemQuantityWidth(self.contents, qty) : self.contents.text_size(qty).width
         xQty = rect.x + rect.width - sizeQty - 2 - 16
         textpos.push([itemname, rect.x, ypos - 4, false, baseColor, shadowColor, false, xQty - rect.x - 8, false])
-        textpos.push([qty, xQty, ypos - 4, false, baseColor, shadowColor])
+        if item_quantity
+          quantity_draw = [qty, rect.x + rect.width - 18, ypos - 4, baseColor, shadowColor]
+        else
+          textpos.push([qty, xQty, ypos - 4, false, baseColor, shadowColor])
+        end
       end
     end
     pbDrawTextPositions(self.contents, textpos)
+    pbDrawItemQuantity(self.contents, *quantity_draw) if quantity_draw
   end
 end
 
@@ -526,7 +533,7 @@ class PokemonMart_Scene
         inbagwindow.baseColor = Color.new(88, 88, 80)
         inbagwindow.shadowColor = Color.new(168, 184, 184)
         inbagwindow.text = _INTL("In Bag:<r>{1}  ", qty)
-        numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
+        numwindow.text = pbFormatItemQuantity(_INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted))
         pbBottomRight(numwindow)
         numwindow.y -= helpwindow.height
         pbBottomLeft(inbagwindow)
@@ -541,22 +548,22 @@ class PokemonMart_Scene
             pbPlayCursorSE
             curnumber -= 10
             curnumber = 1 if curnumber < 1
-            numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
+            numwindow.text = pbFormatItemQuantity(_INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted))
           elsif Input.repeat?(Input::RIGHT)
             pbPlayCursorSE
             curnumber += 10
             curnumber = maximum if curnumber > maximum
-            numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
+            numwindow.text = pbFormatItemQuantity(_INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted))
           elsif Input.repeat?(Input::UP)
             pbPlayCursorSE
             curnumber += 1
             curnumber = 1 if curnumber > maximum
-            numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
+            numwindow.text = pbFormatItemQuantity(_INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted))
           elsif Input.repeat?(Input::DOWN)
             pbPlayCursorSE
             curnumber -= 1
             curnumber = maximum if curnumber < 1
-            numwindow.text = _INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted)
+            numwindow.text = pbFormatItemQuantity(_INTL("x{1}<r>$ {2}", curnumber, (curnumber * itemprice).to_s_formatted))
           elsif Input.trigger?(Input::USE)
             pbPlayDecisionSE
             ret = curnumber

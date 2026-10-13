@@ -103,8 +103,10 @@ class PokemonTrainerCard_Scene
       $Trainer.cosmetics_money = 0 unless $Trainer.cosmetics_money
       textPositions << [_INTL("Glimmer Coins"), 34, 106, 0, baseColor, shadowColor]
       textPositions << [_INTL("{1}", $Trainer.cosmetics_money.to_s_formatted), 302, 106, 1, baseColor, shadowColor]
-      textPositions << [_INTL("Clothes / Hats"), 34, 154, 0, baseColor, shadowColor]
-      textPositions << [sprintf("%d/%d", $Trainer.unlocked_clothes.length, $Trainer.unlocked_hats.length), 302, 154, 1, baseColor, shadowColor]
+      cosmetic_counts = sprintf("%d/%d", $Trainer.unlocked_clothes.length, $Trainer.unlocked_hats.length)
+      cosmetic_label_width = getCurrentLanguage == :SPANISH ? [268 - overlay.text_size(cosmetic_counts).width - 12, 1].max : nil
+      textPositions << [_INTL("Clothes / Hats"), 34, 154, 0, baseColor, shadowColor, false, cosmetic_label_width]
+      textPositions << [cosmetic_counts, 302, 154, 1, baseColor, shadowColor]
     end
 
 
