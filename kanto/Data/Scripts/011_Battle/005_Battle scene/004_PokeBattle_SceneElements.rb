@@ -238,10 +238,8 @@ class PokemonDataBox < SpriteWrapper
     # Draw background panel
     self.bitmap.blt(0, 0, @databoxBitmap.bitmap, Rect.new(0, 0, @databoxBitmap.width, @databoxBitmap.height))
     # Draw Pokémon's name
-    nameWidth = self.bitmap.text_size(@battler.name).width
-    nameOffset = 0
-    nameOffset = nameWidth - 116 if nameWidth > 116
-    textPos.push([@battler.name, @spriteBaseX + 8 - nameOffset, 0, false, NAME_BASE_COLOR, NAME_SHADOW_COLOR])
+    pbDrawFittedText(self.bitmap, @battler.name, @spriteBaseX + 8, 0, 116,
+                     NAME_BASE_COLOR, NAME_SHADOW_COLOR)
     # Draw Pokémon's gender symbol
     case @battler.displayGender
     when 0 # Male

@@ -1453,3 +1453,130 @@ def pbFormatItemQuantity(text)
   }
 end
 # END SPANISH ITEM QUANTITY STYLE
+
+# BEGIN MOVE DESCRIPTION SCROLL
+module AutomaticDescriptionScroll
+  SPEED = 12.0
+  END_PAUSE = 2.5
+
+  def pbResetDescriptionScroll(limit)
+    @scroll_limit = [limit, 0].max
+    @scroll_position = 0.0
+    @scroll_direction = 1
+    @scroll_pause = END_PAUSE
+  end
+
+  def pbNextDescriptionScrollPosition
+    return nil if !self.visible || @scroll_limit == 0
+    elapsed = 1.0 / [Graphics.frame_rate, 1].max
+    if @scroll_pause > 0
+      @scroll_pause = [@scroll_pause - elapsed, 0].max
+      return nil
+    end
+    @scroll_position += SPEED * elapsed * @scroll_direction
+    if @scroll_position >= @scroll_limit
+      @scroll_position = @scroll_limit.to_f
+      @scroll_direction = -1
+      @scroll_pause = END_PAUSE
+    elsif @scroll_position <= 0
+      @scroll_position = 0.0
+      @scroll_direction = 1
+      @scroll_pause = END_PAUSE
+    end
+    return @scroll_position.floor
+  end
+end
+
+class MoveDescriptionScrollSprite < BitmapSprite
+  include AutomaticDescriptionScroll
+
+  def initialize(reference, x, y, width, height, text, base, shadow, viewport)
+    dimensions = [0, 0]
+    chunks = getLineBrokenChunks(reference, text, width, dimensions, true)
+    content_height = dimensions[1] + 2  # Include the original text shadow.
+    super(width + 4, [content_height, height].max, viewport)
+    self.bitmap.font = reference.font.clone
+    renderLineBrokenChunksWithShadow(self.bitmap, 0, 0, chunks, 0, base, shadow)
+    self.x, self.y = x, y
+    self.src_rect.set(0, 0, width + 4, height)
+    pbResetDescriptionScroll(content_height - height)
+  end
+
+  def update
+    return if self.disposed?
+    super
+    position = pbNextDescriptionScrollPosition
+    self.src_rect.y = position if position
+  end
+end
+
+module MoveDescriptionScrolling
+  def pbClearMoveDescription
+    return if !@sprites
+    sprite = @sprites.delete("move_description_scroll")
+    sprite.dispose if sprite && !sprite.disposed?
+  end
+
+  def pbDrawMoveDescription(x, y, width, lines, text, base, shadow)
+    pbClearMoveDescription
+    overlay = @sprites["overlay"]
+    height = [lines * 32 + 2, Graphics.height - y].min
+    sprite = MoveDescriptionScrollSprite.new(overlay.bitmap, x, y, width, height,
+                                             text, base, shadow, @viewport)
+    sprite.z = overlay.z + 1
+    @sprites["move_description_scroll"] = sprite
+  end
+end
+# END MOVE DESCRIPTION SCROLL
+
+# BEGIN BOUNDED POKEDEX TEXT
+def pbFitCompleteText(bitmap, text, width)
+  return if bitmap.text_size(text).width <= width
+  bitmap.font.name = getCurrentLanguage == :CHINESE ? MessageConfig::NARROW_FONT_NAME_CHINESE : MessageConfig.pbGetNarrowFontName
+  while bitmap.text_size(text).width > width && bitmap.font.size > 8
+    bitmap.font.size -= 1
+  end
+end
+
+def pbDrawFittedText(bitmap, text, x, y, width, base, shadow, align = 0)
+  saved_font = bitmap.font.clone
+  begin
+    pbFitCompleteText(bitmap, text, width - 2)
+    size = bitmap.text_size(text)
+    x -= size.width if align == 1
+    x -= size.width / 2 if align == 2
+    y += 6 + (saved_font.size - bitmap.font.size) / 2
+    pbDrawShadowText(bitmap, x, y, size.width, size.height, text, base, shadow)
+  ensure
+    bitmap.font = saved_font
+  end
+end
+
+class PokedexCategorySprite < BitmapSprite
+  include AutomaticDescriptionScroll
+
+  def initialize(reference, text, base, shadow, viewport)
+    saved_font = reference.font.clone
+    begin
+      reference.font.size = [reference.font.size, 24].min
+      width = reference.text_size(text).width + 4
+      category_font = reference.font.clone
+    ensure
+      reference.font = saved_font
+    end
+    super([width, 248].max, 32, viewport)
+    self.bitmap.font = category_font
+    pbDrawShadowText(self.bitmap, 0, 1, width, 32, text, base, shadow)
+    self.x, self.y = 246, 76
+    self.src_rect.set(0, 0, 248, 30)
+    pbResetDescriptionScroll(width - 248)
+  end
+
+  def update
+    return if self.disposed?
+    super
+    position = pbNextDescriptionScrollPosition
+    self.src_rect.x = position if position
+  end
+end
+# END BOUNDED POKEDEX TEXT

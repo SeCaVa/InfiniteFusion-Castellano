@@ -64,8 +64,8 @@ class Window_Pokedex < Window_DrawableCommand
     else
       text = sprintf("%03d  ----------", indexNumber)
     end
-    pbDrawShadowText(self.contents, rect.x + 36, rect.y + 6, rect.width, rect.height,
-                     text, self.baseColor, self.shadowColor)
+    pbDrawFittedText(self.contents, text, rect.x + 36, rect.y,
+                     self.contents.width - rect.x - 48, self.baseColor, self.shadowColor)
   end
 
   def refresh
@@ -233,6 +233,25 @@ end
 # Pokédex main screen
 #===============================================================================
 class PokemonPokedex_Scene
+  # BEGIN POKEDEX COUNTER WIDTH
+  def drawSpanishPokedexCounter(overlay, key, value, y, base, shadow)
+    saved_font = overlay.font.clone
+    begin
+      number = value.to_s
+      label = _INTL(key).sub(/:$/, "")
+      number_width = overlay.text_size(number).width
+      pbFitCompleteText(overlay, label + ":", 194 - 30 - number_width - 10)
+      label_width = overlay.text_size(label).width
+      label_y = y + (saved_font.size - overlay.font.size) / 2
+      pbDrawTextPositions(overlay, [[label, 30, label_y, 0, base, shadow],
+        [":", 30 + label_width, label_y + 2, 0, base, shadow]])
+    ensure
+      overlay.font = saved_font
+    end
+    pbDrawTextPositions(overlay, [[number, 194, y, 1, base, shadow]])
+  end
+  # END POKEDEX COUNTER WIDTH
+
   # Match the Spanish label baseline without moving labels or counters.
   def appendPokedexCounterLabel(textpos, overlay, key, x, y, base, shadow)
     text = _INTL(key)
@@ -454,15 +473,20 @@ class PokemonPokedex_Scene
     textpos = [
       [dexname, Graphics.width / 2, -2, 2, Color.new(248, 248, 248), Color.new(0, 0, 0)]
     ]
-    textpos.push([GameData::Species.get(iconspecies).name, 112, 46, 2, base, shadow]) if iconspecies
+    pbDrawFittedText(overlay, GameData::Species.get(iconspecies).name, 112, 46, 172, base, shadow, 2) if iconspecies
     if @searchResults
-      textpos.push([_INTL("Search results"), 112, 302, 2, base, shadow])
+      pbDrawFittedText(overlay, _INTL("Search results"), 112, 302, 172, base, shadow, 2)
       textpos.push([@dexlist.length.to_s, 112, 334, 2, base, shadow])
     else
+      if getCurrentLanguage == :SPANISH
+        drawSpanishPokedexCounter(overlay, "Seen:", $Trainer.pokedex.seen_count(pbGetPokedexRegion), 302, base, shadow)
+        drawSpanishPokedexCounter(overlay, "Owned:", $Trainer.pokedex.owned_count(pbGetPokedexRegion), 334, base, shadow)
+      else
       appendPokedexCounterLabel(textpos, overlay, "Seen:", 42, 302, base, shadow)
       textpos.push([$Trainer.pokedex.seen_count(pbGetPokedexRegion).to_s, 182, 302, 1, base, shadow])
       appendPokedexCounterLabel(textpos, overlay, "Owned:", 42, 334, base, shadow)
       textpos.push([$Trainer.pokedex.owned_count(pbGetPokedexRegion).to_s, 182, 334, 1, base, shadow])
+      end
     end
     # Draw all text
     pbDrawTextPositions(overlay, textpos)

@@ -102,6 +102,7 @@ end
 #
 #===============================================================================
 class PokemonSummary_Scene
+  include MoveDescriptionScrolling
   NB_PAGES = 5
 
   def pbUpdate
@@ -308,6 +309,7 @@ class PokemonSummary_Scene
   end
 
   def drawPage(page)
+    pbClearMoveDescription
     if @pokemon.egg?
       drawPageOneEgg
       return
@@ -760,6 +762,7 @@ class PokemonSummary_Scene
   end
 
   def drawPageFour
+    pbClearMoveDescription
     overlay = @sprites["overlay"].bitmap
     moveBase = @text_color_base
     moveShadow = @text_color_shadow
@@ -808,6 +811,7 @@ class PokemonSummary_Scene
   end
 
   def drawPageFourSelecting(move_to_learn)
+    pbClearMoveDescription
     overlay = @sprites["overlay"].bitmap
     overlay.clear
     base = Color.new(248, 248, 248)
@@ -915,7 +919,7 @@ class PokemonSummary_Scene
     imagepos = [["Graphics/Pictures/category", 166, 124, 0, selected_move.category * 28, 64, 28]]
     pbDrawImagePositions(overlay, imagepos)
     # Draw selected move's description
-    drawTextEx(overlay, 4, 222, 230, 5, selected_move.description, base, shadow)
+    pbDrawMoveDescription(4, 222, 230, 5, selected_move.description, base, shadow)
   end
 
   def drawPageFive

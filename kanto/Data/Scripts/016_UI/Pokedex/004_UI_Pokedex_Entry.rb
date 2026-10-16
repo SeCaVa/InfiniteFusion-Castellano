@@ -223,7 +223,7 @@ class PokemonPokedexInfo_Scene
   def drawPage(page)
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    ["sprite_credit", "entry_credit"].each { |key| @sprites[key].visible = false if @sprites[key] }
+    ["sprite_credit", "entry_credit", "category_label"].each { |key| @sprites[key].visible = false if @sprites[key] }
     @creditsOverlay.clear if @creditsOverlay && !@creditsOverlay.disposed?
     # Make certain sprites visible
     @sprites["infosprite"].visible = (@page == 1)
@@ -274,12 +274,20 @@ class PokemonPokedexInfo_Scene
     indexNumber = GameData::Species.get(@species).id_number
     indexText = sprintf("%03d", indexNumber)
     # end
-    textpos = [
-      ["#{indexText}  #{species_data.name}", 246, 36, 0, Color.new(248, 248, 248), Color.new(0, 0, 0)],
-    ]
+    textpos = []
+    pbDrawFittedText(overlay, "#{indexText}  #{species_data.name}", 246, 36, 248,
+                    Color.new(248, 248, 248), Color.new(0, 0, 0))
     if $Trainer.owned?(@species)
       # Category
+      if getCurrentLanguage == :SPANISH
+        @sprites["category_label"].dispose if @sprites["category_label"]
+        category_sprite = PokedexCategorySprite.new(overlay,
+          _INTL("{1} Pokémon", species_data.category), base, shadow, @viewport)
+        category_sprite.z = @sprites["overlay"].z + 1
+        @sprites["category_label"] = category_sprite
+      else
       textpos.push([_INTL("{1} Pokémon", species_data.category), 246, 68, 0, base, shadow, false, 260])
+      end
       #Weighty / Height
       weight_value = species_data.weight / 10.0
       weight_unit = _INTL("kg")

@@ -10,6 +10,12 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 
 ## Cambios recientes
 
+- 16 de octubre de 2026: traducida la pregunta para revivir fósiles en Ciudad Plateada e Isla Canela, además de los temas y los nombres de los premios de los combates triples de Isla Prima.
+- Las descripciones largas de movimientos, ropa y complementos se desplazan automáticamente hacia abajo y hacia arriba, con pausas para leer los extremos.
+- Corregidos los rótulos «VISTOS» y «ATRAPADOS» de Kanto, el espacio de las cifras de la Pokédex y el encuadre de «Resultados de búsqueda» en ambos juegos.
+- Los nombres largos de fusiones se ajustan a la lista y a la ficha de la Pokédex, al panel de batalla y al selector de objetivos.
+- Los subtítulos de las fusiones conservan las categorías completas de sus especies base. Los más largos se desplazan dentro de su recuadro.
+
 - 13 de octubre de 2026: «Complemento» y «Complementos» para la categoría de accesorios de cabeza, conservando los nombres específicos de gorras y sombreros. Corregido «Género Ball».
 - Ajustadas las cantidades de objetos en mochila, PC y tiendas, y su selección, con una fuente más equilibrada. Los precios conservan su tamaño habitual.
 - Corregida la separación de «VISTOS» y «ATRAPADOS» y la altura de sus dos puntos en la Pokédex de Hoenn. Ajustado el rótulo de ropa y complementos en la ficha de entrenador.

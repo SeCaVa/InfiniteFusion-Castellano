@@ -2,6 +2,7 @@
 # Scene class for handling appearance of the screen
 #===============================================================================
 class MoveRelearner_Scene
+  include MoveDescriptionScrolling
   VISIBLEMOVES = 4
 
   def pbDisplay(msg,brief=false)
@@ -131,7 +132,7 @@ class MoveRelearner_Scene
       imagepos.push(["Graphics/Pictures/reminderButtons",134,350,76,0,76,32])
     end
     pbDrawImagePositions(overlay,imagepos)
-    drawTextEx(overlay,272,214,230,5,selMoveData.description,
+    pbDrawMoveDescription(272,214,230,5,selMoveData.description,
        @text_color_base,@text_color_shadow)
   end
 

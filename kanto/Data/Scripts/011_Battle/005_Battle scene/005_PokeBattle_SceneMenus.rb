@@ -574,7 +574,8 @@ class TargetMenuDisplay < BattleMenuBase
       next if !button || nil_or_empty?(@texts[i])
       x = button.x-self.x+button.src_rect.width/2
       y = button.y-self.y+2
-      textpos.push([@texts[i],x,y,2,TEXT_BASE_COLOR,TEXT_SHADOW_COLOR])
+      pbDrawFittedText(@pokemon_name_overlay.bitmap, @texts[i], x, y,
+                        button.src_rect.width - 12, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR, 2)
     end
     pbDrawTextPositions(@pokemon_name_overlay.bitmap, textpos)
   end

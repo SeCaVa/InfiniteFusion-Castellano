@@ -305,7 +305,7 @@ module GameData
       for evolution in body_evolutions
         evolutionSpecies = evolution[0]
         evolutionSpecies_dex = GameData::Species.get(evolutionSpecies).id_number
-        fused_species = "B#{evolutionSpecies_dex}H#{@head_pokemon.id_number}" 
+        fused_species = "B#{evolutionSpecies_dex}H#{@head_pokemon.id_number}"
         fused_evolutions << build_evolution_array(evolution, fused_species)
       end
 
@@ -393,6 +393,14 @@ module GameData
     def calculate_evs()
       return average_map_values(@body_pokemon.evs, @head_pokemon.evs)
     end
+
+    # BEGIN SPANISH FUSION CATEGORY
+    def category
+      return super if getCurrentLanguage != :SPANISH
+      # Whole labels avoid broken noun/adjective fragments in generated categories.
+      return [@body_pokemon.category, @head_pokemon.category].uniq.join(" / ")
+    end
+    # END SPANISH FUSION CATEGORY
 
     def calculate_category
       return split_and_combine_text(@body_pokemon.category, @head_pokemon.category, " ")
