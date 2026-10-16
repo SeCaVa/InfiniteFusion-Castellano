@@ -1095,6 +1095,12 @@ end
 # Draw the base letter at its regular baseline. The native single-glyph
 # renderer otherwise centres tall accented capitals lower than their neighbours.
 def pbDrawSpanishCapital(bitmap, x, y, width, height, text)
+  # Formatted windows draw one glyph at a time; punctuation needs its baseline.
+  if text == ":" && getCurrentLanguage == :SPANISH && bitmap.font.name.to_s.downcase.include?("power")
+    offset = [(bitmap.font.size * 2.0 / 29).round, 1].max
+    bitmap.draw_text(x, y + offset, width, height, text)
+    return
+  end
   capitals = "ÁÉÍÓÚÀÈÌÒÙÑÜ"
   bases = "AEIOUAEIOUNU"
   index = capitals.index(text) if text.is_a?(String) && text.length == 1

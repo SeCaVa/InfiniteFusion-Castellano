@@ -10,6 +10,8 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 
 ## Cambios recientes
 
+- Ajustada la altura de los dos puntos en los carteles de gimnasio y otros mensajes en español, conservando la alineación de las letras y las sombras.
+
 - 16 de octubre de 2026: traducida la pregunta para revivir fósiles en Ciudad Plateada e Isla Canela, además de los temas y los nombres de los premios de los combates triples de Isla Prima.
 - Las descripciones largas de movimientos, ropa y complementos se desplazan automáticamente hacia abajo y hacia arriba, con pausas para leer los extremos.
 - Corregidos los rótulos «VISTOS» y «ATRAPADOS» de Kanto, el espacio de las cifras de la Pokédex y el encuadre de «Resultados de búsqueda» en ambos juegos.
