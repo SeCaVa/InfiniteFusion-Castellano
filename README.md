@@ -27,7 +27,6 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 - La Pokédex en español usa metros y kilogramos, también en sus filtros de búsqueda, independientemente de la región del equipo.
 - Corregidos textos pendientes de Voltorb Flip, peluquería, PokéNav, entrenador de alquiler y recuperación de copias de seguridad.
 
-- 8 de octubre de 2026: versión congelada. El lanzador instala siempre la versión del juego base para la que está hecha la traducción (Kanto 6.8.2 y Hoenn 1.2.2) y, con el juego en español, los mensajes de inicio y enlaces del menú que se descargan al arrancar quedan fijados a los del 30 de septiembre de 2026, todos traducidos.
 - 8 de octubre de 2026: la Pokédex de fusiones queda fijada a la versión traducida. Con el juego en español se descargan las entradas de la comunidad del 6 de octubre de 2026 (commit `86aa014` de [pokedex-entries](https://github.com/infinitefusion/pokedex-entries)), así que no aparecen entradas nuevas sin traducir. En los demás idiomas el juego sigue descargando la versión más reciente. Las entradas posteriores se incorporarán por tandas.
 - 13.678 descripciones de fusiones más (79.771 en total), «Piedra Espíritu» unificada en las fusiones de Spiritomb y «Archi7» en la descripción del Pase Seagallop.
 - Las entradas automáticas de las fusiones se componen con las descripciones españolas de sus especies base.
