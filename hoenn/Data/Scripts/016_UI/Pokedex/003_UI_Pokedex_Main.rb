@@ -244,7 +244,7 @@ class PokemonPokedex_Scene
       label_width = overlay.text_size(label).width
       label_y = y + (saved_font.size - overlay.font.size) / 2
       pbDrawTextPositions(overlay, [[label, 30, label_y, 0, base, shadow],
-        [":", 30 + label_width, label_y + 2, 0, base, shadow]])
+        [":", 30 + label_width, label_y, 0, base, shadow]])
     ensure
       overlay.font = saved_font
     end

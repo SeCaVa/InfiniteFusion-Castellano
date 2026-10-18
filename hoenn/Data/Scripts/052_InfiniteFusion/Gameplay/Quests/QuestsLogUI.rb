@@ -325,6 +325,7 @@ class Questlog
       Graphics.update
       Input.update
 
+      pbUpdateQuestDescription
       break if handle_input
       @frame = 0 if @frame == 18
     end
@@ -573,6 +574,7 @@ class Questlog
   ##---------------------------------------------------------------------------
 
   def show_quest_list(mode_index)
+    pbClearQuestDescription
     pbWait(2)
     @scene = SCENE_LIST
     @current_mode = @modes[mode_index]
@@ -824,10 +826,16 @@ class Questlog
   end
 
   def draw_quest_details(quest)
+    pbClearQuestDescription
     @main.clear if @main
     @text.clear if @text
     @text2.clear if @text2
 
+    if getCurrentLanguage == :SPANISH
+      pbDrawSpanishQuestDetails(quest)
+      draw_completion_status(quest)
+      return
+    end
     pbDrawOutlineText(@main, 188, 54, 512, 384, quest.name,
                       Color.new(255, 172, 115), Color.new(0, 0, 0))
     drawTextExMulti(@main, 188, 84, 318, 8, quest.desc,
@@ -837,6 +845,38 @@ class Questlog
 
 
     draw_completion_status(quest)
+  end
+
+  def pbClearQuestDescription
+    sprite = @sprites.delete("quest_description_scroll")
+    sprite.dispose if sprite && !sprite.disposed?
+  end
+
+  def pbUpdateQuestDescription
+    sprite = @sprites["quest_description_scroll"]
+    return unless sprite
+    sprite.visible = (@scene == SCENE_DETAIL)
+    sprite.opacity = @sprites["main"].opacity
+    sprite.update
+  end
+
+  def pbDrawSpanishQuestDetails(quest)
+    saved_font = @main.font.clone
+    begin
+      pbFitTextToWidth(@main, quest.name, 300)
+      pbDrawOutlineText(@main, 188, 54, 302, 40, quest.name,
+                        Color.new(255,172,115), Color.new(0,0,0))
+      @main.font = saved_font.clone
+      sprite = QuestDescriptionScrollSprite.new(@main, quest.desc, @viewport)
+      sprite.z = @sprites["main"].z + 1
+      sprite.opacity = @sprites["main"].opacity
+      @sprites["quest_description_scroll"] = sprite
+      pbFitTextToWidth(@main, quest.location, 300)
+      pbDrawOutlineText(@main, 188, 338, 302, 40, quest.location,
+                        Color.new(255,172,115), Color.new(0,0,0))
+    ensure
+      @main.font = saved_font
+    end
   end
 
   def draw_completion_status(quest)
@@ -891,6 +931,7 @@ class Questlog
   ##---------------------------------------------------------------------------
 
   def cleanup
+    pbClearQuestDescription
     if @switch_to_map
       showBlk(1)  # instant black
     else
@@ -913,3 +954,27 @@ class Questlog
     pbWait(1)
   end
 end
+
+# BEGIN SPANISH QUEST DESCRIPTION
+class QuestDescriptionScrollSprite < BitmapSprite
+  include AutomaticDescriptionScroll
+  def initialize(reference, text, viewport)
+    dimensions = [0, 0]
+    chunks = getLineBrokenChunks(reference, text, 302, dimensions, true)
+    content_height = dimensions[1] + 6
+    super(306, [content_height, 218].max, viewport)
+    self.bitmap.font = reference.font.clone
+    renderMultiLine(self.bitmap, 2, 2, chunks, 0,
+                    Color.new(255,255,255), Color.new(0,0,0))
+    self.x, self.y = 186, 88
+    self.src_rect.set(0, 0, 306, 218)
+    pbResetDescriptionScroll(content_height - 218)
+  end
+  def update
+    return if disposed?
+    super
+    position = pbNextDescriptionScrollPosition
+    self.src_rect.y = position if position
+  end
+end
+# END SPANISH QUEST DESCRIPTION

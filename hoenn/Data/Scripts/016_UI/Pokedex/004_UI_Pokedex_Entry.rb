@@ -369,7 +369,7 @@ class PokemonPokedexInfo_Scene
     label_width = overlay.text_size(label).width
     colon_x = 224 + label_width
     pbDrawTextPositions(overlay, [[label, 224, y, 0, base, shadow],
-      [":", colon_x, y + 2, 0, base, shadow]])
+      [":", colon_x, y, 0, base, shadow]])
     author_x = colon_x + overlay.text_size(": ").width + 2
     available = 496 - author_x - 2
     text = author.to_s.strip

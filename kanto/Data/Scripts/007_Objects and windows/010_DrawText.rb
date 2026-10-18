@@ -1095,12 +1095,6 @@ end
 # Draw the base letter at its regular baseline. The native single-glyph
 # renderer otherwise centres tall accented capitals lower than their neighbours.
 def pbDrawSpanishCapital(bitmap, x, y, width, height, text)
-  # Formatted windows draw one glyph at a time; punctuation needs its baseline.
-  if text == ":" && getCurrentLanguage == :SPANISH && bitmap.font.name.to_s.downcase.include?("power")
-    offset = [(bitmap.font.size * 2.0 / 29).round, 1].max
-    bitmap.draw_text(x, y + offset, width, height, text)
-    return
-  end
   capitals = "ÁÉÍÓÚÀÈÌÒÙÑÜ"
   bases = "AEIOUAEIOUNU"
   index = capitals.index(text) if text.is_a?(String) && text.length == 1
@@ -1586,3 +1580,62 @@ class PokedexCategorySprite < BitmapSprite
   end
 end
 # END BOUNDED POKEDEX TEXT
+
+# BEGIN SPANISH COLON BASELINE
+# Cover complete labels as well as individual glyphs, including direct draws.
+module SpanishColonBaseline
+  def draw_text(*args)
+    rect_form = args[0].is_a?(Rect)
+    text = rect_form ? args[1] : args[4]
+    return super unless text.is_a?(String) && text.include?(":") &&
+      defined?(getCurrentLanguage) && getCurrentLanguage == :SPANISH &&
+      font.name.to_s.downcase.include?("power")
+    if rect_form
+      rect = args[0]
+      x, y, width, height, align = rect.x, rect.y, rect.width, rect.height, args[2] || 0
+    else
+      x, y, width, height, align = args[0], args[1], args[2], args[3], args[5] || 0
+    end
+    offset = [(font.size * 2.0 / 29).round, 1].max
+    return super(x, y + offset, width, height, text, align) if text == ":"
+    natural = text_size(text).width
+    return super unless natural > 0 && width > 0
+    # Draw at natural width, preserving each prefix's advance and all spaces.
+    # Apply alignment/compression to the complete line, never to each fragment.
+    line_height = text_size(text).height
+    padding = font.size
+    scratch = Bitmap.new(natural + 4, line_height + offset + padding * 2 + 4)
+    begin
+      scratch.font = font.clone
+      prefix = ""
+      text.split(/(:)/, -1).each do |part|
+        unless part.empty?
+          at = text_size(prefix).width
+          scratch.mkxp_draw_text(at, padding + (part == ":" ? offset : 0),
+                                 text_size(part).width + 4, line_height, part, 0)
+        end
+        prefix += part
+      end
+      drawn_width = [width, natural].min
+      x += (width - drawn_width) / 2 if align == 1
+      x += width - drawn_width if align == 2
+      y -= (@text_offset_y || 0) + padding
+      source = Rect.new(0, 0, natural + 2, scratch.height)
+      if drawn_width < natural
+        stretch_blt(Rect.new(x, y, drawn_width + 2, scratch.height), scratch, source)
+      else
+        blt(x, y, scratch, source)
+      end
+    ensure
+      scratch.dispose
+    end
+  end
+end
+Bitmap.prepend(SpanishColonBaseline) unless Bitmap.ancestors.include?(SpanishColonBaseline)
+
+def pbMapBottomTextY(bitmap, text, fallback)
+  return fallback unless getCurrentLanguage == :SPANISH
+  # TextPositions adds 10 pixels vertically; retain another 2 for its shadow.
+  [344, Graphics.height - bitmap.text_size(text).height - 12].min
+end
+# END SPANISH COLON BASELINE
