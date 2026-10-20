@@ -28,7 +28,7 @@ class PokemonSummary_Scene
 			pbCreateConditionBars(simple,bargraph)
 		end
 	end
-
+	
 	alias tdw_contests_summary_page_four drawPageFour
 	def drawPageFour
 		pbClearMoveDescription
@@ -60,7 +60,7 @@ class PokemonSummary_Scene
 			  if move
 				type_number = GameData::Move.get(move.id).contest_type_position
 				imagepos.push(["Graphics/Pictures/Contest/contesttype", xPos, yPos + yAdj +8, 0, type_number * 28, 64, 28])
-				textpos.push([move.name, xPos+68, yPos + yAdj, 0, moveBase, moveShadow])
+				pbDrawFittedText(overlay, move.name, xPos+68, yPos + yAdj, 166, moveBase, moveShadow)
 				if move.total_pp > 0
 				  textpos.push([_INTL("PP"), xPos+94, yPos + yAdj + 32, 0, moveBase, moveShadow])
 				  ppfraction = 0
@@ -131,7 +131,7 @@ class PokemonSummary_Scene
 		  if move
 			type_number = GameData::Move.get(move.id).contest_type_position
 			imagepos.push(["Graphics/Pictures/Contest/contesttype", xPos, yPos + yAdj + 8, 0, type_number * 28, 64, 28])
-			textpos.push([move.name, xPos + 68, yPos + yAdj, 0, moveBase, moveShadow])
+			pbDrawFittedText(overlay, move.name, xPos + 68, yPos + yAdj, 166, moveBase, moveShadow)
 			if move.total_pp > 0
 			  textpos.push([_INTL("PP"), xPos + 94, yPos + yAdj + 32, 0, moveBase, moveShadow])
 			  ppfraction = 0
@@ -161,7 +161,7 @@ class PokemonSummary_Scene
 		  overlay.blt(type_x, 78, @typebitmap.bitmap, type_rect)
 		end
 	end
-
+		
 	def drawSelectedContestMove(move_to_learn, selected_move)
 		# Draw all of page four, except selected move's details
 		drawPageFourContestSelecting(move_to_learn)
@@ -188,7 +188,7 @@ class PokemonSummary_Scene
 		# Draw selected move's description
 		pbDrawMoveDescription(4, 224, 230, 5, description, base, shadow)
 	end
-
+	
 	def pbScene
 		@pokemon.play_cry
 		loop do
@@ -270,7 +270,7 @@ class PokemonSummary_Scene
 		end
 		return @partyindex
 	end
-
+	
 	alias tdw_contests_summary_move_select drawSelectedMove
 	def drawSelectedMove(move_to_learn, selected_move)
 		if !@contestpage
@@ -355,7 +355,7 @@ class PokemonSummary_Scene
 		end
 		@sprites["movesel"].visible = false
 	end
-
+	
 
 	def pbChooseMoveToForget(move_to_learn)
 		new_move = (move_to_learn) ? Pokemon::Move.new(move_to_learn) : nil
@@ -401,7 +401,7 @@ class PokemonSummary_Scene
 		end
 		return (selmove == Pokemon::MAX_MOVES) ? -1 : selmove
 	end
-
+	
 	def disposeContestStats
 		@sprites["statsgraphbase"]&.dispose
 		@sprites["statsgraph"]&.dispose
@@ -470,7 +470,7 @@ class PokemonSummary_Scene
 		end
 		pbDrawImagePositions(@sprites["overlay"].bitmap, imagepos)
 	end
-
+		
 end
 
 #====================================================================================

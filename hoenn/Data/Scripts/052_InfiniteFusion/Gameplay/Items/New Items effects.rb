@@ -2177,7 +2177,7 @@ def track_pokemon()
   mapinfos = $RPGVX ? load_data("Data/MapInfos.rvdata") : load_data("Data/MapInfos.rxdata")
   currently_roaming.each do |roamer_id|
     map_id = $PokemonGlobal.roamPosition[roamer_id]
-    map_name = mapinfos[map_id].name
+    map_name = getCurrentLanguage == :SPANISH ? pbGetMapNameFromId(map_id) : mapinfos[map_id].name
     weather_type = Settings::ROAMING_SPECIES[roamer_id][6]
     case weather_type
     when :Storm

@@ -693,6 +693,7 @@ class PokemonSummary_Scene
   end
 
   def drawPageThree
+    pbClearMoveDescription
     overlay = @sprites["overlay"].bitmap
     base = Color.new(248, 248, 248)
     shadow = Color.new(104, 104, 104)
@@ -740,7 +741,11 @@ class PokemonSummary_Scene
       ensure
         overlay.font.name, overlay.font.size = font_name, font_size
       end
-      drawTextEx(overlay, 224, 320, 282, 2, ability.description, @text_color_base, @text_color_shadow)
+      if getCurrentLanguage == :SPANISH
+        pbDrawMoveDescription(224, 320, 260, 2, ability.description, @text_color_base, @text_color_shadow)
+      else
+        drawTextEx(overlay, 224, 320, 282, 2, ability.description, @text_color_base, @text_color_shadow)
+      end
     end
 
 
@@ -786,7 +791,7 @@ class PokemonSummary_Scene
       if move
         type_number = GameData::Type.get(move.type).id_number
         imagepos.push(["Graphics/Pictures/types", 248, yPos + 8, 0, type_number * 28, 64, 28])
-        textpos.push([move.name, 316, yPos, 0, moveBase, moveShadow, false, 190])
+        pbDrawFittedText(overlay, move.name, 316, yPos, 166, moveBase, moveShadow)
         if move.total_pp > 0
           textpos.push([_INTL("PP"), 342, yPos + 32, 0, moveBase, moveShadow])
           ppfraction = 0
@@ -853,7 +858,7 @@ class PokemonSummary_Scene
       if move
         type_number = GameData::Type.get(move.type).id_number
         imagepos.push(["Graphics/Pictures/types", 248, yPos + 8, 0, type_number * 28, 64, 28])
-        textpos.push([move.name, 316, yPos, 0, moveBase, moveShadow, false, 190])
+        pbDrawFittedText(overlay, move.name, 316, yPos, 166, moveBase, moveShadow)
         if move.total_pp > 0
           textpos.push([_INTL("PP"), 342, yPos + 32, 0, moveBase, moveShadow])
           ppfraction = 0

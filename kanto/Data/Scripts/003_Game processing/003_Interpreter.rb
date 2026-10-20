@@ -133,6 +133,21 @@ class Interpreter
   # * Execute script
   #-----------------------------------------------------------------------------
   def execute_script(script)
+
+    # BEGIN LOCALIZED DISPLAY VALUES
+    if getCurrentLanguage == :SPANISH
+      script = script.gsub(/(pbSet\(\s*\d+\s*,\s*)(?:map_infos|mapinfos)\[([^\]\r\n]+)\]\.name(\s*\))/) do
+        "#{$1}pbGetMapNameFromId(#{$2})#{$3}"
+      end
+      band_names = {
+        "MELOETTA_BAND_NAME" => "Miss Melody and the Mystic Musicians",
+        "SUCKY_BAND_NAME" => "MooMoo Milk"
+      }
+      band_names.each do |constant, original|
+        script = script.gsub(/\b#{constant}\b/, "_INTL(#{original.inspect})")
+      end
+    end
+    # END LOCALIZED DISPLAY VALUES
     # The lounge event displays these names; keep raw names elsewhere intact.
     if getCurrentLanguage == :SPANISH &&
        script.include?("prize = pbGet(239)") &&
