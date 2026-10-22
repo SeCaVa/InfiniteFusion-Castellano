@@ -10,6 +10,10 @@ Usa los nombres oficiales españoles más recientes, sacados de PokeAPI, WikiDex
 
 ## Cambios recientes
 
+- 22 de octubre de 2026: corregido «Blasco» al entregar un Pokémon al acompañante, incluidas la pregunta, la opción y la confirmación.
+- Ajustados un píxel hacia abajo los dos puntos de los diálogos en español.
+- Traducidas las tres preguntas de la entrevista de concursos: estrategia ganadora, truco secreto y resumen del concurso.
+
 - Ajustada la altura de los dos puntos en los carteles de gimnasio y otros mensajes en español, conservando la alineación de las letras y las sombras.
 
 - 16 de octubre de 2026: traducida la pregunta para revivir fósiles en Ciudad Plateada e Isla Canela, además de los temas y los nombres de los premios de los combates triples de Isla Prima.

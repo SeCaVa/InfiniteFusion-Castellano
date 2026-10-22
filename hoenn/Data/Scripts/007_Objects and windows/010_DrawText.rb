@@ -1150,6 +1150,13 @@ end
 # END SPANISH CAPITAL ACCENTS
 
 def drawSingleFormattedChar(bitmap,ch)
+  # BEGIN SPANISH DIALOGUE COLON
+  if !ch[5] && ch[0] == ":" && getCurrentLanguage == :SPANISH &&
+      ch[12].to_s.downcase.include?("power")
+    ch = ch.dup
+    ch[2] += 1
+  end
+  # END SPANISH DIALOGUE COLON
   if ch[5] # If a graphic
     graphic=Bitmap.new(ch[0])
     graphicRect=ch[15]
