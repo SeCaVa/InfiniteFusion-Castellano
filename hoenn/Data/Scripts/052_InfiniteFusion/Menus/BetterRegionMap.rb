@@ -840,11 +840,25 @@ class BetterRegionMap
       end
     end
     @sprites["txt"].draw([
-                           [pbGetMessage(MessageTypes::RegionNames, @region), 16, 0, 0,
+                           ["", 16, 0, 0,
                             Color.new(255, 255, 255), Color.new(0, 0, 0)],
                            [text, 16, pbMapBottomTextY(@sprites["txt"].bitmap, text + " " + poi, 354), 0, Color.new(255, 255, 255), Color.new(0, 0, 0)],
                            [poi, 496, pbMapBottomTextY(@sprites["txt"].bitmap, text + " " + poi, 354), 1, Color.new(255, 255, 255), Color.new(0, 0, 0)],
                          ], true)
+    if getCurrentLanguage == :SPANISH
+      overlay = @sprites["txt"].bitmap
+      saved_font = overlay.font.clone
+      begin
+        overlay.font.size = [overlay.font.size, 24].min
+        pbDrawTextPositions(overlay, [[pbGetMessage(MessageTypes::RegionNames, @region), 16, -10, 0,
+          Color.new(255,255,255), Color.new(0,0,0)]])
+      ensure
+        overlay.font = saved_font
+      end
+    else
+      pbDrawTextPositions(@sprites["txt"].bitmap, [[pbGetMessage(MessageTypes::RegionNames, @region), 16, 0, 0,
+        Color.new(255,255,255), Color.new(0,0,0)]])
+    end
     #on_hover($PokemonGlobal.regionMapSel[0], $PokemonGlobal.regionMapSel[1]) if location
   end
 
