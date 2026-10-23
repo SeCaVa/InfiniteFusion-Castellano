@@ -176,7 +176,7 @@ class PokemonPokegearScreen
 end
 
 # BEGIN BOUNDED POKENAV LABELS
-def pbDrawPokenavBlock(bitmap, text, x, y, width, height, max_lines, base, shadow)
+def pbDrawPokenavBlock(bitmap, text, x, y, width, height, max_lines, base, shadow, align = 0)
   saved = bitmap.font.clone
   begin
     bitmap.font.size = [bitmap.font.size, 24].min
@@ -201,10 +201,11 @@ def pbDrawPokenavBlock(bitmap, text, x, y, width, height, max_lines, base, shado
     row_height = [22, height / [lines.size, 1].max].min
     top = y + (height - row_height * lines.size) / 2
     lines.each_with_index do |line, i|
+      row_x = align == 2 ? x + (width - bitmap.text_size(line).width) / 2 : x
       bitmap.font.color = shadow
-      bitmap.draw_text(x + 1, top + i * row_height + 1, width, row_height, line)
+      bitmap.draw_text(row_x + 1, top + i * row_height + 1, width, row_height, line)
       bitmap.font.color = base
-      bitmap.draw_text(x, top + i * row_height, width, row_height, line)
+      bitmap.draw_text(row_x, top + i * row_height, width, row_height, line)
     end
   ensure
     bitmap.font = saved
