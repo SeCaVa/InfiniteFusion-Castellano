@@ -74,10 +74,11 @@ class PokemonLoadPanel < SpriteWrapper
         textpos.push([_INTL("Time:"),16*2,85*2,0,TEXTCOLOR,TEXTSHADOWCOLOR])
         hour = @totalsec / 60 / 60
         min  = @totalsec / 60 % 60
+        time_width = [206 - (32 + self.bitmap.text_size(_INTL("Time:")).width + 12), 32].max
         if hour>0
-          textpos.push([_INTL("{1}h {2}m",hour,min),103*2,85*2,1,TEXTCOLOR,TEXTSHADOWCOLOR])
+          pbDrawFittedText(self.bitmap, _INTL("{1}h {2}m",hour,min), 206, 170, time_width, TEXTCOLOR, TEXTSHADOWCOLOR, 1)
         else
-          textpos.push([_INTL("{1}m",min),103*2,85*2,1,TEXTCOLOR,TEXTSHADOWCOLOR])
+          pbDrawFittedText(self.bitmap, _INTL("{1}m",min), 206, 170, time_width, TEXTCOLOR, TEXTSHADOWCOLOR, 1)
         end
         if @trainer.male?
           textpos.push([@trainer.name,56*2,29*2,0,MALETEXTCOLOR,MALETEXTSHADOWCOLOR])

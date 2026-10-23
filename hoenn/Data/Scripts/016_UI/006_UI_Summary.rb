@@ -728,19 +728,9 @@ class PokemonSummary_Scene
     if ability
       # Keep the original value column, with room for accents above it.
       background = @sprites["background"].bitmap
-      overlay.fill_rect(356, 274, 156, 40, background.get_pixel(400, 298))
-      font_name, font_size = overlay.font.name, overlay.font.size
-      begin
-        pbFitTextToWidth(overlay, ability.name, 142)
-        while overlay.text_size(ability.name).width > 142 && overlay.font.size > 18
-          overlay.font.size -= 1
-        end
-        ability_y = 276 + (font_size - overlay.font.size) / 2
-        pbDrawTextPositions(overlay, [[ability.name, 364, ability_y, 0,
-          @text_color_base, @text_color_shadow]])
-      ensure
-        overlay.font.name, overlay.font.size = font_name, font_size
-      end
+      overlay.fill_rect(356, 274, 130, 40, background.get_pixel(400, 298))
+      pbDrawFittedText(overlay, ability.name, 364, 276, 120,
+                        @text_color_base, @text_color_shadow)
       if getCurrentLanguage == :SPANISH
         pbDrawMoveDescription(224, 320, 260, 2, ability.description, @text_color_base, @text_color_shadow)
       else
@@ -791,7 +781,7 @@ class PokemonSummary_Scene
       if move
         type_number = GameData::Type.get(move.type).id_number
         imagepos.push(["Graphics/Pictures/types", 248, yPos + 8, 0, type_number * 28, 64, 28])
-        pbDrawFittedText(overlay, move.name, 316, yPos, 166, moveBase, moveShadow)
+        pbDrawFittedText(overlay, move.name, 316, yPos, 158, moveBase, moveShadow)
         if move.total_pp > 0
           textpos.push([_INTL("PP"), 342, yPos + 32, 0, moveBase, moveShadow])
           ppfraction = 0
@@ -858,7 +848,7 @@ class PokemonSummary_Scene
       if move
         type_number = GameData::Type.get(move.type).id_number
         imagepos.push(["Graphics/Pictures/types", 248, yPos + 8, 0, type_number * 28, 64, 28])
-        pbDrawFittedText(overlay, move.name, 316, yPos, 166, moveBase, moveShadow)
+        pbDrawFittedText(overlay, move.name, 316, yPos, 158, moveBase, moveShadow)
         if move.total_pp > 0
           textpos.push([_INTL("PP"), 342, yPos + 32, 0, moveBase, moveShadow])
           ppfraction = 0

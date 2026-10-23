@@ -1150,13 +1150,6 @@ end
 # END SPANISH CAPITAL ACCENTS
 
 def drawSingleFormattedChar(bitmap,ch)
-  # BEGIN SPANISH DIALOGUE COLON
-  if !ch[5] && ch[0] == ":" && getCurrentLanguage == :SPANISH &&
-      ch[12].to_s.downcase.include?("power")
-    ch = ch.dup
-    ch[2] += 1
-  end
-  # END SPANISH DIALOGUE COLON
   if ch[5] # If a graphic
     graphic=Bitmap.new(ch[0])
     graphicRect=ch[15]
@@ -1591,6 +1584,38 @@ end
 # BEGIN SPANISH COLON BASELINE
 # Cover complete labels as well as individual glyphs, including direct draws.
 module SpanishColonBaseline
+
+  # Measure actual ink, rather than assuming identical metrics for all fonts.
+  def spanish_colon_offset
+    @spanish_colon_offsets ||= {}
+    key = [font.name, font.size, font.bold, font.italic]
+    return @spanish_colon_offsets[key] if @spanish_colon_offsets.key?(key)
+    probe = Bitmap.new(font.size * 4 + 16, font.size * 4 + 16)
+    bounds = []
+    begin
+      probe.font = font.clone
+      probe.font.color = Color.new(255, 255, 255, 255)
+      ["x", ":"].each do |glyph|
+        probe.clear
+        probe.mkxp_draw_text(4, font.size, probe.width - 8,
+                             text_size(glyph).height, glyph, 0)
+        top, bottom = probe.height, -1
+        for py in 0...probe.height
+          for px in 0...probe.width
+            next if probe.get_pixel(px, py).alpha < 128
+            top = py if py < top
+            bottom = py if py > bottom
+          end
+        end
+        bounds << [top, bottom]
+      end
+    ensure
+      probe.dispose
+    end
+    shift = bounds.any? { |b| b[1] < b[0] } ? 0 :
+      ((bounds[0][0] + bounds[0][1] - bounds[1][0] - bounds[1][1]) / 2.0).round
+    @spanish_colon_offsets[key] = shift
+  end
   def draw_text(*args)
     rect_form = args[0].is_a?(Rect)
     text = rect_form ? args[1] : args[4]
@@ -1603,7 +1628,7 @@ module SpanishColonBaseline
     else
       x, y, width, height, align = args[0], args[1], args[2], args[3], args[5] || 0
     end
-    offset = [(font.size * 2.0 / 29).round, 1].max
+    offset = spanish_colon_offset
     return super(x, y + offset, width, height, text, align) if text == ":"
     natural = text_size(text).width
     return super unless natural > 0 && width > 0
@@ -1611,7 +1636,7 @@ module SpanishColonBaseline
     # Apply alignment/compression to the complete line, never to each fragment.
     line_height = text_size(text).height
     padding = font.size
-    scratch = Bitmap.new(natural + 4, line_height + offset + padding * 2 + 4)
+    scratch = Bitmap.new(natural + 4, line_height + offset.abs + padding * 2 + 4)
     begin
       scratch.font = font.clone
       prefix = ""

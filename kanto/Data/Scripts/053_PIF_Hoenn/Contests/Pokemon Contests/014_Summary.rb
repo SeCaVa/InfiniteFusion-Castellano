@@ -60,7 +60,7 @@ class PokemonSummary_Scene
 			  if move
 				type_number = GameData::Move.get(move.id).contest_type_position
 				imagepos.push(["Graphics/Pictures/Contest/contesttype", xPos, yPos + yAdj +8, 0, type_number * 28, 64, 28])
-				pbDrawFittedText(overlay, move.name, xPos+68, yPos + yAdj, 166, moveBase, moveShadow)
+				pbDrawFittedText(overlay, move.name, xPos+68, yPos + yAdj, 158, moveBase, moveShadow)
 				if move.total_pp > 0
 				  textpos.push([_INTL("PP"), xPos+94, yPos + yAdj + 32, 0, moveBase, moveShadow])
 				  ppfraction = 0
@@ -131,7 +131,7 @@ class PokemonSummary_Scene
 		  if move
 			type_number = GameData::Move.get(move.id).contest_type_position
 			imagepos.push(["Graphics/Pictures/Contest/contesttype", xPos, yPos + yAdj + 8, 0, type_number * 28, 64, 28])
-			pbDrawFittedText(overlay, move.name, xPos + 68, yPos + yAdj, 166, moveBase, moveShadow)
+			pbDrawFittedText(overlay, move.name, xPos + 68, yPos + yAdj, 158, moveBase, moveShadow)
 			if move.total_pp > 0
 			  textpos.push([_INTL("PP"), xPos + 94, yPos + yAdj + 32, 0, moveBase, moveShadow])
 			  ppfraction = 0
