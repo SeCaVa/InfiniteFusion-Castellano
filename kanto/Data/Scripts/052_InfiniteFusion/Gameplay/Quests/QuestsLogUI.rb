@@ -280,9 +280,26 @@ class Questlog
     end
   end
 
+  def draw_quest_log_heading
+    label = _INTL("Quest Log")
+    saved_font = @main.font.clone
+    begin
+      if getCurrentLanguage == :SPANISH
+        # Reserve the upper right corner for the L/R map hint.
+        pbFitCompleteText(@main, label, 272)
+        pbDrawOutlineText(@main, 16, 8, 276, 32, label,
+                          Color.new(255,255,255), Color.new(0,0,0), 1)
+      else
+        pbDrawOutlineText(@main, -160, 8, 512, 384, label,
+                          Color.new(255,255,255), Color.new(0,0,0), 1)
+      end
+    ensure
+      @main.font = saved_font
+    end
+  end
+
   def draw_main_text
-    pbDrawOutlineText(@main, -160, 8, 512, 384, _INTL("Quest Log"),
-                      Color.new(255, 255, 255), Color.new(0, 0, 0), 1)
+    draw_quest_log_heading
     if can_switch_mode?
       pbDrawOutlineText(@main, 160, 8, 512, 384, _INTL("L/R : MAP"),
                         Color.new(255, 255, 255), Color.new(0, 0, 0), 1)

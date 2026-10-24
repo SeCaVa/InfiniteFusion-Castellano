@@ -1613,7 +1613,7 @@ module SpanishColonBaseline
       probe.dispose
     end
     shift = bounds.any? { |b| b[1] < b[0] } ? 0 :
-      ((bounds[0][0] + bounds[0][1] - bounds[1][0] - bounds[1][1]) / 2.0).round
+      ((bounds[0][0] + bounds[0][1] - bounds[1][0] - bounds[1][1]) / 2.0).floor
     @spanish_colon_offsets[key] = shift
   end
   def draw_text(*args)
